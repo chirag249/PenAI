@@ -37,7 +37,7 @@ except Exception:
     init_logger = None  # type: ignore
 
 try:
-    from modules.reporter import Reporter
+    from modules.reporter import Reporter  # type: ignore
 except Exception:
     Reporter = None  # type: ignore
 
@@ -47,9 +47,31 @@ except Exception:
     parse_tool_envelope = None  # type: ignore
 
 try:
+    from modules.notifications import send_scan_results_notification  # type: ignore
+except Exception:
+    send_scan_results_notification = None  # type: ignore
+
+try:
+    from modules.vuln_intel import correlate_findings_with_cve, get_threat_intel_feeds  # type: ignore
+except Exception:
+    correlate_findings_with_cve = None  # type: ignore
+    get_threat_intel_feeds = None  # type: ignore
+
+try:
     from modules.tools.manager import run_tool  # type: ignore
 except Exception:
     run_tool = None  # type: ignore
+
+try:
+    from modules.notifications import send_scan_results_notification  # type: ignore
+except Exception:
+    send_scan_results_notification = None  # type: ignore
+
+try:
+    from modules.vuln_intel import correlate_findings_with_cve, get_threat_intel_feeds  # type: ignore
+except Exception:
+    correlate_findings_with_cve = None  # type: ignore
+    get_threat_intel_feeds = None  # type: ignore
 
 # dynamic curated generator if present
 _gen_path = os.path.join(os.path.dirname(__file__), "modules", "reporter", "generate_curated.py")
@@ -496,6 +518,17 @@ async def run_non_destructive_phase(scope, outdir: str,
         except Exception:
             logger.exception("triage_all failed, continuing with untriaged findings")
 
+    # Integrate with vulnerability intelligence sources
+    if correlate_findings_with_cve:
+        try:
+            findings = correlate_findings_with_cve(findings)
+            logger.info("CVE correlation completed for %s findings", len(findings))
+        except Exception:
+            logger.exception("CVE correlation failed")
+    
+    # Get threat intelligence feeds
+    # Threat intelligence will be added to meta after meta is defined
+
     try:
         from modules.ai.predictor import predict_findings  # type: ignore
         try:
@@ -537,6 +570,15 @@ async def run_non_destructive_phase(scope, outdir: str,
         "pocs_file": "reports/pocs.json",
     }
 
+    # Add threat intelligence to meta
+    if get_threat_intel_feeds:
+        try:
+            threat_intel = get_threat_intel_feeds()
+            meta["threat_intel"] = threat_intel
+            logger.info("Threat intelligence feeds retrieved")
+        except Exception:
+            logger.exception("Threat intelligence retrieval failed")
+
     # Enhanced AI reasoning for correlation and triage (after meta is defined)
     try:
         from modules.ai.reasoner import enhance_findings_with_ai_reasoning
@@ -569,6 +611,14 @@ async def run_non_destructive_phase(scope, outdir: str,
             logger.info("Wrote minimal final_report.json (Reporter missing)")
         except Exception:
             logger.exception("Failed to write fallback report")
+
+    # Send notifications about scan completion
+    if send_scan_results_notification:
+        try:
+            send_scan_results_notification(outdir, ', '.join(scope.targets or []), success=True)
+            logger.info("Scan completion notification sent")
+        except Exception:
+            logger.exception("Failed to send scan completion notification")
 
     # post-processing pipeline (normalize/map/attach/curated)
     try:
@@ -905,8 +955,24 @@ def main():
                         clear_logs=args.clear_logs,
                         skip_destructive=args.skip_destructive))
         print(f"Run complete. Reports at {outdir}/reports")
+        
+        # Send success notification
+        if send_scan_results_notification:
+            try:
+                send_scan_results_notification(outdir, ', '.join(args.targets or []), success=True)
+            except Exception:
+                pass  # Don't fail the whole process if notification fails
     except KeyboardInterrupt:
         print("Interrupted by user")
+        sys.exit(1)
+    except Exception as e:
+        print(f"Scan failed with error: {e}", file=sys.stderr)
+        # Send failure notification
+        if send_scan_results_notification:
+            try:
+                send_scan_results_notification(outdir, ', '.join(args.targets or []), success=False)
+            except Exception:
+                pass  # Don't fail the whole process if notification fails
         sys.exit(1)
 
 if __name__ == "__main__":

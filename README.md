@@ -10,6 +10,10 @@ PenAI is a comprehensive penetration testing automation framework that integrate
 - **Safety Controls**: Built-in safeguards for destructive testing with explicit operator approval
 - **Comprehensive Reporting**: Generates detailed findings and summary reports in multiple formats
 - **Extensible Design**: Easy to add new tools, parsers, and scanners
+- **CI/CD Integration**: Professional-grade GitHub Actions and GitLab CI/CD pipelines
+- **Real-time Notifications**: Slack and Microsoft Teams integration for immediate alerts
+- **Vulnerability Intelligence**: NVD/CVE integration for up-to-date vulnerability data
+- **Threat Intelligence**: Integration with threat feeds for enhanced detection capabilities
 
 ## Prerequisites
 
@@ -47,6 +51,7 @@ The main dependencies include:
 - `pydantic` - Data validation
 - `weasyprint` - PDF generation
 - `python-dotenv` - Environment variable management
+- `requests` - HTTP library for intelligence and notification integrations
 
 ## Basic Usage
 
@@ -154,6 +159,45 @@ modules/
 ├── tools/        # Tool adapters and configuration
 └── ...           # Core modules (logger, scope, etc.)
 ```
+
+## Continuous Integration & Deployment
+
+PenAI now includes professional-grade CI/CD integration for automated security testing:
+
+### GitHub Actions
+
+- Multi-Python version testing (3.8, 3.9, 3.10, 3.11)
+- Automated security scans on push, pull request, and scheduled events
+- Artifact archiving for 1 week
+- Failure notifications to Slack and Teams
+
+### GitLab CI/CD
+
+- Multi-stage pipeline (security-scan, report, notify)
+- Enhanced scanning with AI capabilities
+- Comprehensive notifications
+- Artifact management with expiration policies
+
+To enable CI/CD integration, configure the appropriate webhook URLs in your repository/CI settings.
+
+## Notifications
+
+PenAI supports real-time notifications via popular collaboration platforms:
+
+- **Slack**: Configure `SLACK_WEBHOOK_URL` environment variable
+- **Microsoft Teams**: Configure `TEAMS_WEBHOOK_URL` environment variable
+
+Notifications include scan status, findings count, and duration information.
+
+## Vulnerability Intelligence
+
+PenAI integrates with external intelligence sources to enhance vulnerability detection:
+
+- **NVD/CVE Integration**: Automatic correlation of findings with CVE data
+- **Threat Intelligence**: Integration with threat feeds for emerging threats
+- **Exploit Correlation**: Cross-referencing with exploit databases
+
+To enable intelligence features, set your `NVD_API_KEY` environment variable.
 
 ## Customization
 

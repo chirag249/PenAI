@@ -1,0 +1,128 @@
+stages:
+  - security-scan
+  - report
+  - notify
+
+variables:
+  PYTHON_VERSION: "3.10"
+  SCAN_TARGET: "https://example.com"
+
+before_script:
+  - python --version
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+
+security-scan-job:
+  stage: security-scan
+  image: python:${PYTHON_VERSION}
+  script:
+    - echo "Running security scan on $SCAN_TARGET"
+    - python agent.py --targets $SCAN_TARGET --run-id gitlab-ci-scan
+  artifacts:
+    paths:
+      - runs/
+      - test_output/
+    expire_in: 1 week
+  only:
+    - main
+    - merge_requests
+    - schedules
+
+enhanced-security-scan-job:
+  stage: security-scan
+  image: python:${PYTHON_VERSION}
+  script:
+    - echo "Running enhanced AI-powered security scan on $SCAN_TARGET"
+    - pip install -r requirements-ai-enhanced.txt
+    - python demo_enhanced_ai.py --target $SCAN_TARGET --run-id gitlab-ci-enhanced-scan
+  artifacts:
+    paths:
+      - runs/
+      - test_output/
+    expire_in: 1 week
+  only:
+    - main
+    - schedules
+
+generate-report-job:
+  stage: report
+  image: python:${PYTHON_VERSION}
+  script:
+    - echo "Generating security report"
+    - python test_enhanced_reporting.py
+  dependencies:
+    - security-scan-job
+  artifacts:
+    paths:
+      - test_output/reports/
+    expire_in: 1 month
+  only:
+    - main
+    - schedules
+
+slack-notification-success:
+  stage: notify
+  image: curlimages/curl:latest
+  script:
+    - |
+      curl -X POST -H 'Content-type: application/json' \
+      --data '{"text":"Security scan completed successfully for '"$CI_PROJECT_NAME"' on branch '"$CI_COMMIT_REF_NAME"'"}' \
+      $SLACK_WEBHOOK_URL
+  dependencies:
+    - security-scan-job
+  only:
+    - main
+  except:
+    - schedules
+
+slack-notification-failure:
+  stage: notify
+  image: curlimages/curl:latest
+  script:
+    - |
+      curl -X POST -H 'Content-type: application/json' \
+      --data '{"text":"Security scan failed for '"$CI_PROJECT_NAME"' on branch '"$CI_COMMIT_REF_NAME"'. Check the pipeline for details."}' \
+      $SLACK_WEBHOOK_URL
+  dependencies:
+    - security-scan-job
+  when: on_failure
+  only:
+    - main
+
+teams-notification:
+  stage: notify
+  image: curlimages/curl:latest
+  script:
+    - |
+      curl -H 'Content-Type: application/json' -d "{
+        \"@type\": \"MessageCard\",
+        \"@context\": \"http://schema.org/extensions\",
+        \"themeColor\": \"0076D7\",
+        \"summary\": \"Security Scan Results\",
+        \"sections\": [{
+          \"activityTitle\": \"Security Scan Completed\",
+          \"activitySubtitle\": \"Repository: $CI_PROJECT_NAME\",
+          \"activityImage\": \"https://gitlab.com/gitlab-com/gitlab-artwork/raw/master/logo/logo-square.png\",
+          \"facts\": [
+            {
+              \"name\": \"Branch\",
+              \"value\": \"$CI_COMMIT_REF_NAME\"
+            },
+            {
+              \"name\": \"Commit\",
+              \"value\": \"$CI_COMMIT_SHORT_SHA\"
+            },
+            {
+              \"name\": \"Status\",
+              \"value\": \"Success\"
+            }
+          ],
+          \"markdown\": true
+        }]
+      }" $TEAMS_WEBHOOK_URL
+  dependencies:
+    - security-scan-job
+  only:
+    - main
+  except:
+    - schedules

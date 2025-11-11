@@ -1,0 +1,74 @@
+name: Security Testing Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  schedule:
+    - cron: '0 2 * * 1'  # Weekly on Monday at 2 AM UTC
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9, "3.10", 3.11]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        # Install optional AI dependencies if needed for enhanced scanning
+        # pip install -r requirements-ai-enhanced.txt
+
+    - name: Run basic security scan
+      run: |
+        python agent.py --targets https://example.com --run-id github-action-scan
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+    - name: Run enhanced security scan (if AI dependencies installed)
+      if: matrix.python-version == '3.11'
+      run: |
+        python demo_enhanced_ai.py --target https://example.com --run-id github-action-enhanced-scan
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+    - name: Archive scan results
+      uses: actions/upload-artifact@v3
+      with:
+        name: security-scan-results-${{ matrix.python-version }}
+        path: |
+          runs/
+          test_output/
+
+    - name: Notify Slack on failure
+      if: failure()
+      uses: 8398a7/action-slack@v3
+      with:
+        status: ${{ job.status }}
+        channel: '#security-alerts'
+        webhook_url: ${{ secrets.SLACK_WEBHOOK }}
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
+
+    - name: Notify Teams on failure
+      if: failure()
+      uses: skitionek/notify-microsoft-teams@v1.0.7
+      with:
+        webhook_url: ${{ secrets.TEAMS_WEBHOOK }}
+        message: |
+          Security scan failed in GitHub Actions
+          Repository: ${{ github.repository }}
+          Branch: ${{ github.ref }}
+          Commit: ${{ github.sha }}
