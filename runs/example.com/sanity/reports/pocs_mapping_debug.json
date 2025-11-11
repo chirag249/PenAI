@@ -1,0 +1,15 @@
+{
+  "matches": [
+    {
+      "poc": {
+        "proof_url": "https://example.com",
+        "finding_type": "sqli-error",
+        "status": "error"
+      },
+      "finding_target": "https://example.com",
+      "score": 0.75,
+      "attached_to": "best"
+    }
+  ],
+  "unmapped": []
+}

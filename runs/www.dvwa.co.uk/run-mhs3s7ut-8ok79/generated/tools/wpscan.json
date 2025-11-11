@@ -1,0 +1,5 @@
+{
+  "tool": "wpscan",
+  "status": "adapter_missing_binary",
+  "note": "wpscan not found on PATH"
+}

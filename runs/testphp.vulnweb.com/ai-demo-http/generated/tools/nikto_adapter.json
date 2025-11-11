@@ -1,0 +1,8 @@
+{
+  "tool": "nikto",
+  "status": "ran",
+  "rc": null,
+  "findings": [],
+  "stdout": "",
+  "stderr": "timeout"
+}

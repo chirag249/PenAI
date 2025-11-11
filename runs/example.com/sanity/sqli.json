@@ -1,0 +1,7 @@
+[
+  {
+    "type": "sqli-error",
+    "target": "https://example.com",
+    "error": "RuntimeError('Neither http nor https reachable for example.com')"
+  }
+]

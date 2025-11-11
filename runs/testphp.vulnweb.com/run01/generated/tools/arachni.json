@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "tool": "arachni",
+    "status": "mocked_no_binary"
+  },
+  "result": {
+    "stdout": "mock output for arachni"
+  },
+  "parsed_findings": []
+}

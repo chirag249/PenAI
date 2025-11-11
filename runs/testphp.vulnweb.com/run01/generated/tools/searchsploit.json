@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "tool": "searchsploit",
+    "status": "ran"
+  },
+  "result": {
+    "cmd": [
+      "/usr/bin/searchsploit",
+      "https://testphp.vulnweb.com"
+    ],
+    "rc": 0,
+    "stdout": "Exploits: No Results\nShellcodes: No Results\n",
+    "stderr": ""
+  },
+  "parsed_findings": []
+}

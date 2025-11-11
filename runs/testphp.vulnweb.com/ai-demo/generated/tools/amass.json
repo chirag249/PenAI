@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "tool": "amass",
+    "status": "mocked_no_binary"
+  },
+  "result": {
+    "stdout": "mock output for amass"
+  },
+  "parsed_findings": []
+}

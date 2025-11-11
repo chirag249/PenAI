@@ -1,0 +1,25 @@
+{
+    "profiles": {
+        "quick": {
+            "args": ["-Pn", "-sS", "--top-ports", "50"],
+            "timeout": 30
+        },
+        "normal": {
+            "args": ["-Pn", "-sS", "-sV", "--top-ports", "1000", "--script", "banner"],
+            "timeout": 120
+        },
+        "thorough": {
+            "args": ["-Pn", "-sS", "-sV", "-O", "--script", "default,safe,vuln"],
+            "timeout": 300
+        },
+        "stealth": {
+            "args": ["-Pn", "-sS", "-f", "--scan-delay", "10", "--max-rate", "5"],
+            "timeout": 600
+        },
+        "custom": {
+            "args": ["-Pn", "-sT", "-p", "22,80,443,8080", "--reason"],
+            "timeout": 90
+        }
+    },
+    "default_profile": "normal"
+}

@@ -1,0 +1,29 @@
+{
+  "result": [
+    {
+      "type": "nuclei-run",
+      "target": "http://testphp.vulnweb.com",
+      "severity": 1,
+      "evidence": "nuclei executed (no structured vulns parsed)",
+      "source": {
+        "tool": "nuclei",
+        "envelope": {
+          "meta": {
+            "tool": "nuclei",
+            "status": "adapter_return"
+          },
+          "result": {
+            "tool": "nuclei",
+            "status": "ran",
+            "rc": null,
+            "findings": [],
+            "stdout": "",
+            "stderr": "timeout",
+            "output_file": "runs/testphp.vulnweb.com/ai-demo-http/generated/tools/nuclei_adapter.json"
+          },
+          "output_file": "runs/testphp.vulnweb.com/ai-demo-http/generated/tools/nuclei.json"
+        }
+      }
+    }
+  ]
+}

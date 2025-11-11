@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "tool": "whatweb",
+    "status": "ran"
+  },
+  "result": {
+    "cmd": [
+      "/usr/bin/whatweb",
+      "http://www.dvwa.co.uk/"
+    ],
+    "rc": 0,
+    "stdout": "\u001b[1m\u001b[34mhttp://www.dvwa.co.uk/\u001b[0m [403 Forbidden] \u001b[1mCountry\u001b[0m[\u001b[0m\u001b[22mUNITED STATES\u001b[0m][\u001b[1m\u001b[31mUS\u001b[0m], \u001b[1mHTML5\u001b[0m, \u001b[1mHTTPServer\u001b[0m[\u001b[1m\u001b[36mcloudflare\u001b[0m], \u001b[1mIP\u001b[0m[\u001b[0m\u001b[22m104.21.32.202\u001b[0m], \u001b[1mScript\u001b[0m, \u001b[1mTitle\u001b[0m[\u001b[1m\u001b[33mAttention Required! | Cloudflare\u001b[0m], \u001b[1mUncommonHeaders\u001b[0m[\u001b[0m\u001b[22mreferrer-policy,report-to,nel,cf-ray,alt-svc\u001b[0m], \u001b[1mX-Frame-Options\u001b[0m[\u001b[0m\u001b[22mSAMEORIGIN\u001b[0m], \u001b[1mX-UA-Compatible\u001b[0m[\u001b[0m\u001b[22mIE=Edge\u001b[0m]\n",
+    "stderr": ""
+  },
+  "parsed_findings": []
+}

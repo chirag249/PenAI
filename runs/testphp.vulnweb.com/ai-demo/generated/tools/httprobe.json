@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "tool": "httprobe",
+    "status": "mocked_no_binary"
+  },
+  "result": {
+    "stdout": "mock output for httprobe"
+  },
+  "parsed_findings": []
+}

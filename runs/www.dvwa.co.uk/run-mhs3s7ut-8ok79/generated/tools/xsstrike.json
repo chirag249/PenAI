@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "tool": "xsstrike",
+    "status": "mocked_no_binary"
+  },
+  "result": {
+    "stdout": "mock output for xsstrike"
+  },
+  "parsed_findings": []
+}

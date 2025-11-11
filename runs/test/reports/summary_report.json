@@ -1,0 +1,56 @@
+{
+  "scan_summary": {
+    "total_findings": 2,
+    "vulnerabilities_found": 2,
+    "severity_distribution": {
+      "4": 1,
+      "5": 1
+    },
+    "critical_findings": 1,
+    "high_severity": 1,
+    "medium_severity": 0,
+    "low_severity": 0,
+    "info_findings": 0
+  },
+  "vulnerability_breakdown": {
+    "xss-reflected": 1,
+    "sqli-error": 1
+  },
+  "high_risk_targets": [
+    "http://example.com/search",
+    "http://example.com/login"
+  ],
+  "top_vulnerabilities": [
+    {
+      "type": "sqli-error",
+      "target": "http://example.com/login",
+      "severity": 5,
+      "confidence": "medium",
+      "evidence": "SQL error message",
+      "ai_prediction": {}
+    },
+    {
+      "type": "xss-reflected",
+      "target": "http://example.com/search",
+      "severity": 4,
+      "confidence": "high",
+      "evidence": "Script in response",
+      "ai_prediction": {}
+    }
+  ],
+  "meta": {
+    "targets": [
+      "http://example.com"
+    ],
+    "mode": "normal"
+  },
+  "recommendations": [
+    "Regularly scan for vulnerabilities using automated tools",
+    "Implement proper authentication and authorization mechanisms",
+    "Conduct periodic security assessments and penetration testing",
+    "Immediately address critical and high-severity vulnerabilities",
+    "Use parameterized queries and input validation to prevent SQL injection",
+    "Implement proper input validation and output encoding to prevent XSS attacks",
+    "Keep all software and dependencies up to date with the latest security patches"
+  ]
+}

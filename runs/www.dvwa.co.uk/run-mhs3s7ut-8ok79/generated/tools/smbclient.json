@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "tool": "smbclient",
+    "status": "ran"
+  },
+  "result": {
+    "cmd": [
+      "/usr/bin/smbclient",
+      "http://www.dvwa.co.uk/"
+    ],
+    "rc": 1,
+    "stdout": "",
+    "stderr": ""
+  },
+  "parsed_findings": []
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "type": "xss-none",
+    "target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+    "used_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+    "confidence": "low",
+    "note": "marker not found",
+    "status": 200,
+    "snippet": "valid12"
+  }
+]

@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PenAI Security Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1, h2, h3 { color: #2c3e50; }
+        .header { background-color: #3498db; color: white; padding: 20px; border-radius: 5px; }
+        .summary-box { background-color: #ecf0f1; padding: 15px; margin: 20px 0; border-radius: 5px; }
+        .finding { border: 1px solid #bdc3c7; margin: 15px 0; padding: 15px; border-radius: 5px; }
+        .severity-5 { border-left: 5px solid #e74c3c; }
+        .severity-4 { border-left: 5px solid #e67e22; }
+        .severity-3 { border-left: 5px solid #f1c40f; }
+        .severity-2 { border-left: 5px solid #3498db; }
+        .severity-1 { border-left: 5px solid #95a5a6; }
+        .chart-container { text-align: center; margin: 30px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>PenAI Security Assessment Report</h1>
+        <p>Generated on: 2025-11-11 18:02:23 UTC</p>
+    </div>
+    
+    <div class="summary-box">
+        <h2>Executive Summary</h2>
+        
+        <p><strong>Risk Level:</strong> HIGH</p>
+        <p><strong>Total Vulnerabilities:</strong> 5</p>
+        
+    </div>
+    
+    <h2>Detailed Findings</h2>
+    
+    <div class="finding severity-5">
+        <h3>1. sqli</h3>
+        <p><strong>Target:</strong> https://example.com/admin/login</p>
+        <p><strong>Severity:</strong> 5/5</p>
+        <p><strong>Description:</strong> SQL Injection vulnerability in admin login form</p>
+        <p><strong>Evidence:</strong> SQL error message visible in response</p></div>
+    <div class="finding severity-4">
+        <h3>2. xss-reflected</h3>
+        <p><strong>Target:</strong> https://example.com/search?q=test</p>
+        <p><strong>Severity:</strong> 4/5</p>
+        <p><strong>Description:</strong> Reflected XSS in search functionality</p>
+        <p><strong>Evidence:</strong> <script>alert('xss')</script> executed in search results</p></div>
+    <div class="finding severity-4">
+        <h3>3. idor</h3>
+        <p><strong>Target:</strong> https://example.com/api/user/123</p>
+        <p><strong>Severity:</strong> 4/5</p>
+        <p><strong>Description:</strong> Insecure Direct Object Reference in user API</p>
+        <p><strong>Evidence:</strong> Able to access user data without authorization</p></div>
+    <div class="finding severity-5">
+        <h3>4. auth-bypass</h3>
+        <p><strong>Target:</strong> https://example.com/admin/dashboard</p>
+        <p><strong>Severity:</strong> 5/5</p>
+        <p><strong>Description:</strong> Authentication Bypass in admin area</p>
+        <p><strong>Evidence:</strong> Admin dashboard accessible without authentication</p></div>
+    <div class="finding severity-4">
+        <h3>5. ssrf</h3>
+        <p><strong>Target:</strong> https://example.com/api/fetch?url=http://internal</p>
+        <p><strong>Severity:</strong> 4/5</p>
+        <p><strong>Description:</strong> Server-Side Request Forgery in fetch API</p>
+        <p><strong>Evidence:</strong> Internal service metadata accessible through API</p></div><h2>Remediation Guidance</h2>
+    <div class="finding">
+        <h3>sqli</h3>
+        <p><strong>Severity:</strong> 5</p>
+        <p><strong>Description:</strong> SQL Injection vulnerability</p>
+        <p><strong>Remediation Steps:</strong></p>
+        <ul>
+        <li>Use parameterized queries</li><li>Implement input validation</li></ul></div>
+</body>
+</html>
+        

@@ -1,0 +1,2604 @@
+Final report
+Meta:
+{
+  "passive": {
+    "https://testphp.vulnweb.com": {
+      "status": 200,
+      "title": "Home of Acunetix Art",
+      "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>Home of Acunetix Art</title>\n<!-- Insta",
+      "used_url": "http://testphp.vulnweb.com/"
+    }
+  },
+  "active": {
+    "https://testphp.vulnweb.com": {
+      "status": 200,
+      "headers": {
+        "server": "nginx/1.19.0",
+        "date": "Sun, 26 Oct 2025 13:01:31 GMT",
+        "content-type": "text/html; charset=UTF-8",
+        "connection": "keep-alive",
+        "x-powered-by": "PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1",
+        "content-encoding": "gzip"
+      },
+      "used_url": "http://testphp.vulnweb.com/"
+    },
+    "ports": {
+      "testphp.vulnweb.com": {
+        "80": true,
+        "443": false,
+        "8080": false,
+        "8000": false,
+        "22": false,
+        "21": false
+      }
+    }
+  },
+  "crawl_count": 18,
+  "fingerprint": {
+    "https://testphp.vulnweb.com": {
+      "used_url": "http://testphp.vulnweb.com/",
+      "status": 200,
+      "headers": {
+        "server": "nginx/1.19.0",
+        "x-powered-by": "PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1"
+      },
+      "versions": [
+        [
+          "nginx",
+          "1.19.0"
+        ]
+      ]
+    }
+  },
+  "pocs_summary": {
+    "count": 4
+  },
+  "pocs_file": "reports/pocs.json"
+}
+Findings:
+{
+  "type": "xss-none",
+  "target": "https://testphp.vulnweb.com",
+  "used_url": "http://testphp.vulnweb.com/",
+  "confidence": "low",
+  "note": "marker not found",
+  "status": 200,
+  "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-error",
+  "target": "https://testphp.vulnweb.com",
+  "error": "ConnectTimeout('')",
+  "used_url": "http://testphp.vulnweb.com/",
+  "severity": 4,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-none",
+  "target": "http://testphp.vulnweb.com/search.php?test=query",
+  "used_url": "http://testphp.vulnweb.com/search.php?test=query",
+  "confidence": "low",
+  "note": "marker not found",
+  "status": 200,
+  "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-none",
+  "target": "http://testphp.vulnweb.com/search.php?test=query",
+  "used_url": "http://testphp.vulnweb.com/search.php?test=query",
+  "confidence": "low",
+  "status": 200,
+  "note": "no error signatures",
+  "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-none",
+  "target": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+  "used_url": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+  "confidence": "low",
+  "note": "marker not found",
+  "status": 200,
+  "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-none",
+  "target": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+  "used_url": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+  "confidence": "low",
+  "status": 200,
+  "note": "no error signatures",
+  "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-none",
+  "target": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+  "used_url": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+  "confidence": "low",
+  "note": "marker not found",
+  "status": 200,
+  "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-none",
+  "target": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+  "used_url": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+  "confidence": "low",
+  "status": 200,
+  "note": "no error signatures",
+  "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-none",
+  "target": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+  "used_url": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+  "confidence": "low",
+  "note": "marker not found",
+  "status": 200,
+  "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-none",
+  "target": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+  "used_url": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+  "confidence": "low",
+  "status": 200,
+  "note": "no error signatures",
+  "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-none",
+  "target": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+  "used_url": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+  "confidence": "low",
+  "note": "marker not found",
+  "status": 200,
+  "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-none",
+  "target": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+  "used_url": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+  "confidence": "low",
+  "status": 200,
+  "note": "no error signatures",
+  "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-none",
+  "target": "http://testphp.vulnweb.com/artists.php?artist=1",
+  "used_url": "http://testphp.vulnweb.com/artists.php?artist=1",
+  "confidence": "low",
+  "note": "marker not found",
+  "status": 200,
+  "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-none",
+  "target": "http://testphp.vulnweb.com/artists.php?artist=1",
+  "used_url": "http://testphp.vulnweb.com/artists.php?artist=1",
+  "confidence": "low",
+  "status": 200,
+  "note": "no error signatures",
+  "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-none",
+  "target": "http://testphp.vulnweb.com/artists.php?artist=2",
+  "used_url": "http://testphp.vulnweb.com/artists.php?artist=2",
+  "confidence": "low",
+  "note": "marker not found",
+  "status": 200,
+  "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-none",
+  "target": "http://testphp.vulnweb.com/artists.php?artist=2",
+  "used_url": "http://testphp.vulnweb.com/artists.php?artist=2",
+  "confidence": "low",
+  "status": 200,
+  "note": "no error signatures",
+  "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-none",
+  "target": "http://testphp.vulnweb.com/artists.php?artist=3",
+  "used_url": "http://testphp.vulnweb.com/artists.php?artist=3",
+  "confidence": "low",
+  "note": "marker not found",
+  "status": 200,
+  "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-none",
+  "target": "http://testphp.vulnweb.com/artists.php?artist=3",
+  "used_url": "http://testphp.vulnweb.com/artists.php?artist=3",
+  "confidence": "low",
+  "status": 200,
+  "note": "no error signatures",
+  "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-none",
+  "target": "http://testphp.vulnweb.com/guestbook.php",
+  "used_url": "http://testphp.vulnweb.com/guestbook.php",
+  "confidence": "low",
+  "note": "marker not found",
+  "status": 200,
+  "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-none",
+  "target": "http://testphp.vulnweb.com/guestbook.php",
+  "used_url": "http://testphp.vulnweb.com/guestbook.php",
+  "confidence": "low",
+  "status": 200,
+  "note": "no error signatures",
+  "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-none",
+  "target": "http://testphp.vulnweb.com/userinfo.php",
+  "used_url": "http://testphp.vulnweb.com/userinfo.php",
+  "confidence": "low",
+  "note": "marker not found",
+  "status": 302,
+  "snippet": "you must login",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-none",
+  "target": "http://testphp.vulnweb.com/userinfo.php",
+  "used_url": "http://testphp.vulnweb.com/userinfo.php",
+  "confidence": "low",
+  "status": 302,
+  "note": "no error signatures",
+  "snippet": "you must login",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-none",
+  "target": "http://testphp.vulnweb.com/hpp/?pp=12",
+  "used_url": "http://testphp.vulnweb.com/hpp/?pp=12",
+  "confidence": "low",
+  "note": "marker not found",
+  "status": 200,
+  "snippet": "<title>HTTP Parameter Pollution Example</title>\r\n\r\n<a href=\"?pp=12\">check</a><br/>\r\n<a href=\"params.php?p=valid&pp=12\">link1</a><br/><a href=\"params.php?p=valid&pp=12\">link2</a><br/><form action=\"params.php?p=valid&pp=12\"><input type=submit name=aaaa/></form><br/>\r\n<hr>\r\n<a href='http://blog.mindeds",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-none",
+  "target": "http://testphp.vulnweb.com/hpp/?pp=12",
+  "used_url": "http://testphp.vulnweb.com/hpp/?pp=12",
+  "confidence": "low",
+  "status": 200,
+  "note": "no error signatures",
+  "snippet": "<title>http parameter pollution example</title>\r\n\r\n<a href=\"?pp=12\">check</a><br/>\r\n<a href=\"params.php?p=valid&pp=12\">link1</a><br/><a href=\"params.php?p=valid&pp=12\">link2</a><br/><form action=\"params.php?p=valid&pp=12\"><input type=submit name=aaaa/></form><br/>\r\n<hr>\r\n<a href='http://blog.mindeds",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-none",
+  "target": "http://testphp.vulnweb.com/secured/newuser.php",
+  "used_url": "http://testphp.vulnweb.com/secured/newuser.php",
+  "confidence": "low",
+  "note": "marker not found",
+  "status": 200,
+  "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<title>add new user</title>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">\r\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\">\r\n</head>\r\n<body>\r\n<d",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-none",
+  "target": "http://testphp.vulnweb.com/secured/newuser.php",
+  "used_url": "http://testphp.vulnweb.com/secured/newuser.php",
+  "confidence": "low",
+  "status": 200,
+  "note": "no error signatures",
+  "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\" \"http://www.w3.org/tr/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<title>add new user</title>\r\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-1\">\r\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\">\r\n</head>\r\n<body>\r\n<d",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-none",
+  "target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+  "used_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+  "confidence": "low",
+  "note": "marker not found",
+  "status": 200,
+  "snippet": "valid12",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-none",
+  "target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+  "used_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+  "confidence": "low",
+  "status": 200,
+  "note": "no error signatures",
+  "snippet": "valid12",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-none",
+  "target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+  "used_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+  "confidence": "low",
+  "note": "marker not found",
+  "status": 200,
+  "snippet": "valid12",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-none",
+  "target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+  "used_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+  "confidence": "low",
+  "status": 200,
+  "note": "no error signatures",
+  "snippet": "valid12",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-none",
+  "target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+  "used_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+  "confidence": "low",
+  "note": "marker not found",
+  "status": 200,
+  "snippet": "valid12",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-none",
+  "target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+  "used_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+  "confidence": "low",
+  "status": 200,
+  "note": "no error signatures",
+  "snippet": "valid12",
+  "severity": 2,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-reflected",
+  "target": "http://testphp.vulnweb.com/search.php?test=query",
+  "param": "searchFor",
+  "payload": "<script>penai_xss</script>",
+  "method": "post",
+  "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+  "confidence": "high",
+  "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- InstanceEndEditable",
+  "severity": 4,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-error",
+  "target": "http://testphp.vulnweb.com/search.php?test=query",
+  "param": "searchFor",
+  "payload": "' OR '1'='1' -- ",
+  "method": "post",
+  "evidence": "SQL syntax",
+  "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+  "confidence": "high",
+  "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- instancebegineditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- instanceendeditable",
+  "severity": 5,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-error",
+  "target": "http://testphp.vulnweb.com/search.php?test=query",
+  "param": "searchFor",
+  "payload": "'; DROP TABLE users; --",
+  "method": "post",
+  "evidence": "SQL syntax",
+  "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+  "confidence": "high",
+  "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- instancebegineditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- instanceendeditable",
+  "severity": 5,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-error",
+  "target": "http://testphp.vulnweb.com/search.php?test=query",
+  "param": "searchFor",
+  "payload": "1' OR '1'='1' /*",
+  "method": "post",
+  "evidence": "SQL syntax",
+  "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+  "confidence": "high",
+  "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- instancebegineditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- instanceendeditable",
+  "severity": 5,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-reflected",
+  "target": "http://testphp.vulnweb.com/search.php?test=query",
+  "method": "post",
+  "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+  "confidence": "high",
+  "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- InstanceEndEditable",
+  "severity": 4,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-reflected",
+  "target": "http://testphp.vulnweb.com/guestbook.php",
+  "param": "name",
+  "payload": "<script>penai_xss</script>",
+  "method": "post",
+  "proof_used_url": "http://testphp.vulnweb.com/guestbook.php",
+  "confidence": "high",
+  "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>guestbook</title>\n<!-- InstanceEndEdita",
+  "severity": 4,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-reflected",
+  "target": "http://testphp.vulnweb.com/guestbook.php",
+  "param": "text",
+  "payload": "<script>penai_xss</script>",
+  "method": "post",
+  "proof_used_url": "http://testphp.vulnweb.com/guestbook.php",
+  "confidence": "high",
+  "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>guestbook</title>\n<!-- InstanceEndEdita",
+  "severity": 4,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-reflected",
+  "target": "http://testphp.vulnweb.com/guestbook.php",
+  "method": "post",
+  "proof_used_url": "http://testphp.vulnweb.com/guestbook.php",
+  "confidence": "high",
+  "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>guestbook</title>\n<!-- InstanceEndEdita",
+  "severity": 4,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "xss-reflected",
+  "target": "http://testphp.vulnweb.com/secured/newuser.php",
+  "method": "post",
+  "proof_used_url": "http://testphp.vulnweb.com/secured/newuser.php",
+  "confidence": "high",
+  "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<title>add new user</title>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">\r\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\">\r\n</head>\r\n<body>\r\n<div id=\"masthead\"> \r\n  <h1 id=\"siteName\">ACUNETIX ART</h1> \r\n</div>\r\n<div id=\"content\">\r\n\t<p>You have",
+  "severity": 4,
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "sqli-error",
+  "target": "http://testphp.vulnweb.com/secured/newuser.php",
+  "method": "post",
+  "evidence": "SQL syntax",
+  "proof_used_url": "http://testphp.vulnweb.com/secured/newuser.php",
+  "confidence": "high",
+  "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\" \"http://www.w3.org/tr/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<title>add new user</title>\r\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-1\">\r\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\">\r\n</head>\r\n<body>\r\n<div id=\"masthead\"> \r\n  <h1 id=\"sitename\">acunetix art</h1> \r\n</div>\r\n<div id=\"content\">\r\n\tunable to a",
+  "severity": 5,
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "external-tool-__init__",
+  "target": "<unknown>",
+  "severity": 2,
+  "evidence": "null",
+  "source": {
+    "tool": "__init__",
+    "file": "generated/tools/__init__.json"
+  },
+  "raw_tool_output": null,
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-adapter_base",
+  "target": "<unknown>",
+  "severity": 2,
+  "evidence": "null",
+  "source": {
+    "tool": "adapter_base",
+    "file": "generated/tools/adapter_base.json"
+  },
+  "raw_tool_output": null,
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-amass",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"amass\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for amass\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "amass",
+    "file": "generated/tools/amass.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "amass",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for amass"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-arachni",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"arachni\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for arachni\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "arachni",
+    "file": "generated/tools/arachni.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "arachni",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for arachni"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-boofuzz",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"boofuzz\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for boofuzz\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "boofuzz",
+    "file": "generated/tools/boofuzz.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "boofuzz",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for boofuzz"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-certspotter",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"certspotter\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for certspotter\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "certspotter",
+    "file": "generated/tools/certspotter.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "certspotter",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for certspotter"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-commix",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"status\": \"skipped_by_safety\", \"tool\": \"commix\"}",
+  "source": {
+    "tool": "commix",
+    "file": "generated/tools/commix.json"
+  },
+  "raw_tool_output": {
+    "status": "skipped_by_safety",
+    "tool": "commix"
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-create_proof",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"status\": \"error\", \"tool\": \"create_proof\", \"error\": \"main() takes 0 positional arguments but 2 were given\"}",
+  "source": {
+    "tool": "create_proof",
+    "file": "generated/tools/create_proof.json"
+  },
+  "raw_tool_output": {
+    "status": "error",
+    "tool": "create_proof",
+    "error": "main() takes 0 positional arguments but 2 were given"
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-crtsh",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"crtsh\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for crtsh\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "crtsh",
+    "file": "generated/tools/crtsh.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "crtsh",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for crtsh"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-dalfox",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"dalfox\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for dalfox\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "dalfox",
+    "file": "generated/tools/dalfox.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "dalfox",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for dalfox"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-dirb",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"dirb\", \"status\": \"timeout\"}, \"result\": {\"cmd\": [\"/usr/bin/dirb\", \"https://testphp.vulnweb.com\"], \"rc\": null, \"stderr\": \"timeout\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "dirb",
+    "file": "generated/tools/dirb.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "dirb",
+      "status": "timeout"
+    },
+    "result": {
+      "cmd": [
+        "/usr/bin/dirb",
+        "https://testphp.vulnweb.com"
+      ],
+      "rc": null,
+      "stderr": "timeout"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-enum4linux",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"enum4linux\", \"status\": \"ran\"}, \"result\": {\"cmd\": [\"/usr/bin/enum4linux\", \"https://testphp.vulnweb.com\"], \"rc\": 1, \"stdout\": \"ERROR: Target hostname \\\"https://testphp.vulnweb.com\\\" contains some illegal characters\\n\", \"stderr\": \"\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "enum4linux",
+    "file": "generated/tools/enum4linux.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "enum4linux",
+      "status": "ran"
+    },
+    "result": {
+      "cmd": [
+        "/usr/bin/enum4linux",
+        "https://testphp.vulnweb.com"
+      ],
+      "rc": 1,
+      "stdout": "ERROR: Target hostname \"https://testphp.vulnweb.com\" contains some illegal characters\n",
+      "stderr": ""
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-ffuf",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"ffuf\", \"status\": \"ran\"}, \"result\": {\"cmd\": [\"/usr/bin/ffuf\", \"https://testphp.vulnweb.com\"], \"rc\": 1, \"stdout\": \"Fuzz Faster U Fool - v2.1.0-dev\\n\\nHTTP OPTIONS:\\n  -H                  Header `\\\"Name: Value\\\"`, separated by colon. Multiple -H flags are accepted.\\n  -X                  HTTP method to use\\n  -b                  Cookie data `\\\"NAME1=VALUE1; NAME2=VALUE2\\\"` for copy as curl functionality.\\n  -cc                 Client cert for authentication. Client key needs to be defined as well for this to work\\n  -ck                 Client key for authentication. Client certificate needs to be defined as well for this to work\\n  -d                  POST data\\n  -http2              Use HTTP2 protocol (default: false)\\n  -ignore-body        Do not fetch the response content. (default: false)\\n  -r                  Follow redirects (default: false)\\n  -raw                Do not encode URI (default: false)\\n  -recursion          Scan recursively. Only FUZZ keyword is supported, and URL (-u) has to end in it. (default: false)\\n  -recursion-depth    Maximum recursion depth. (default: 0)\\n  -recursion-strategy Recursion strategy: \\\"default\\\" for a redirect based, and \\\"greedy\\\" to recurse on all matches (default: default)\\n  -replay-proxy       Replay matched requests using this proxy.\\n  -sni                Target TLS SNI, does not support FUZZ keyword\\n  -timeout            HTTP request timeout in seconds. (default: 10)\\n  -u                  Target URL\\n  -x   ",
+  "source": {
+    "tool": "ffuf",
+    "file": "generated/tools/ffuf.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "ffuf",
+      "status": "ran"
+    },
+    "result": {
+      "cmd": [
+        "/usr/bin/ffuf",
+        "https://testphp.vulnweb.com"
+      ],
+      "rc": 1,
+      "stdout": "Fuzz Faster U Fool - v2.1.0-dev\n\nHTTP OPTIONS:\n  -H                  Header `\"Name: Value\"`, separated by colon. Multiple -H flags are accepted.\n  -X                  HTTP method to use\n  -b                  Cookie data `\"NAME1=VALUE1; NAME2=VALUE2\"` for copy as curl functionality.\n  -cc                 Client cert for authentication. Client key needs to be defined as well for this to work\n  -ck                 Client key for authentication. Client certificate needs to be defined as well for this to work\n  -d                  POST data\n  -http2              Use HTTP2 protocol (default: false)\n  -ignore-body        Do not fetch the response content. (default: false)\n  -r                  Follow redirects (default: false)\n  -raw                Do not encode URI (default: false)\n  -recursion          Scan recursively. Only FUZZ keyword is supported, and URL (-u) has to end in it. (default: false)\n  -recursion-depth    Maximum recursion depth. (default: 0)\n  -recursion-strategy Recursion strategy: \"default\" for a redirect based, and \"greedy\" to recurse on all matches (default: default)\n  -replay-proxy       Replay matched requests using this proxy.\n  -sni                Target TLS SNI, does not support FUZZ keyword\n  -timeout            HTTP request timeout in seconds. (default: 10)\n  -u                  Target URL\n  -x                  Proxy URL (SOCKS5 or HTTP). For example: http://127.0.0.1:8080 or socks5://127.0.0.1:8080\n\nGENERAL OPTIONS:\n  -V                  Show version information. (default: false)\n  -ac                 Automatically calibrate filtering options (default: false)\n  -acc                Custom auto-calibration string. Can be used multiple times. Implies -ac\n  -ach                Per host autocalibration (default: false)\n  -ack                Autocalibration keyword (default: FUZZ)\n  -acs                Custom auto-calibration strategies. Can be used multiple times. Implies -ac\n  -c                  Colorize output. (default: false)\n  -config             Load configuration from a file\n  -json               JSON output, printing newline-delimited JSON records (default: false)\n  -maxtime            Maximum running time in seconds for entire process. (default: 0)\n  -maxtime-job        Maximum running time in seconds per job. (default: 0)\n  -noninteractive     Disable the interactive console functionality (default: false)\n  -p                  Seconds of `delay` between requests, or a range of random delay. For example \"0.1\" or \"0.1-2.0\"\n  -rate               Rate of requests per second (default: 0)\n  -s                  Do not print additional information (silent mode) (default: false)\n  -sa                 Stop on all error cases. Implies -sf and -se. (default: false)\n  -scraperfile        Custom scraper file path\n  -scrapers           Active scraper groups (default: all)\n  -se                 Stop on spurious errors (default: false)\n  -search             Search for a FFUFHASH payload from ffuf history\n  -sf                 Stop when > 95% of responses return 403 Forbidden (default: false)\n  -t                  Number of concurrent threads. (default: 40)\n  -v                  Verbose output, printing full URL and redirect location (if any) with the results. (default: false)\n\nMATCHER OPTIONS:\n  -mc                 Match HTTP status codes, or \"all\" for everything. (default: 200-299,301,302,307,401,403,405,500)\n  -ml                 Match amount of lines in response\n  -mmode              Matcher set operator. Either of: and, or (default: or)\n  -mr                 Match regexp\n  -ms                 Match HTTP response size\n  -mt                 Match how many milliseconds to the first response byte, either greater or less than. EG: >100 or <100\n  -mw                 Match amount of words in response\n\nFILTER OPTIONS:\n  -fc                 Filter HTTP status codes from response. Comma separated list of codes and ranges\n  -fl                 Filter by amount of lines in response. Comma separated list of line counts and ranges\n  -fmode              Filter set operator. Either of: and, or (default: or)\n  -fr                 Filter regexp\n  -fs                 Filter HTTP response size. Comma separated list of sizes and ranges\n  -ft                 Filter by number of milliseconds to the first response byte, either greater or less than. EG: >100 or <100\n  -fw                 Filter by amount of words in response. Comma separated list of word counts and ranges\n\nINPUT OPTIONS:\n  -D                  DirSearch wordlist compatibility mode. Used in conjunction with -e flag. (default: false)\n  -e                  Comma separated list of extensions. Extends FUZZ keyword.\n  -enc                Encoders for keywords, eg. 'FUZZ:urlencode b64encode'\n  -ic                 Ignore wordlist comments (default: false)\n  -input-cmd          Command producing the input. --input-num is required when using this input method. Overrides -w.\n  -input-num          Number of inputs to test. Used in conjunction with --input-cmd. (default: 100)\n  -input-shell        Shell to be used for running command\n  -mode               Multi-wordlist operation mode. Available modes: clusterbomb, pitchfork, sniper (default: clusterbomb)\n  -request            File containing the raw http request\n  -request-proto      Protocol to use along with raw request (default: https)\n  -w                  Wordlist file path and (optional) keyword separated by colon. eg. '/path/to/wordlist:KEYWORD'\n\nOUTPUT OPTIONS:\n  -debug-log          Write all of the internal logging to the specified file.\n  -o                  Write output to file\n  -od                 Directory path to store matched results to.\n  -of                 Output file format. Available formats: json, ejson, html, md, csv, ecsv (or, 'all' for all formats) (default: json)\n  -or                 Don't create the output file if we don't have results (default: false)\n\nEXAMPLE USAGE:\n  Fuzz file paths from wordlist.txt, match all responses but filter out those with content-size 42.\n  Colored, verbose output.\n    ffuf -w wordlist.txt -u https://example.org/FUZZ -mc all -fs 42 -c -v\n\n  Fuzz Host-header, match HTTP 200 responses.\n    ffuf -w hosts.txt -u https://example.org/ -H \"Host: FUZZ\" -mc 200\n\n  Fuzz POST JSON data. Match all responses not containing text \"error\".\n    ffuf -w entries.txt -u https://example.org/ -X POST -H \"Content-Type: application/json\" \\\n      -d '{\"name\": \"FUZZ\", \"anotherkey\": \"anothervalue\"}' -fr \"error\"\n\n  Fuzz multiple locations. Match only responses reflecting the value of \"VAL\" keyword. Colored.\n    ffuf -w params.txt:PARAM -w values.txt:VAL -u https://example.org/?PARAM=VAL -mr \"VAL\" -c\n\n  More information and examples: https://github.com/ffuf/ffuf\n\n",
+      "stderr": "Encountered error(s): 2 errors occured.\n\t* -u flag or -request flag is required\n\t* Either -w or --input-cmd flag is required\n\nEncountered error(s): 2 errors occured.\n\t* -u flag or -request flag is required\n\t* Either -w or --input-cmd flag is required\n\n"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-gitleaks",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"gitleaks\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for gitleaks\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "gitleaks",
+    "file": "generated/tools/gitleaks.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "gitleaks",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for gitleaks"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-gitrob",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"gitrob\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for gitrob\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "gitrob",
+    "file": "generated/tools/gitrob.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "gitrob",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for gitrob"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-gobuster",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"gobuster\", \"status\": \"ran\"}, \"result\": {\"cmd\": [\"/usr/bin/gobuster\", \"https://testphp.vulnweb.com\"], \"rc\": 1, \"stdout\": \"\", \"stderr\": \"Error: unknown command \\\"https://testphp.vulnweb.com\\\" for \\\"gobuster\\\"\\nRun 'gobuster --help' for usage.\\n\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "gobuster",
+    "file": "generated/tools/gobuster.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "gobuster",
+      "status": "ran"
+    },
+    "result": {
+      "cmd": [
+        "/usr/bin/gobuster",
+        "https://testphp.vulnweb.com"
+      ],
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Error: unknown command \"https://testphp.vulnweb.com\" for \"gobuster\"\nRun 'gobuster --help' for usage.\n"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-graphql-fuzzer",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"graphql-fuzzer\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for graphql-fuzzer\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "graphql-fuzzer",
+    "file": "generated/tools/graphql-fuzzer.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "graphql-fuzzer",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for graphql-fuzzer"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-hashcat",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"status\": \"skipped_by_safety\", \"tool\": \"hashcat\"}",
+  "source": {
+    "tool": "hashcat",
+    "file": "generated/tools/hashcat.json"
+  },
+  "raw_tool_output": {
+    "status": "skipped_by_safety",
+    "tool": "hashcat"
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-httprobe",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"httprobe\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for httprobe\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "httprobe",
+    "file": "generated/tools/httprobe.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "httprobe",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for httprobe"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-hydra",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"status\": \"skipped_by_safety\", \"tool\": \"hydra\"}",
+  "source": {
+    "tool": "hydra",
+    "file": "generated/tools/hydra.json"
+  },
+  "raw_tool_output": {
+    "status": "skipped_by_safety",
+    "tool": "hydra"
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-john",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"status\": \"skipped_by_safety\", \"tool\": \"john\"}",
+  "source": {
+    "tool": "john",
+    "file": "generated/tools/john.json"
+  },
+  "raw_tool_output": {
+    "status": "skipped_by_safety",
+    "tool": "john"
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-manager",
+  "target": "<unknown>",
+  "severity": 2,
+  "evidence": "null",
+  "source": {
+    "tool": "manager",
+    "file": "generated/tools/manager.json"
+  },
+  "raw_tool_output": null,
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-masscan",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"masscan\", \"status\": \"ran\"}, \"result\": {\"cmd\": [\"/usr/bin/masscan\", \"https://testphp.vulnweb.com\"], \"rc\": 1, \"stdout\": \"\", \"stderr\": \"FAIL: unknown command-line parameter \\\"https://testphp.vulnweb.com\\\"\\n [hint] did you want \\\"--https://testphp.vulnweb.com\\\"?\\n\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "masscan",
+    "file": "generated/tools/masscan.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "masscan",
+      "status": "ran"
+    },
+    "result": {
+      "cmd": [
+        "/usr/bin/masscan",
+        "https://testphp.vulnweb.com"
+      ],
+      "rc": 1,
+      "stdout": "",
+      "stderr": "FAIL: unknown command-line parameter \"https://testphp.vulnweb.com\"\n [hint] did you want \"--https://testphp.vulnweb.com\"?\n"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-medusa",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"status\": \"skipped_by_safety\", \"tool\": \"medusa\"}",
+  "source": {
+    "tool": "medusa",
+    "file": "generated/tools/medusa.json"
+  },
+  "raw_tool_output": {
+    "status": "skipped_by_safety",
+    "tool": "medusa"
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-msfconsole",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"status\": \"skipped_by_safety\", \"tool\": \"msfconsole\"}",
+  "source": {
+    "tool": "msfconsole",
+    "file": "generated/tools/msfconsole.json"
+  },
+  "raw_tool_output": {
+    "status": "skipped_by_safety",
+    "tool": "msfconsole"
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-newman",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"newman\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for newman\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "newman",
+    "file": "generated/tools/newman.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "newman",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for newman"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-nikto_adapter",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"tool\": \"nikto\", \"status\": \"ran\", \"rc\": 0, \"findings\": [\"+ 0 host(s) tested\"], \"stdout\": \"- Nikto v2.5.0\\n---------------------------------------------------------------------------\\n---------------------------------------------------------------------------\\n+ 0 host(s) tested\\n\", \"stderr\": \"\"}",
+  "source": {
+    "tool": "nikto_adapter",
+    "file": "generated/tools/nikto_adapter.json"
+  },
+  "raw_tool_output": {
+    "tool": "nikto",
+    "status": "ran",
+    "rc": 0,
+    "findings": [
+      "+ 0 host(s) tested"
+    ],
+    "stdout": "- Nikto v2.5.0\n---------------------------------------------------------------------------\n---------------------------------------------------------------------------\n+ 0 host(s) tested\n",
+    "stderr": ""
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-nikto",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"tool\": \"nikto\", \"status\": \"ran\", \"rc\": 0, \"findings\": [\"+ 0 host(s) tested\"], \"stdout\": \"- Nikto v2.5.0\\n---------------------------------------------------------------------------\\n---------------------------------------------------------------------------\\n+ 0 host(s) tested\\n\", \"stderr\": \"\", \"output_file\": \"runs/testphp.vulnweb.com/run01/generated/tools/nikto_adapter.json\"}",
+  "source": {
+    "tool": "nikto",
+    "file": "generated/tools/nikto.json"
+  },
+  "raw_tool_output": {
+    "tool": "nikto",
+    "status": "ran",
+    "rc": 0,
+    "findings": [
+      "+ 0 host(s) tested"
+    ],
+    "stdout": "- Nikto v2.5.0\n---------------------------------------------------------------------------\n---------------------------------------------------------------------------\n+ 0 host(s) tested\n",
+    "stderr": "",
+    "output_file": "runs/testphp.vulnweb.com/run01/generated/tools/nikto_adapter.json"
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-nmap",
+  "target": "<unknown>",
+  "severity": 2,
+  "evidence": "null",
+  "source": {
+    "tool": "nmap",
+    "file": "generated/tools/nmap.json"
+  },
+  "raw_tool_output": null,
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-nuclei_adapter",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"tool\": \"nuclei\", \"status\": \"ran\", \"rc\": null, \"findings\": [], \"stdout\": \"\", \"stderr\": \"timeout\"}",
+  "source": {
+    "tool": "nuclei_adapter",
+    "file": "generated/tools/nuclei_adapter.json"
+  },
+  "raw_tool_output": {
+    "tool": "nuclei",
+    "status": "ran",
+    "rc": null,
+    "findings": [],
+    "stdout": "",
+    "stderr": "timeout"
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-nuclei",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"tool\": \"nuclei\", \"status\": \"ran\", \"rc\": null, \"findings\": [], \"stdout\": \"\", \"stderr\": \"timeout\", \"output_file\": \"runs/testphp.vulnweb.com/run01/generated/tools/nuclei_adapter.json\"}",
+  "source": {
+    "tool": "nuclei",
+    "file": "generated/tools/nuclei.json"
+  },
+  "raw_tool_output": {
+    "tool": "nuclei",
+    "status": "ran",
+    "rc": null,
+    "findings": [],
+    "stdout": "",
+    "stderr": "timeout",
+    "output_file": "runs/testphp.vulnweb.com/run01/generated/tools/nuclei_adapter.json"
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-parsers",
+  "target": "<unknown>",
+  "severity": 2,
+  "evidence": "null",
+  "source": {
+    "tool": "parsers",
+    "file": "generated/tools/parsers.json"
+  },
+  "raw_tool_output": null,
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-radamsa",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"radamsa\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for radamsa\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "radamsa",
+    "file": "generated/tools/radamsa.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "radamsa",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for radamsa"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-searchsploit",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"searchsploit\", \"status\": \"ran\"}, \"result\": {\"cmd\": [\"/usr/bin/searchsploit\", \"https://testphp.vulnweb.com\"], \"rc\": 0, \"stdout\": \"Exploits: No Results\\nShellcodes: No Results\\n\", \"stderr\": \"\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "searchsploit",
+    "file": "generated/tools/searchsploit.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "searchsploit",
+      "status": "ran"
+    },
+    "result": {
+      "cmd": [
+        "/usr/bin/searchsploit",
+        "https://testphp.vulnweb.com"
+      ],
+      "rc": 0,
+      "stdout": "Exploits: No Results\nShellcodes: No Results\n",
+      "stderr": ""
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-smbclient",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"smbclient\", \"status\": \"ran\"}, \"result\": {\"cmd\": [\"/usr/bin/smbclient\", \"https://testphp.vulnweb.com\"], \"rc\": 1, \"stdout\": \"\\nhttps:\\\\\\\\testphp.vulnweb.com: Not enough '\\\\' characters in service\\n\", \"stderr\": \"Usage: smbclient [-?EgqBNPkV] [-?|--help] [--usage] [-M|--message=HOST]\\n        [-I|--ip-address=IP] [-E|--stderr] [-L|--list=HOST]\\n        [-T|--tar=<c|x>IXFvgbNan] [-D|--directory=DIR] [-c|--command=STRING]\\n        [-b|--send-buffer=BYTES] [-t|--timeout=SECONDS] [-p|--port=PORT]\\n        [-g|--grepable] [-q|--quiet] [-B|--browse]\\n        [-d|--debuglevel=DEBUGLEVEL] [--debug-stdout]\\n        [-s|--configfile=CONFIGFILE] [--option=name=value]\\n        [-l|--log-basename=LOGFILEBASE] [--leak-report] [--leak-report-full]\\n        [-R|--name-resolve=NAME-RESOLVE-ORDER]\\n        [-O|--socket-options=SOCKETOPTIONS] [-m|--max-protocol=MAXPROTOCOL]\\n        [-n|--netbiosname=NETBIOSNAME] [--netbios-scope=SCOPE]\\n        [-W|--workgroup=WORKGROUP] [--realm=REALM]\\n        [-U|--user=[DOMAIN/]USERNAME[%PASSWORD]] [-N|--no-pass]\\n        [--password=STRING] [--pw-nt-hash] [-A|--authentication-file=FILE]\\n        [-P|--machine-pass] [--simple-bind-dn=DN]\\n        [--use-kerberos=desired|required|off] [--use-krb5-ccache=CCACHE]\\n        [--use-winbind-ccache] [--client-protection=sign|encrypt|off]\\n        [-k|--kerberos] [-V|--version] [OPTIONS] service <password>\\n\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "smbclient",
+    "file": "generated/tools/smbclient.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "smbclient",
+      "status": "ran"
+    },
+    "result": {
+      "cmd": [
+        "/usr/bin/smbclient",
+        "https://testphp.vulnweb.com"
+      ],
+      "rc": 1,
+      "stdout": "\nhttps:\\\\testphp.vulnweb.com: Not enough '\\' characters in service\n",
+      "stderr": "Usage: smbclient [-?EgqBNPkV] [-?|--help] [--usage] [-M|--message=HOST]\n        [-I|--ip-address=IP] [-E|--stderr] [-L|--list=HOST]\n        [-T|--tar=<c|x>IXFvgbNan] [-D|--directory=DIR] [-c|--command=STRING]\n        [-b|--send-buffer=BYTES] [-t|--timeout=SECONDS] [-p|--port=PORT]\n        [-g|--grepable] [-q|--quiet] [-B|--browse]\n        [-d|--debuglevel=DEBUGLEVEL] [--debug-stdout]\n        [-s|--configfile=CONFIGFILE] [--option=name=value]\n        [-l|--log-basename=LOGFILEBASE] [--leak-report] [--leak-report-full]\n        [-R|--name-resolve=NAME-RESOLVE-ORDER]\n        [-O|--socket-options=SOCKETOPTIONS] [-m|--max-protocol=MAXPROTOCOL]\n        [-n|--netbiosname=NETBIOSNAME] [--netbios-scope=SCOPE]\n        [-W|--workgroup=WORKGROUP] [--realm=REALM]\n        [-U|--user=[DOMAIN/]USERNAME[%PASSWORD]] [-N|--no-pass]\n        [--password=STRING] [--pw-nt-hash] [-A|--authentication-file=FILE]\n        [-P|--machine-pass] [--simple-bind-dn=DN]\n        [--use-kerberos=desired|required|off] [--use-krb5-ccache=CCACHE]\n        [--use-winbind-ccache] [--client-protection=sign|encrypt|off]\n        [-k|--kerberos] [-V|--version] [OPTIONS] service <password>\n"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-smtp-user-enum",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"smtp-user-enum\", \"status\": \"ran\"}, \"result\": {\"cmd\": [\"/usr/bin/smtp-user-enum\", \"https://testphp.vulnweb.com\"], \"rc\": 1, \"stdout\": \"smtp-user-enum v1.2 ( http://pentestmonkey.net/tools/smtp-user-enum )\\n\\nUsage: smtp-user-enum [options] ( -u username | -U file-of-usernames ) ( -t host | -T file-of-targets )\\n\\noptions are:\\n        -m n     Maximum number of processes (default: 5)\\n\\t-M mode  Method to use for username guessing EXPN, VRFY or RCPT (default: VRFY)\\n\\t-u user  Check if user exists on remote system\\n\\t-f addr  MAIL FROM email address.  Used only in \\\"RCPT TO\\\" mode (default: user@example.com)\\n        -D dom   Domain to append to supplied user list to make email addresses (Default: none)\\n                 Use this option when you want to guess valid email addresses instead of just usernames\\n                 e.g. \\\"-D example.com\\\" would guess foo@example.com, bar@example.com, etc.  Instead of \\n                      simply the usernames foo and bar.\\n\\t-U file  File of usernames to check via smtp service\\n\\t-t host  Server host running smtp service\\n\\t-T file  File of hostnames running the smtp service\\n\\t-p port  TCP port on which smtp service runs (default: 25)\\n\\t-d       Debugging output\\n\\t-w n     Wait a maximum of n seconds for reply (default: 5)\\n\\t-v       Verbose\\n\\t-h       This help message\\n\\nAlso see smtp-user-enum-user-docs.pdf from the smtp-user-enum tar ball.\\n\\nExamples:\\n\\n$ smtp-user-enum -M VRFY -U users.txt -t 10.0.0.1\\n",
+  "source": {
+    "tool": "smtp-user-enum",
+    "file": "generated/tools/smtp-user-enum.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "smtp-user-enum",
+      "status": "ran"
+    },
+    "result": {
+      "cmd": [
+        "/usr/bin/smtp-user-enum",
+        "https://testphp.vulnweb.com"
+      ],
+      "rc": 1,
+      "stdout": "smtp-user-enum v1.2 ( http://pentestmonkey.net/tools/smtp-user-enum )\n\nUsage: smtp-user-enum [options] ( -u username | -U file-of-usernames ) ( -t host | -T file-of-targets )\n\noptions are:\n        -m n     Maximum number of processes (default: 5)\n\t-M mode  Method to use for username guessing EXPN, VRFY or RCPT (default: VRFY)\n\t-u user  Check if user exists on remote system\n\t-f addr  MAIL FROM email address.  Used only in \"RCPT TO\" mode (default: user@example.com)\n        -D dom   Domain to append to supplied user list to make email addresses (Default: none)\n                 Use this option when you want to guess valid email addresses instead of just usernames\n                 e.g. \"-D example.com\" would guess foo@example.com, bar@example.com, etc.  Instead of \n                      simply the usernames foo and bar.\n\t-U file  File of usernames to check via smtp service\n\t-t host  Server host running smtp service\n\t-T file  File of hostnames running the smtp service\n\t-p port  TCP port on which smtp service runs (default: 25)\n\t-d       Debugging output\n\t-w n     Wait a maximum of n seconds for reply (default: 5)\n\t-v       Verbose\n\t-h       This help message\n\nAlso see smtp-user-enum-user-docs.pdf from the smtp-user-enum tar ball.\n\nExamples:\n\n$ smtp-user-enum -M VRFY -U users.txt -t 10.0.0.1\n$ smtp-user-enum -M EXPN -u admin1 -t 10.0.0.1\n$ smtp-user-enum -M RCPT -U users.txt -T mail-server-ips.txt\n$ smtp-user-enum -M EXPN -D example.com -U users.txt -t 10.0.0.1\n\n",
+      "stderr": ""
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-sqlmap",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"status\": \"skipped_by_safety\", \"tool\": \"sqlmap\"}",
+  "source": {
+    "tool": "sqlmap",
+    "file": "generated/tools/sqlmap.json"
+  },
+  "raw_tool_output": {
+    "status": "skipped_by_safety",
+    "tool": "sqlmap"
+  },
+  "ai": {
+    "vuln_type": "sqli",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "sqli",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "external-tool-sslyze",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"sslyze\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for sslyze\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "sslyze",
+    "file": "generated/tools/sslyze.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "sslyze",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for sslyze"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-subfinder",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"subfinder\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for subfinder\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "subfinder",
+    "file": "generated/tools/subfinder.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "subfinder",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for subfinder"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-trufflehog",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"trufflehog\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for trufflehog\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "trufflehog",
+    "file": "generated/tools/trufflehog.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "trufflehog",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for trufflehog"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-unicornscan",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"unicornscan\", \"status\": \"ran\"}, \"result\": {\"cmd\": [\"/usr/bin/unicornscan\", \"https://testphp.vulnweb.com\"], \"rc\": 0, \"stdout\": \"what host(s) should i scan?, ive got nothing to do\\n\", \"stderr\": \"Main [Error   cidr.c:263] dns lookup fails for `https': Unknown host\\nMain [Error   getconfig.c:434] cant add workunit for argument `https://testphp.vulnweb.com': dont understand address `//testphp.vulnweb.com'\\n\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "unicornscan",
+    "file": "generated/tools/unicornscan.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "unicornscan",
+      "status": "ran"
+    },
+    "result": {
+      "cmd": [
+        "/usr/bin/unicornscan",
+        "https://testphp.vulnweb.com"
+      ],
+      "rc": 0,
+      "stdout": "what host(s) should i scan?, ive got nothing to do\n",
+      "stderr": "Main [Error   cidr.c:263] dns lookup fails for `https': Unknown host\nMain [Error   getconfig.c:434] cant add workunit for argument `https://testphp.vulnweb.com': dont understand address `//testphp.vulnweb.com'\n"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-w3af",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"w3af\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for w3af\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "w3af",
+    "file": "generated/tools/w3af.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "w3af",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for w3af"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-wapiti",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"status\": \"error\", \"tool\": \"wapiti\", \"error\": \"[Errno 2] No such file or directory: 'wapiti'\"}",
+  "source": {
+    "tool": "wapiti",
+    "file": "generated/tools/wapiti.json"
+  },
+  "raw_tool_output": {
+    "status": "error",
+    "tool": "wapiti",
+    "error": "[Errno 2] No such file or directory: 'wapiti'"
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-wappalyzer",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"wappalyzer\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for wappalyzer\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "wappalyzer",
+    "file": "generated/tools/wappalyzer.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "wappalyzer",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for wappalyzer"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-wfuzz",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"wfuzz\", \"status\": \"ran\"}, \"result\": {\"cmd\": [\"/usr/bin/wfuzz\", \"https://testphp.vulnweb.com\"], \"rc\": 0, \"stdout\": \"\", \"stderr\": \" /usr/lib/python3/dist-packages/wfuzz/__init__.py:34: UserWarning:Pycurl is not compiled against Openssl. Wfuzz might not work correctly when fuzzing SSL sites. Check Wfuzz's documentation for more information.\\n /usr/lib/python3/dist-packages/wfuzz/wfuzz.py:78: UserWarning:Fatal exception: Bad usage: You must specify a payload.\\n\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "wfuzz",
+    "file": "generated/tools/wfuzz.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "wfuzz",
+      "status": "ran"
+    },
+    "result": {
+      "cmd": [
+        "/usr/bin/wfuzz",
+        "https://testphp.vulnweb.com"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": " /usr/lib/python3/dist-packages/wfuzz/__init__.py:34: UserWarning:Pycurl is not compiled against Openssl. Wfuzz might not work correctly when fuzzing SSL sites. Check Wfuzz's documentation for more information.\n /usr/lib/python3/dist-packages/wfuzz/wfuzz.py:78: UserWarning:Fatal exception: Bad usage: You must specify a payload.\n"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-whatweb",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"whatweb\", \"status\": \"ran\"}, \"result\": {\"cmd\": [\"/usr/bin/whatweb\", \"https://testphp.vulnweb.com\"], \"rc\": 0, \"stdout\": \"\", \"stderr\": \"\\u001b[1m\\u001b[31mERROR Opening: https://testphp.vulnweb.com - execution expired\\u001b[0m\\n\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "whatweb",
+    "file": "generated/tools/whatweb.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "whatweb",
+      "status": "ran"
+    },
+    "result": {
+      "cmd": [
+        "/usr/bin/whatweb",
+        "https://testphp.vulnweb.com"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": "\u001b[1m\u001b[31mERROR Opening: https://testphp.vulnweb.com - execution expired\u001b[0m\n"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-wpscan",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"status\": \"skipped_by_safety\", \"tool\": \"wpscan\"}",
+  "source": {
+    "tool": "wpscan",
+    "file": "generated/tools/wpscan.json"
+  },
+  "raw_tool_output": {
+    "status": "skipped_by_safety",
+    "tool": "wpscan"
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+
+{
+  "type": "external-tool-xsstrike",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"xsstrike\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for xsstrike\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "xsstrike",
+    "file": "generated/tools/xsstrike.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "xsstrike",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for xsstrike"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "xss",
+    "confidence": 0.5,
+    "explanation": "heuristic"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "xss",
+      "confidence": 0.5,
+      "explanation": "heuristic"
+    }
+  }
+}
+
+{
+  "type": "external-tool-zmap",
+  "target": null,
+  "severity": 2,
+  "evidence": "{\"meta\": {\"tool\": \"zmap\", \"status\": \"mocked_no_binary\"}, \"result\": {\"stdout\": \"mock output for zmap\"}, \"parsed_findings\": []}",
+  "source": {
+    "tool": "zmap",
+    "file": "generated/tools/zmap.json"
+  },
+  "raw_tool_output": {
+    "meta": {
+      "tool": "zmap",
+      "status": "mocked_no_binary"
+    },
+    "result": {
+      "stdout": "mock output for zmap"
+    },
+    "parsed_findings": []
+  },
+  "ai": {
+    "vuln_type": "unknown",
+    "confidence": 0.0,
+    "explanation": "no-model"
+  },
+  "meta": {
+    "ai_prediction": {
+      "vuln_type": "unknown",
+      "confidence": 0.0,
+      "explanation": "no-model"
+    }
+  }
+}
+

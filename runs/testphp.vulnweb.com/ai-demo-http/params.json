@@ -1,0 +1,59 @@
+[
+  {
+    "type": "form",
+    "url": "http://testphp.vulnweb.com/search.php?test=query",
+    "method": "post",
+    "params": [
+      "searchFor",
+      "goButton"
+    ]
+  },
+  {
+    "type": "form",
+    "url": "http://testphp.vulnweb.com/userinfo.php",
+    "method": "post",
+    "params": [
+      "uname",
+      "pass"
+    ]
+  },
+  {
+    "type": "query",
+    "url": "http://testphp.vulnweb.com/hpp/?pp=12",
+    "param": "pp"
+  },
+  {
+    "type": "form",
+    "url": "http://testphp.vulnweb.com/secured/newuser.php",
+    "method": "post",
+    "params": [
+      "uuname",
+      "upass",
+      "upass2",
+      "urname",
+      "ucc",
+      "uemail",
+      "uphone",
+      "uaddress",
+      "signup"
+    ]
+  },
+  {
+    "type": "form",
+    "url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+    "method": "get",
+    "params": [
+      "aaaa/"
+    ]
+  },
+  {
+    "type": "query",
+    "url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+    "param": "p"
+  },
+  {
+    "type": "query",
+    "url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+    "param": "pp"
+  }
+]

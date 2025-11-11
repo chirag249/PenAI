@@ -1,0 +1,233 @@
+2025-10-26 16:57:13,210 INFO Starting non-destructive phase
+2025-10-26 16:57:31,115 INFO Passive recon done
+2025-10-26 16:57:45,964 INFO Active recon done
+2025-10-26 16:58:20,230 INFO Crawl done, found 18 pages
+2025-10-26 16:58:34,557 INFO Fingerprint done
+2025-10-26 16:58:42,940 INFO Discovered 15 parameterized endpoints
+2025-10-26 17:03:21,368 INFO Form testing done, results: 122
+2025-10-26 17:03:21,368 INFO Running external adapters (only_non_destructive=True)
+2025-10-26 17:03:21,368 INFO Running adapter: __init__ (destructive=False)
+2025-10-26 17:03:21,369 INFO Adapter __init__: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/__init__.json
+2025-10-26 17:03:21,369 INFO Running adapter: adapter_base (destructive=False)
+2025-10-26 17:03:21,372 INFO Adapter adapter_base: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/adapter_base.json
+2025-10-26 17:03:21,372 INFO Running adapter: amass (destructive=False)
+2025-10-26 17:03:21,373 INFO Adapter amass: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/amass.json
+2025-10-26 17:03:21,374 INFO Running adapter: arachni (destructive=False)
+2025-10-26 17:03:21,375 INFO Adapter arachni: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/arachni.json
+2025-10-26 17:03:21,376 INFO Running adapter: boofuzz (destructive=False)
+2025-10-26 17:03:21,377 INFO Adapter boofuzz: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/boofuzz.json
+2025-10-26 17:03:21,377 INFO Running adapter: certspotter (destructive=False)
+2025-10-26 17:03:21,378 INFO Adapter certspotter: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/certspotter.json
+2025-10-26 17:03:21,378 INFO Skipping destructive-capable adapter commix (safety gate)
+2025-10-26 17:03:21,379 INFO Running adapter: create_proof (destructive=False)
+2025-10-26 17:03:21,380 ERROR Adapter create_proof execution failed: main() takes 0 positional arguments but 2 were given
+Traceback (most recent call last):
+  File "/home/asd/pentest_ai/agent.py", line 239, in run_external_tools
+    result = safe_call_module_fn(adapter_module, ["run", "main", "run_adapter"], outdir, t0)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/asd/pentest_ai/agent.py", line 120, in safe_call_module_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+TypeError: main() takes 0 positional arguments but 2 were given
+2025-10-26 17:03:21,382 INFO Adapter create_proof: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/create_proof.json
+2025-10-26 17:03:21,382 INFO Running adapter: crtsh (destructive=False)
+2025-10-26 17:03:21,383 INFO Adapter crtsh: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/crtsh.json
+2025-10-26 17:03:21,383 INFO Running adapter: dalfox (destructive=False)
+2025-10-26 17:03:21,385 INFO Adapter dalfox: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/dalfox.json
+2025-10-26 17:03:21,385 INFO Running adapter: dirb (destructive=False)
+2025-10-26 17:04:21,449 INFO Adapter dirb: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/dirb.json
+2025-10-26 17:04:21,449 INFO Running adapter: enum4linux (destructive=False)
+2025-10-26 17:04:21,474 INFO Adapter enum4linux: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/enum4linux.json
+2025-10-26 17:04:21,474 INFO Running adapter: ffuf (destructive=False)
+2025-10-26 17:04:21,480 INFO Adapter ffuf: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/ffuf.json
+2025-10-26 17:04:21,480 INFO Running adapter: gitleaks (destructive=False)
+2025-10-26 17:04:21,482 INFO Adapter gitleaks: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/gitleaks.json
+2025-10-26 17:04:21,482 INFO Running adapter: gitrob (destructive=False)
+2025-10-26 17:04:21,483 INFO Adapter gitrob: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/gitrob.json
+2025-10-26 17:04:21,483 INFO Running adapter: gobuster (destructive=False)
+2025-10-26 17:04:21,489 INFO Adapter gobuster: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/gobuster.json
+2025-10-26 17:04:21,489 INFO Running adapter: graphql-fuzzer (destructive=False)
+2025-10-26 17:04:21,491 INFO Adapter graphql-fuzzer: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/graphql-fuzzer.json
+2025-10-26 17:04:21,491 INFO Skipping destructive-capable adapter hashcat (safety gate)
+2025-10-26 17:04:21,492 INFO Running adapter: httprobe (destructive=False)
+2025-10-26 17:04:21,493 INFO Adapter httprobe: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/httprobe.json
+2025-10-26 17:04:21,493 INFO Skipping destructive-capable adapter hydra (safety gate)
+2025-10-26 17:04:21,494 INFO Skipping destructive-capable adapter john (safety gate)
+2025-10-26 17:04:21,494 INFO Running adapter: manager (destructive=False)
+2025-10-26 17:04:21,495 INFO Adapter manager: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/manager.json
+2025-10-26 17:04:21,495 INFO Running adapter: masscan (destructive=False)
+2025-10-26 17:04:21,498 INFO Adapter masscan: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/masscan.json
+2025-10-26 17:04:21,498 INFO Skipping destructive-capable adapter medusa (safety gate)
+2025-10-26 17:04:21,498 INFO Skipping destructive-capable adapter msfconsole (safety gate)
+2025-10-26 17:04:21,498 INFO Running adapter: newman (destructive=False)
+2025-10-26 17:04:21,499 INFO Adapter newman: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/newman.json
+2025-10-26 17:04:21,499 INFO Running adapter: nikto (destructive=False)
+2025-10-26 17:04:41,989 INFO Adapter nikto: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/nikto.json
+2025-10-26 17:04:41,989 INFO Running adapter: nmap (destructive=False)
+2025-10-26 17:04:41,991 INFO Adapter nmap: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/nmap.json
+2025-10-26 17:04:41,991 INFO Running adapter: nuclei (destructive=False)
+2025-10-26 17:05:42,104 INFO Adapter nuclei: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/nuclei.json
+2025-10-26 17:05:42,104 INFO Running adapter: parsers (destructive=False)
+2025-10-26 17:05:42,108 INFO Adapter parsers: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/parsers.json
+2025-10-26 17:05:42,108 INFO Running adapter: radamsa (destructive=False)
+2025-10-26 17:05:42,109 INFO Adapter radamsa: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/radamsa.json
+2025-10-26 17:05:42,109 INFO Running adapter: searchsploit (destructive=False)
+2025-10-26 17:05:42,228 INFO Adapter searchsploit: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/searchsploit.json
+2025-10-26 17:05:42,228 INFO Running adapter: smbclient (destructive=False)
+2025-10-26 17:05:42,270 INFO Adapter smbclient: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/smbclient.json
+2025-10-26 17:05:42,270 INFO Running adapter: smtp-user-enum (destructive=False)
+2025-10-26 17:05:42,292 INFO Adapter smtp-user-enum: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/smtp-user-enum.json
+2025-10-26 17:05:42,292 INFO Skipping destructive-capable adapter sqlmap (safety gate)
+2025-10-26 17:05:42,292 INFO Running adapter: sslyze (destructive=False)
+2025-10-26 17:05:42,294 INFO Adapter sslyze: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/sslyze.json
+2025-10-26 17:05:42,294 INFO Running adapter: subfinder (destructive=False)
+2025-10-26 17:05:42,295 INFO Adapter subfinder: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/subfinder.json
+2025-10-26 17:05:42,295 INFO Running adapter: trufflehog (destructive=False)
+2025-10-26 17:05:42,296 INFO Adapter trufflehog: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/trufflehog.json
+2025-10-26 17:05:42,296 INFO Running adapter: unicornscan (destructive=False)
+2025-10-26 17:05:42,408 INFO Adapter unicornscan: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/unicornscan.json
+2025-10-26 17:05:42,409 INFO Running adapter: w3af (destructive=False)
+2025-10-26 17:05:42,410 INFO Adapter w3af: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/w3af.json
+2025-10-26 17:05:42,410 INFO Running adapter: wapiti (destructive=False)
+2025-10-26 17:05:42,411 INFO Adapter wapiti: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/wapiti.json
+2025-10-26 17:05:42,411 INFO Running adapter: wappalyzer (destructive=False)
+2025-10-26 17:05:42,412 INFO Adapter wappalyzer: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/wappalyzer.json
+2025-10-26 17:05:42,412 INFO Running adapter: wfuzz (destructive=False)
+2025-10-26 17:05:43,014 INFO Adapter wfuzz: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/wfuzz.json
+2025-10-26 17:05:43,014 INFO Running adapter: whatweb (destructive=False)
+2025-10-26 17:06:00,265 INFO Adapter whatweb: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/whatweb.json
+2025-10-26 17:06:00,265 INFO Skipping destructive-capable adapter wpscan (safety gate)
+2025-10-26 17:06:00,265 INFO Running adapter: xsstrike (destructive=False)
+2025-10-26 17:06:00,266 INFO Adapter xsstrike: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/xsstrike.json
+2025-10-26 17:06:00,266 INFO Running adapter: zmap (destructive=False)
+2025-10-26 17:06:00,267 INFO Adapter zmap: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/zmap.json
+2025-10-26 17:06:00,268 INFO Targets to scan: 16
+2025-10-26 17:07:22,060 INFO Tool parsers: added 50 findings from generated/tools
+2025-10-26 17:07:23,556 INFO AI predictions attached to findings (count=204)
+2025-10-26 17:07:25,534 INFO PoCs generated: 3
+2025-10-26 17:07:25,547 INFO Reports written
+2025-10-26 17:07:25,549 INFO normalize_pocs executed
+2025-10-26 17:07:25,587 INFO map_pocs executed
+2025-10-26 17:07:25,623 INFO attach_pocs executed
+2025-10-26 17:07:30,706 INFO Called generate_curated.main successfully
+2025-10-26 17:07:30,707 INFO Non-destructive phase complete
+2025-11-07 22:33:30,086 INFO Starting non-destructive phase
+2025-11-07 22:33:48,111 INFO Passive recon done
+2025-11-07 22:34:05,142 INFO Active recon done
+2025-11-07 22:34:54,833 INFO Crawl done, found 18 pages
+2025-11-07 22:35:18,889 INFO Fingerprint done
+2025-11-07 22:35:43,457 INFO Discovered 15 parameterized endpoints
+2025-11-07 22:41:03,772 INFO Form testing done, results: 132
+2025-11-07 22:41:03,772 INFO Running external adapters (only_non_destructive=True)
+2025-11-07 22:41:03,773 INFO Running adapter: __init__ (destructive=False)
+2025-11-07 22:41:03,773 INFO Adapter __init__: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/__init__.json
+2025-11-07 22:41:03,773 INFO Running adapter: adapter_base (destructive=False)
+2025-11-07 22:41:03,774 INFO Adapter adapter_base: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/adapter_base.json
+2025-11-07 22:41:03,774 INFO Running adapter: amass (destructive=False)
+2025-11-07 22:41:03,775 INFO Adapter amass: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/amass.json
+2025-11-07 22:41:03,775 INFO Running adapter: arachni (destructive=False)
+2025-11-07 22:41:03,776 INFO Adapter arachni: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/arachni.json
+2025-11-07 22:41:03,776 INFO Running adapter: boofuzz (destructive=False)
+2025-11-07 22:41:03,777 INFO Adapter boofuzz: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/boofuzz.json
+2025-11-07 22:41:03,777 INFO Running adapter: certspotter (destructive=False)
+2025-11-07 22:41:03,778 INFO Adapter certspotter: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/certspotter.json
+2025-11-07 22:41:03,778 INFO Skipping destructive-capable adapter commix (safety gate)
+2025-11-07 22:41:03,778 INFO Running adapter: create_proof (destructive=False)
+2025-11-07 23:13:17,828 INFO Starting non-destructive phase
+2025-11-07 23:13:35,915 INFO Passive recon done
+2025-11-07 23:13:50,352 INFO Active recon done
+2025-11-07 23:14:20,958 INFO Crawl done, found 18 pages
+2025-11-07 23:14:34,388 INFO Fingerprint done
+2025-11-07 23:14:58,880 INFO Discovered 14 parameterized endpoints
+2025-11-07 23:17:12,757 INFO Form testing done, results: 140
+2025-11-07 23:17:12,757 INFO Running external adapters (only_non_destructive=True)
+2025-11-07 23:17:12,757 INFO Running adapter: amass (destructive=False)
+2025-11-07 23:17:12,758 INFO Adapter amass: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/amass.json
+2025-11-07 23:17:12,758 INFO Running adapter: arachni (destructive=False)
+2025-11-07 23:17:12,758 INFO Adapter arachni: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/arachni.json
+2025-11-07 23:17:12,758 INFO Running adapter: boofuzz (destructive=False)
+2025-11-07 23:17:12,758 INFO Adapter boofuzz: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/boofuzz.json
+2025-11-07 23:17:12,758 INFO Running adapter: certspotter (destructive=False)
+2025-11-07 23:17:12,759 INFO Adapter certspotter: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/certspotter.json
+2025-11-07 23:17:12,759 INFO Skipping destructive-capable adapter commix (safety gate)
+2025-11-07 23:17:12,759 INFO Running adapter: crtsh (destructive=False)
+2025-11-07 23:17:12,760 INFO Adapter crtsh: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/crtsh.json
+2025-11-07 23:17:12,760 INFO Running adapter: dalfox (destructive=False)
+2025-11-07 23:17:12,764 INFO Adapter dalfox: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/dalfox.json
+2025-11-07 23:17:12,764 INFO Running adapter: dirb (destructive=False)
+2025-11-07 23:18:12,829 INFO Adapter dirb: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/dirb.json
+2025-11-07 23:18:12,829 INFO Running adapter: enum4linux (destructive=False)
+2025-11-07 23:18:12,869 INFO Adapter enum4linux: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/enum4linux.json
+2025-11-07 23:18:12,869 INFO Running adapter: ffuf (destructive=False)
+2025-11-07 23:18:12,883 INFO Adapter ffuf: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/ffuf.json
+2025-11-07 23:18:12,883 INFO Running adapter: gitleaks (destructive=False)
+2025-11-07 23:18:12,884 INFO Adapter gitleaks: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/gitleaks.json
+2025-11-07 23:18:12,884 INFO Running adapter: gitrob (destructive=False)
+2025-11-07 23:18:12,885 INFO Adapter gitrob: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/gitrob.json
+2025-11-07 23:18:12,885 INFO Running adapter: gobuster (destructive=False)
+2025-11-07 23:18:12,898 INFO Adapter gobuster: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/gobuster.json
+2025-11-07 23:18:12,898 INFO Running adapter: graphql-fuzzer (destructive=False)
+2025-11-07 23:18:12,900 INFO Adapter graphql-fuzzer: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/graphql-fuzzer.json
+2025-11-07 23:18:12,900 INFO Skipping destructive-capable adapter hashcat (safety gate)
+2025-11-07 23:18:12,900 INFO Running adapter: httprobe (destructive=False)
+2025-11-07 23:18:12,902 INFO Adapter httprobe: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/httprobe.json
+2025-11-07 23:18:12,902 INFO Skipping destructive-capable adapter hydra (safety gate)
+2025-11-07 23:18:12,903 INFO Skipping destructive-capable adapter john (safety gate)
+2025-11-07 23:18:12,903 INFO Running adapter: manager (destructive=False)
+2025-11-07 23:18:12,904 INFO Adapter manager: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/manager.json
+2025-11-07 23:18:12,904 INFO Running adapter: masscan (destructive=False)
+2025-11-07 23:18:12,908 INFO Adapter masscan: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/masscan.json
+2025-11-07 23:18:12,908 INFO Skipping destructive-capable adapter medusa (safety gate)
+2025-11-07 23:18:12,908 INFO Skipping destructive-capable adapter msfconsole (safety gate)
+2025-11-07 23:18:12,909 INFO Running adapter: newman (destructive=False)
+2025-11-07 23:18:12,910 INFO Adapter newman: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/newman.json
+2025-11-07 23:18:12,911 INFO Running adapter: nikto (destructive=False)
+2025-11-07 23:18:33,372 INFO Adapter nikto: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/nikto.json
+2025-11-07 23:18:33,372 INFO Running adapter: nmap (destructive=False)
+2025-11-07 23:18:33,374 INFO Adapter nmap: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/nmap.json
+2025-11-07 23:18:33,374 INFO Running adapter: nuclei (destructive=False)
+2025-11-07 23:18:33,375 INFO Adapter nuclei: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/nuclei.json
+2025-11-07 23:18:33,375 INFO Running adapter: parsers (destructive=False)
+2025-11-07 23:18:33,377 INFO Adapter parsers: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/parsers.json
+2025-11-07 23:18:33,377 INFO Running adapter: radamsa (destructive=False)
+2025-11-07 23:18:33,378 INFO Adapter radamsa: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/radamsa.json
+2025-11-07 23:18:33,379 INFO Running adapter: searchsploit (destructive=False)
+2025-11-07 23:18:33,380 INFO Adapter searchsploit: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/searchsploit.json
+2025-11-07 23:18:33,380 INFO Running adapter: smbclient (destructive=False)
+2025-11-07 23:18:33,409 INFO Adapter smbclient: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/smbclient.json
+2025-11-07 23:18:33,410 INFO Running adapter: smtp-user-enum (destructive=False)
+2025-11-07 23:18:33,430 INFO Adapter smtp-user-enum: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/smtp-user-enum.json
+2025-11-07 23:18:33,430 INFO Skipping destructive-capable adapter sqlmap (safety gate)
+2025-11-07 23:18:33,431 INFO Running adapter: sslyze (destructive=False)
+2025-11-07 23:18:33,432 INFO Adapter sslyze: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/sslyze.json
+2025-11-07 23:18:33,432 INFO Running adapter: subfinder (destructive=False)
+2025-11-07 23:18:33,433 INFO Adapter subfinder: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/subfinder.json
+2025-11-07 23:18:33,433 INFO Running adapter: trufflehog (destructive=False)
+2025-11-07 23:18:33,434 INFO Adapter trufflehog: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/trufflehog.json
+2025-11-07 23:18:33,434 INFO Running adapter: unicornscan (destructive=False)
+2025-11-07 23:18:33,466 INFO Adapter unicornscan: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/unicornscan.json
+2025-11-07 23:18:33,466 INFO Running adapter: w3af (destructive=False)
+2025-11-07 23:18:33,467 INFO Adapter w3af: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/w3af.json
+2025-11-07 23:18:33,468 INFO Running adapter: wapiti (destructive=False)
+2025-11-07 23:18:33,469 INFO Adapter wapiti: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/wapiti.json
+2025-11-07 23:18:33,469 INFO Running adapter: wappalyzer (destructive=False)
+2025-11-07 23:18:33,470 INFO Adapter wappalyzer: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/wappalyzer.json
+2025-11-07 23:18:33,470 INFO Running adapter: wfuzz (destructive=False)
+2025-11-07 23:18:34,178 INFO Adapter wfuzz: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/wfuzz.json
+2025-11-07 23:18:34,179 INFO Running adapter: whatweb (destructive=False)
+2025-11-07 23:18:50,546 INFO Adapter whatweb: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/whatweb.json
+2025-11-07 23:18:50,546 INFO Skipping destructive-capable adapter wpscan (safety gate)
+2025-11-07 23:18:50,547 INFO Running adapter: xsstrike (destructive=False)
+2025-11-07 23:18:50,548 INFO Adapter xsstrike: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/xsstrike.json
+2025-11-07 23:18:50,549 INFO Running adapter: zmap (destructive=False)
+2025-11-07 23:18:50,549 INFO Adapter zmap: wrote runs/testphp.vulnweb.com/ai-demo/generated/tools/zmap.json
+2025-11-07 23:18:50,551 INFO Targets to scan: 15
+2025-11-07 23:20:01,279 INFO Tool parsers: added 50 findings from generated/tools
+2025-11-07 23:20:01,284 INFO AI predictions attached to findings (count=220)
+2025-11-07 23:20:03,100 INFO PoCs generated: 3
+2025-11-07 23:20:03,113 INFO Reports written
+2025-11-07 23:20:03,115 INFO normalize_pocs executed
+2025-11-07 23:20:03,164 INFO map_pocs executed
+2025-11-07 23:20:03,204 INFO attach_pocs executed
+2025-11-07 23:20:03,359 INFO Called generate_curated.main successfully
+2025-11-07 23:20:03,359 INFO Non-destructive phase complete

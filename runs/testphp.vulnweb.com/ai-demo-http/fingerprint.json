@@ -1,0 +1,16 @@
+{
+  "http://testphp.vulnweb.com": {
+    "used_url": "http://testphp.vulnweb.com/",
+    "status": 200,
+    "headers": {
+      "server": "nginx/1.19.0",
+      "x-powered-by": "PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1"
+    },
+    "versions": [
+      [
+        "nginx",
+        "1.19.0"
+      ]
+    ]
+  }
+}

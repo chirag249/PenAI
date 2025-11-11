@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "tool": "msfconsole",
+    "status": "mocked_no_binary"
+  },
+  "result": {
+    "stdout": "mock output for msfconsole"
+  },
+  "parsed_findings": []
+}

@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "tool": "enum4linux",
+    "status": "ran"
+  },
+  "result": {
+    "cmd": [
+      "/usr/bin/enum4linux",
+      "http://www.dvwa.co.uk/"
+    ],
+    "rc": 1,
+    "stdout": "ERROR: Target hostname \"http://www.dvwa.co.uk/\" contains some illegal characters\n",
+    "stderr": ""
+  },
+  "parsed_findings": []
+}

@@ -1,0 +1,29 @@
+
+#!/usr/bin/env python3
+"""Parser for graphql-fuzzer outputs (normalized)."""
+
+def parse_graphql_fuzzer_output(envelope, run_dir=None):
+    out = []
+    pf = envelope.get("parsed_findings") or (envelope.get("result") or {}).get("parsed_findings")
+    if isinstance(pf, list) and pf:
+        for p in pf:
+            out.append({
+                "type": p.get("type") or "graphql-fuzzer-vuln",
+                "target": p.get("target") or envelope.get("result", {}).get("target") or "<unknown>",
+                "severity": int(p.get("severity") or 3),
+                "evidence": p.get("evidence") or str(p)[:500],
+                "source": {"tool": "graphql-fuzzer", "raw": p},
+            })
+        return out
+
+    res = envelope.get("result") or envelope
+    stdout = (res.get("stdout") if isinstance(res, dict) else "") or ""
+    if isinstance(stdout, str) and ("vulnerable" in stdout.lower() or "cve" in stdout.lower() or "error" in stdout.lower()):
+        out.append({
+            "type": "graphql-fuzzer-inferred",
+            "target": envelope.get("result", {}).get("target") or "<unknown>",
+            "severity": 3,
+            "evidence": stdout[:1000],
+            "source": {"tool": "graphql-fuzzer", "raw": stdout},
+        })
+    return out

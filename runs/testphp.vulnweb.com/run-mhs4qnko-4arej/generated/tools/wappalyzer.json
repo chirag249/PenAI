@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "tool": "wappalyzer",
+    "status": "mocked_no_binary"
+  },
+  "result": {
+    "stdout": "mock output for wappalyzer"
+  },
+  "parsed_findings": []
+}

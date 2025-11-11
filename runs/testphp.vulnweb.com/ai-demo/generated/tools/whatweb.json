@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "tool": "whatweb",
+    "status": "ran"
+  },
+  "result": {
+    "cmd": [
+      "/usr/bin/whatweb",
+      "https://testphp.vulnweb.com"
+    ],
+    "rc": 0,
+    "stdout": "",
+    "stderr": "\u001b[1m\u001b[31mERROR Opening: https://testphp.vulnweb.com - execution expired\u001b[0m\n"
+  },
+  "parsed_findings": []
+}

@@ -1,0 +1,15 @@
+{
+  "https://testphp.vulnweb.com": {
+    "error": ""
+  },
+  "ports": {
+    "testphp.vulnweb.com": {
+      "80": true,
+      "443": false,
+      "8080": false,
+      "8000": false,
+      "22": false,
+      "21": false
+    }
+  }
+}

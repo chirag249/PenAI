@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "tool": "medusa",
+    "status": "ran"
+  },
+  "result": {
+    "cmd": [
+      "/usr/bin/medusa",
+      "https://testphp.vulnweb.com"
+    ],
+    "rc": 1,
+    "stdout": "Medusa v2.2 [http://www.foofus.net] (C) JoMo-Kun / Foofus Networks <jmk@foofus.net>\n\n\nSyntax: Medusa [-h host|-H file] [-u username|-U file] [-p password|-P file] [-C file] -M module [OPT]\n  -h [TEXT]    : Target hostname or IP address\n  -H [FILE]    : File containing target hostnames or IP addresses\n  -u [TEXT]    : Username to test\n  -U [FILE]    : File containing usernames to test\n  -p [TEXT]    : Password to test\n  -P [FILE]    : File containing passwords to test\n  -C [FILE]    : File containing combo entries. See README for more information.\n  -O [FILE]    : File to append log information to\n  -e [n/s/ns]  : Additional password checks ([n] No Password, [s] Password = Username)\n  -M [TEXT]    : Name of the module to execute (without the .mod extension)\n  -m [TEXT]    : Parameter to pass to the module. This can be passed multiple times with a\n                 different parameter each time and they will all be sent to the module (i.e.\n                 -m Param1 -m Param2, etc.)\n  -d           : Dump all known modules\n  -n [NUM]     : Use for non-default TCP port number\n  -s           : Enable SSL\n  -g [NUM]     : Give up after trying to connect for NUM seconds (default 3)\n  -r [NUM]     : Sleep NUM seconds between retry attempts (default 3)\n  -R [NUM]     : Attempt NUM retries before giving up. The total number of attempts will be NUM + 1.\n  -c [NUM]     : Time to wait in usec to verify socket is available (default 500 usec).\n  -t [NUM]     : Total number of logins to be tested concurrently\n  -T [NUM]     : Total number of hosts to be tested concurrently\n  -L           : Parallelize logins using one username per thread. The default is to process \n                 the entire username before proceeding.\n  -f           : Stop scanning host after first valid username/password found.\n  -F           : Stop audit after first valid username/password found on any host.\n  -b           : Suppress startup banner\n  -q           : Display module's usage information\n  -v [NUM]     : Verbose level [0 - 6 (more)]\n  -w [NUM]     : Error debug level [0 - 10 (more)]\n  -V           : Display version\n  -Z [TEXT]    : Resume scan based on map of previous scan\n\n\n",
+    "stderr": "ALERT: Host information must be supplied.\n"
+  },
+  "parsed_findings": []
+}

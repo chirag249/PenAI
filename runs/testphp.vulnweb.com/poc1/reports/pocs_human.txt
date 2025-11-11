@@ -1,0 +1,5406 @@
+---
+Finding index: 0
+Type: xss-none
+Target: https://testphp.vulnweb.com
+Proof URL: https://testphp.vulnweb.com
+HTTP status: error
+Snippet:
+(none)
+---
+---
+Finding index: 1
+Type: sqli-none
+Target: https://testphp.vulnweb.com
+Proof URL: https://testphp.vulnweb.com
+HTTP status: error
+Snippet:
+(none)
+---
+---
+Finding index: 2
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 3
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 4
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 5
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 6
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 7
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 8
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 9
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 10
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 11
+Type: sqli-error
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 12
+Type: xss-none
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 13
+Type: sqli-none
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 14
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 15
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 16
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 17
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 18
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 19
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 20
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 21
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 22
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 23
+Type: sqli-error
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 24
+Type: xss-none
+Target: http://testphp.vulnweb.com/listproducts.php?cat=1
+Proof URL: http://testphp.vulnweb.com/listproducts.php?cat=1
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>pictures</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<d
+---
+---
+Finding index: 25
+Type: sqli-none
+Target: http://testphp.vulnweb.com/listproducts.php?cat=1
+Proof URL: http://testphp.vulnweb.com/listproducts.php?cat=1
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>pictures</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<d
+---
+---
+Finding index: 26
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 27
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 28
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 29
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 30
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 31
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 32
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 33
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 34
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 35
+Type: sqli-error
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 36
+Type: xss-none
+Target: http://testphp.vulnweb.com/listproducts.php?cat=2
+Proof URL: http://testphp.vulnweb.com/listproducts.php?cat=2
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>pictures</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<d
+---
+---
+Finding index: 37
+Type: sqli-none
+Target: http://testphp.vulnweb.com/listproducts.php?cat=2
+Proof URL: http://testphp.vulnweb.com/listproducts.php?cat=2
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>pictures</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<d
+---
+---
+Finding index: 38
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: error
+Snippet:
+(none)
+---
+---
+Finding index: 39
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 40
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 41
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 42
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 43
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 44
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 45
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 46
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 47
+Type: sqli-error
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 48
+Type: xss-none
+Target: http://testphp.vulnweb.com/listproducts.php?cat=3
+Proof URL: http://testphp.vulnweb.com/listproducts.php?cat=3
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>pictures</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<d
+---
+---
+Finding index: 49
+Type: sqli-none
+Target: http://testphp.vulnweb.com/listproducts.php?cat=3
+Proof URL: http://testphp.vulnweb.com/listproducts.php?cat=3
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>pictures</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<d
+---
+---
+Finding index: 50
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 51
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 52
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 53
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 54
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 55
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 56
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 57
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 58
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 59
+Type: sqli-error
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 60
+Type: xss-none
+Target: http://testphp.vulnweb.com/listproducts.php?cat=4
+Proof URL: http://testphp.vulnweb.com/listproducts.php?cat=4
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>pictures</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<d
+---
+---
+Finding index: 61
+Type: sqli-none
+Target: http://testphp.vulnweb.com/listproducts.php?cat=4
+Proof URL: http://testphp.vulnweb.com/listproducts.php?cat=4
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>pictures</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<d
+---
+---
+Finding index: 62
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 63
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 64
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 65
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 66
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 67
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 68
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 69
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 70
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 71
+Type: sqli-error
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 72
+Type: xss-none
+Target: http://testphp.vulnweb.com/artists.php?artist=1
+Proof URL: http://testphp.vulnweb.com/artists.php?artist=1
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>artists</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+/
+---
+---
+Finding index: 73
+Type: sqli-none
+Target: http://testphp.vulnweb.com/artists.php?artist=1
+Proof URL: http://testphp.vulnweb.com/artists.php?artist=1
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>artists</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+/
+---
+---
+Finding index: 74
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 75
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 76
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 77
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 78
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 79
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 80
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 81
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 82
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 83
+Type: sqli-error
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 84
+Type: xss-none
+Target: http://testphp.vulnweb.com/artists.php?artist=2
+Proof URL: http://testphp.vulnweb.com/artists.php?artist=2
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>artists</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+/
+---
+---
+Finding index: 85
+Type: sqli-none
+Target: http://testphp.vulnweb.com/artists.php?artist=2
+Proof URL: http://testphp.vulnweb.com/artists.php?artist=2
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>artists</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+/
+---
+---
+Finding index: 86
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 87
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 88
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 89
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 90
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 91
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 92
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 93
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 94
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 95
+Type: sqli-error
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 96
+Type: xss-none
+Target: http://testphp.vulnweb.com/artists.php?artist=3
+Proof URL: http://testphp.vulnweb.com/artists.php?artist=3
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>artists</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+/
+---
+---
+Finding index: 97
+Type: sqli-none
+Target: http://testphp.vulnweb.com/artists.php?artist=3
+Proof URL: http://testphp.vulnweb.com/artists.php?artist=3
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>artists</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+/
+---
+---
+Finding index: 98
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 99
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 100
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 101
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 102
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 103
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 104
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: error
+Snippet:
+(none)
+---
+---
+Finding index: 105
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 106
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 107
+Type: sqli-error
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 108
+Type: xss-none
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 109
+Type: sqli-none
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 110
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 111
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 112
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 113
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 114
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 115
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 116
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 117
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 118
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 119
+Type: sqli-error
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 120
+Type: xss-none
+Target: http://testphp.vulnweb.com/userinfo.php
+Proof URL: http://testphp.vulnweb.com/userinfo.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>login page</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true)
+---
+---
+Finding index: 121
+Type: sqli-none
+Target: http://testphp.vulnweb.com/userinfo.php
+Proof URL: http://testphp.vulnweb.com/userinfo.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>login page</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true)
+---
+---
+Finding index: 122
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 123
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 124
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 125
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 126
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 127
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 128
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 129
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 130
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 131
+Type: sqli-error
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 132
+Type: xss-none
+Target: http://testphp.vulnweb.com/hpp/?pp=12
+Proof URL: http://testphp.vulnweb.com/hpp/?pp=12
+HTTP status: 200
+Snippet:
+<title>HTTP Parameter Pollution Example</title>
+
+<a href="?pp=12">check</a><br/>
+<a href="params.php?p=valid&pp=12">link1</a><br/><a href="params.php?p=valid&pp=12">link2</a><br/><form action="params.php?p=valid&pp=12"><input type=submit name=aaaa/></form><br/>
+<hr>
+<a href='http://blog.mindedsecurity.com/2009/05/client-side-http-parameter-pollution.html'>Original article</a>
+---
+---
+Finding index: 133
+Type: sqli-none
+Target: http://testphp.vulnweb.com/hpp/?pp=12
+Proof URL: http://testphp.vulnweb.com/hpp/?pp=12
+HTTP status: 200
+Snippet:
+<title>HTTP Parameter Pollution Example</title>
+
+<a href="?pp=12">check</a><br/>
+<a href="params.php?p=valid&pp=12">link1</a><br/><a href="params.php?p=valid&pp=12">link2</a><br/><form action="params.php?p=valid&pp=12"><input type=submit name=aaaa/></form><br/>
+<hr>
+<a href='http://blog.mindedsecurity.com/2009/05/client-side-http-parameter-pollution.html'>Original article</a>
+---
+---
+Finding index: 134
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 135
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 136
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 137
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 138
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 139
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 140
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 141
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 142
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 143
+Type: sqli-error
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 144
+Type: xss-none
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 145
+Type: sqli-none
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 146
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 147
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 148
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 149
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 150
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 151
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 152
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 153
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 154
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 155
+Type: sqli-error
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 156
+Type: xss-none
+Target: http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12
+Proof URL: http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12
+HTTP status: 200
+Snippet:
+valid12
+---
+---
+Finding index: 157
+Type: sqli-none
+Target: http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12
+Proof URL: http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12
+HTTP status: error
+Snippet:
+(none)
+---
+---
+Finding index: 158
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 159
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: error
+Snippet:
+(none)
+---
+---
+Finding index: 160
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 161
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 162
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: error
+Snippet:
+(none)
+---
+---
+Finding index: 163
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 164
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 165
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 166
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 167
+Type: sqli-error
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 168
+Type: xss-none
+Target: http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12
+Proof URL: http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12
+HTTP status: error
+Snippet:
+(none)
+---
+---
+Finding index: 169
+Type: sqli-none
+Target: http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12
+Proof URL: http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12
+HTTP status: 200
+Snippet:
+valid12
+---
+---
+Finding index: 170
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 171
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 172
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 173
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 174
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: error
+Snippet:
+(none)
+---
+---
+Finding index: 175
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 176
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 177
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: error
+Snippet:
+(none)
+---
+---
+Finding index: 178
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 179
+Type: sqli-error
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 180
+Type: xss-none
+Target: http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12
+Proof URL: http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12
+HTTP status: error
+Snippet:
+(none)
+---
+---
+Finding index: 181
+Type: sqli-none
+Target: http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12
+Proof URL: http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12
+HTTP status: error
+Snippet:
+(none)
+---
+---
+Finding index: 182
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 183
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: error
+Snippet:
+(none)
+---
+---
+Finding index: 184
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 185
+Type: sqli-error
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 186
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/search.php?test=query
+Proof URL: http://testphp.vulnweb.com/search.php?test=query
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>search</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- here goes headers headers -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//
+---
+---
+Finding index: 187
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: error
+Snippet:
+(none)
+---
+---
+Finding index: 188
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 189
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/guestbook.php
+Proof URL: http://testphp.vulnweb.com/guestbook.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+
+<!-- InstanceBeginEditable name="document_title_rgn" -->
+<title>guestbook</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="style.css" type="text/css">
+<!-- InstanceBeginEditable name="headers_rgn" -->
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+
+</head>
+<body> 
+<
+---
+---
+Finding index: 190
+Type: xss-reflected
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---
+---
+Finding index: 191
+Type: sqli-error
+Target: http://testphp.vulnweb.com/secured/newuser.php
+Proof URL: http://testphp.vulnweb.com/secured/newuser.php
+HTTP status: 200
+Snippet:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>add new user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="masthead"> 
+  <h1 id="siteName">ACUNETIX ART</h1> 
+</div>
+<div id="content">
+	</div>
+</body>
+</html>
+
+---

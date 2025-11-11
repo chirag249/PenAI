@@ -1,0 +1,7 @@
+[
+  {
+    "type": "xss-error",
+    "target": "https://testphp.vulnweb.com",
+    "error": "ConnectTimeout('')"
+  }
+]

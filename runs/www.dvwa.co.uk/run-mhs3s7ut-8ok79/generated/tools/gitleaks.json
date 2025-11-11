@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "tool": "gitleaks",
+    "status": "mocked_no_binary"
+  },
+  "result": {
+    "stdout": "mock output for gitleaks"
+  },
+  "parsed_findings": []
+}

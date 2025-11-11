@@ -1,0 +1,53 @@
+{
+  "count": 3,
+  "pocs": [
+    {
+      "proof_url": "http://testphp.vulnweb.com/search.php?test=query",
+      "finding_type": "xss-reflected",
+      "status": 200,
+      "raw": {
+        "proof_url": "http://testphp.vulnweb.com/search.php?test=query",
+        "finding_type": "xss-reflected",
+        "target": "http://testphp.vulnweb.com/search.php?test=query",
+        "used_url": null,
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "snippet_path": "runs/testphp.vulnweb.com/poc_destruct/pocs/snippets/http_testphp.vulnweb.com_guestbook.php_5304e0614c.html",
+        "http_status": 200
+      },
+      "_norm_proof_url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "proof_url": "http://testphp.vulnweb.com/guestbook.php",
+      "finding_type": "xss-reflected",
+      "status": 200,
+      "raw": {
+        "proof_url": "http://testphp.vulnweb.com/guestbook.php",
+        "finding_type": "xss-reflected",
+        "target": "http://testphp.vulnweb.com/guestbook.php",
+        "used_url": null,
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "snippet_path": "runs/testphp.vulnweb.com/poc_destruct/pocs/snippets/http_testphp.vulnweb.com_search.php_test_query_fc4c1079cd.html",
+        "http_status": 200
+      },
+      "_norm_proof_url": "http://testphp.vulnweb.com/guestbook.php"
+    },
+    {
+      "proof_url": "http://testphp.vulnweb.com/secured/newuser.php",
+      "finding_type": "xss-reflected",
+      "status": 200,
+      "raw": {
+        "proof_url": "http://testphp.vulnweb.com/secured/newuser.php",
+        "finding_type": "xss-reflected",
+        "target": "http://testphp.vulnweb.com/secured/newuser.php",
+        "used_url": null,
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "snippet_path": "runs/testphp.vulnweb.com/poc_destruct/pocs/snippets/http_testphp.vulnweb.com_secured_newuser.php_2e10db35d2.html",
+        "http_status": 200
+      },
+      "_norm_proof_url": "http://testphp.vulnweb.com/secured/newuser.php"
+    }
+  ]
+}

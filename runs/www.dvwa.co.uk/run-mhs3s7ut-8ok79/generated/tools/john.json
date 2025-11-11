@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "tool": "john",
+    "status": "ran"
+  },
+  "result": {
+    "cmd": [
+      "/usr/sbin/john",
+      "http://www.dvwa.co.uk/"
+    ],
+    "rc": 1,
+    "stdout": "",
+    "stderr": "stat: http://www.dvwa.co.uk/: No such file or directory\n"
+  },
+  "parsed_findings": []
+}

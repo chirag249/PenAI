@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PenAI - Penetration Testing Automation</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #f1f5f9;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #3b82f6;
+        }
+
+        .theme-toggle {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(148, 163, 184, 0.3);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(59, 130, 246, 0.2);
+            transform: rotate(15deg);
+        }
+
+        .card {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(2, 6, 23, 0.3);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(2, 6, 23, 0.4);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 0.8rem 1.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #3b82f6;
+            color: #3b82f6;
+        }
+
+        .btn-outline:hover {
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #64748b, #94a3b8);
+        }
+
+        .btn-secondary:hover {
+            box-shadow: 0 6px 20px rgba(100, 116, 139, 0.3);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #ef4444, #f87171);
+        }
+
+        .btn-danger:hover {
+            box-shadow: 0 6px 20px rgba(239, 68, 68, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #cbd5e1;
+        }
+
+        .form-input, .form-select {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, 0.3);
+            background: rgba(30, 41, 59, 0.5);
+            color: #f1f5f9;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+
+        .form-input::placeholder {
+            color: #94a3b8;
+        }
+
+        .chart-container {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        .report-section {
+            margin: 2rem 0;
+        }
+
+        .report-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .finding-item {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        .finding-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .finding-type {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .finding-severity {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .severity-critical {
+            background: rgba(239, 68, 68, 0.2);
+            color: #fecaca;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .severity-high {
+            background: rgba(249, 115, 22, 0.2);
+            color: #fed7aa;
+            border: 1px solid rgba(249, 115, 22, 0.3);
+        }
+
+        .severity-medium {
+            background: rgba(234, 179, 8, 0.2);
+            color: #fef08a;
+            border: 1px solid rgba(234, 179, 8, 0.3);
+        }
+
+        .severity-low {
+            background: rgba(132, 204, 22, 0.2);
+            color: #d9f99d;
+            border: 1px solid rgba(132, 204, 22, 0.3);
+        }
+
+        .finding-target {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .finding-evidence {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+
+        .recommendations-list {
+            list-style: none;
+        }
+
+        .recommendations-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .recommendations-list li:last-child {
+            border-bottom: none;
+        }
+
+        .recommendation-icon {
+            color: #3b82f6;
+            font-size: 1.2rem;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(59, 130, 246, 0.3);
+            border-radius: 50%;
+            border-top-color: #3b82f6;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            backdrop-filter: blur(4px);
+        }
+
+        .loading-content {
+            background: rgba(15, 23, 42, 0.9);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            box-shadow: 0 12px 40px rgba(2, 6, 23, 0.5);
+        }
+
+        .loading-text {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            color: #e2e8f0;
+        }
+
+        .loading-subtext {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .actions .btn {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .polling-status {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .stat-card {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .finding-confidence {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .vulnerability-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .vuln-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem;
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 8px;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        .vuln-type {
+            font-weight: 500;
+        }
+
+        .vuln-count {
+            background: rgba(59, 130, 246, 0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+            
+            .card {
+                padding: 1.5rem;
+            }
+            
+            .finding-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .actions {
+                flex-direction: column;
+            }
+            
+            .actions .btn {
+                width: 100%;
+            }
+            
+            .summary-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .vulnerability-breakdown {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <span>PenAI</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" id="home-link">Home</a></li>
+                    <li><a href="#" id="refresh-link">Refresh</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">🌙</div>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-icon">🚀</span>
+                    <h2 class="card-title">Start New Scan</h2>
+                </div>
+                <form id="scan-form">
+                    <div class="form-group">
+                        <label class="form-label" for="target">Target Site</label>
+                        <input
+                            type="text"
+                            id="target"
+                            class="form-input"
+                            placeholder="https://example.com"
+                            required
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="mode">Scan Mode</label>
+                        <select
+                            id="mode"
+                            class="form-select"
+                        >
+                            <option value="non-destructive">🛡️ Non-Destructive (Safe)</option>
+                            <option value="destructive">💥 Destructive (Aggressive)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="run-id">Run ID</label>
+                        <input
+                            type="text"
+                            id="run-id"
+                            class="form-input"
+                        />
+                    </div>
+
+                    <button type="submit" class="btn" id="start-btn">
+                        ▶️ Start Scan
+                    </button>
+                </form>
+            </div>
+
+            <div class="card" id="latest-run-card" style="display: none;">
+                <div class="card-header">
+                    <span class="card-icon">📄</span>
+                    <h2 class="card-title">Latest Run: <span id="latest-run-title"></span></h2>
+                </div>
+                
+                <div class="actions">
+                    <button class="btn btn-outline" id="view-report-btn">
+                        📊 View Report
+                    </button>
+                    <button class="btn" id="download-md-btn">
+                        📝 Download Markdown
+                    </button>
+                    <button class="btn" id="download-html-btn">
+                        🌐 Download HTML
+                    </button>
+                    <button class="btn" id="download-pdf-btn">
+                        📄 Download PDF
+                    </button>
+                    <button class="btn" id="download-json-btn">
+                        📊 Download Summary JSON
+                    </button>
+                    <button class="btn" id="download-txt-btn">
+                        📋 Download Summary TXT
+                    </button>
+                </div>
+
+                <div class="polling-status" id="polling-status" style="display: none;">
+                    <p>🔄 Scan in progress... Checking for updates every 3 seconds.</p>
+                </div>
+
+                <div id="report-content">
+                    <!-- Report content will be loaded here -->
+                </div>
+            </div>
+        </main>
+
+        <div class="loading-overlay" id="loading-overlay" style="display: none;">
+            <div class="loading-content">
+                <div class="spinner" style="width: 48px; height: 48px; border-width: 4px;"></div>
+                <div class="loading-text">🚀 Starting Scan...</div>
+                <div class="loading-subtext">Initializing backend agent...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Generate a random run ID
+        document.getElementById('run-id').value = `run-${Date.now().toString(36)}-${Math.random().toString(36).substr(2, 5)}`;
+
+        // Global variables
+        let isPolling = false;
+        let pollInterval = null;
+        let latestRun = null;
+        let scanInProgress = false;
+
+        // DOM Elements
+        const scanForm = document.getElementById('scan-form');
+        const startBtn = document.getElementById('start-btn');
+        const loadingOverlay = document.getElementById('loading-overlay');
+        const latestRunCard = document.getElementById('latest-run-card');
+        const latestRunTitle = document.getElementById('latest-run-title');
+        const pollingStatus = document.getElementById('polling-status');
+        const reportContent = document.getElementById('report-content');
+        const allButtons = document.querySelectorAll('button');
+
+        // Event Listeners
+        scanForm.addEventListener('submit', startScan);
+        document.getElementById('refresh-link').addEventListener('click', checkLatestRun);
+        document.getElementById('view-report-btn').addEventListener('click', viewReport);
+        document.getElementById('download-md-btn').addEventListener('click', () => downloadReport('final_report_curated.md'));
+        document.getElementById('download-html-btn').addEventListener('click', () => downloadReport('final_report_curated.html'));
+        document.getElementById('download-pdf-btn').addEventListener('click', () => downloadReport('final_report_curated.pdf'));
+        document.getElementById('download-json-btn').addEventListener('click', () => downloadReport('reports/summary_report.json'));
+        document.getElementById('download-txt-btn').addEventListener('click', () => downloadReport('reports/summary_report.txt'));
+
+        // Check for latest run on page load
+        window.addEventListener('DOMContentLoaded', checkLatestRun);
+
+        // Functions
+        async function startScan(e) {
+            e.preventDefault();
+            
+            if (scanInProgress) return;
+            
+            const target = document.getElementById('target').value;
+            const mode = document.getElementById('mode').value;
+            const runId = document.getElementById('run-id').value;
+            
+            if (!target) {
+                alert('Please enter a target URL');
+                return;
+            }
+
+            // Set scan in progress flag
+            scanInProgress = true;
+            
+            // Disable all buttons during scan
+            allButtons.forEach(button => {
+                button.disabled = true;
+            });
+            startBtn.innerHTML = '<span class="spinner"></span> Starting Scan...';
+            
+            isPolling = true;
+            pollingStatus.style.display = 'block';
+
+            try {
+                const formData = new FormData();
+                formData.append('target', target);
+                formData.append('mode', mode);
+                formData.append('run_id', runId);
+
+                const response = await fetch('/api/start', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Failed to start scan: ${response.status}`);
+                }
+
+                // Start polling for updates
+                if (pollInterval) clearInterval(pollInterval);
+                pollInterval = setInterval(checkLatestRun, 3000);
+
+                // Set a timeout to stop polling after 10 minutes
+                setTimeout(() => {
+                    if (pollInterval) {
+                        clearInterval(pollInterval);
+                        pollInterval = null;
+                        isPolling = false;
+                        pollingStatus.style.display = 'none';
+                        scanInProgress = false;
+                        // Re-enable buttons
+                        allButtons.forEach(button => {
+                            button.disabled = false;
+                        });
+                        startBtn.innerHTML = '▶️ Start Scan';
+                    }
+                }, 600000); // 10 minutes
+
+            } catch (error) {
+                console.error('Error starting scan:', error);
+                alert('Failed to start scan: ' + error.message);
+                // Re-enable buttons on error
+                scanInProgress = false;
+                allButtons.forEach(button => {
+                    button.disabled = false;
+                });
+                startBtn.innerHTML = '▶️ Start Scan';
+            }
+        }
+
+        async function checkLatestRun() {
+            try {
+                const response = await fetch('/api/latest');
+                if (!response.ok) {
+                    throw new Error(`Failed to check latest run: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                if (data.latest) {
+                    latestRun = data.latest;
+                    latestRunCard.style.display = 'block';
+                    latestRunTitle.textContent = data.latest;
+                    
+                    if (data.ready) {
+                        // Scan is complete, load the report
+                        if (isPolling) {
+                            isPolling = false;
+                            pollingStatus.style.display = 'none';
+                            if (pollInterval) {
+                                clearInterval(pollInterval);
+                                pollInterval = null;
+                            }
+                            // Re-enable buttons when scan is complete
+                            scanInProgress = false;
+                            allButtons.forEach(button => {
+                                button.disabled = false;
+                            });
+                            startBtn.innerHTML = '▶️ Start Scan';
+                        }
+                        
+                        loadSummaryReport(data.latest);
+                    }
+                } else {
+                    latestRunCard.style.display = 'none';
+                }
+            } catch (error) {
+                console.error('Error checking latest run:', error);
+            }
+        }
+
+        async function loadSummaryReport(runPath) {
+            try {
+                const response = await fetch(`/api/summary/${encodeURIComponent(runPath)}`);
+                if (!response.ok) {
+                    throw new Error(`Failed to load summary report: ${response.status}`);
+                }
+                
+                const report = await response.json();
+                renderReport(report);
+            } catch (error) {
+                console.error('Error loading summary report:', error);
+                reportContent.innerHTML = `<p>Error loading report: ${error.message}</p>`;
+            }
+        }
+
+        function renderReport(report) {
+            if (!report) return;
+
+            let html = '';
+
+            // Scan Summary
+            html += `
+                <div class="report-section">
+                    <h3>📋 Scan Summary</h3>
+                    <div class="summary-stats">
+                        <div class="stat-card">
+                            <div class="stat-value">${report.scan_summary.total_findings}</div>
+                            <div class="stat-label">Total Findings</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">${report.scan_summary.vulnerabilities_found}</div>
+                            <div class="stat-label">Vulnerabilities</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">${report.scan_summary.critical_findings}</div>
+                            <div class="stat-label">Critical</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">${report.scan_summary.high_severity}</div>
+                            <div class="stat-label">High Severity</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Severity Distribution Chart
+            html += `
+                <div class="chart-container">
+                    <div id="severity-chart"></div>
+                </div>
+            `;
+
+            // Vulnerability Type Chart
+            html += `
+                <div class="chart-container">
+                    <div id="vuln-type-chart"></div>
+                </div>
+            `;
+
+            // Vulnerability Breakdown
+            if (report.vulnerability_breakdown) {
+                html += `
+                    <div class="report-section">
+                        <h3>🔍 Vulnerability Breakdown</h3>
+                        <div class="vulnerability-breakdown">
+                `;
+                
+                for (const [type, count] of Object.entries(report.vulnerability_breakdown)) {
+                    html += `
+                        <div class="vuln-item">
+                            <span class="vuln-type">${type}</span>
+                            <span class="vuln-count">${count}</span>
+                        </div>
+                    `;
+                }
+                
+                html += `
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Top Vulnerabilities
+            if (report.top_vulnerabilities && report.top_vulnerabilities.length > 0) {
+                html += `
+                    <div class="report-section">
+                        <h3>🔥 Top Vulnerabilities</h3>
+                `;
+                
+                const topVulns = report.top_vulnerabilities.slice(0, 5);
+                for (let i = 0; i < topVulns.length; i++) {
+                    const vuln = topVulns[i];
+                    const severityClass = ['info', 'low', 'medium', 'high', 'critical'][vuln.severity];
+                    const severityName = ['Info', 'Low', 'Medium', 'High', 'Critical'][vuln.severity];
+                    
+                    html += `
+                        <div class="finding-item">
+                            <div class="finding-header">
+                                <div class="finding-type">${vuln.type.toUpperCase()}</div>
+                                <div class="finding-severity severity-${severityClass}">
+                                    ${severityName}
+                                </div>
+                            </div>
+                            <div class="finding-target">${vuln.target}</div>
+                            <div class="finding-confidence">Confidence: ${vuln.confidence}</div>
+                    `;
+                    
+                    if (vuln.evidence) {
+                        html += `
+                            <div class="finding-evidence">
+                                ${vuln.evidence}
+                            </div>
+                        `;
+                    }
+                    
+                    html += `
+                        </div>
+                    `;
+                }
+                
+                html += `
+                    </div>
+                `;
+            }
+
+            // Recommendations
+            if (report.recommendations && report.recommendations.length > 0) {
+                html += `
+                    <div class="report-section">
+                        <h3>💡 Recommendations</h3>
+                        <ul class="recommendations-list">
+                `;
+                
+                for (let i = 0; i < report.recommendations.length; i++) {
+                    html += `
+                        <li>
+                            <span class="recommendation-icon">✅</span>
+                            <span>${report.recommendations[i]}</span>
+                        </li>
+                    `;
+                }
+                
+                html += `
+                        </ul>
+                    </div>
+                `;
+            }
+
+            reportContent.innerHTML = html;
+            
+            // Render charts after HTML is inserted
+            setTimeout(() => {
+                renderSeverityChart(report);
+                renderVulnerabilityTypeChart(report);
+            }, 100);
+        }
+
+        function renderSeverityChart(report) {
+            if (!report) return;
+
+            const severityData = report.scan_summary.severity_distribution || {};
+            const severities = Object.keys(severityData).map(Number).sort();
+            const counts = severities.map(sev => severityData[sev]);
+            const severityNames = severities.map(sev => {
+                switch(sev) {
+                    case 1: return 'Info';
+                    case 2: return 'Low';
+                    case 3: return 'Medium';
+                    case 4: return 'High';
+                    case 5: return 'Critical';
+                    default: return 'Unknown';
+                }
+            });
+
+            const colors = ['#2196F3', '#4CAF50', '#FFC107', '#FF9800', '#F44336'];
+
+            try {
+                Plotly.newPlot('severity-chart', [{
+                    x: severityNames,
+                    y: counts,
+                    type: 'bar',
+                    marker: { color: colors.slice(0, severities.length) },
+                    text: counts,
+                    textposition: 'auto'
+                }], {
+                    title: 'Findings by Severity',
+                    xaxis: { title: 'Severity Level' },
+                    yaxis: { title: 'Number of Findings' },
+                    paper_bgcolor: 'rgba(0,0,0,0)',
+                    plot_bgcolor: 'rgba(0,0,0,0)',
+                    font: { color: '#f1f5f9' }
+                }, {
+                    displayModeBar: false
+                });
+            } catch (error) {
+                console.error('Error rendering severity chart:', error);
+                document.getElementById('severity-chart').innerHTML = '<p>Error rendering chart</p>';
+            }
+        }
+
+        function renderVulnerabilityTypeChart(report) {
+            if (!report) return;
+
+            const vulnData = report.vulnerability_breakdown || {};
+            const vulnTypes = Object.keys(vulnData);
+            const vulnCounts = vulnTypes.map(type => vulnData[type]);
+
+            // Limit to top 10 for better visualization
+            const topIndices = vulnCounts.map((_, i) => i)
+                .sort((a, b) => vulnCounts[b] - vulnCounts[a])
+                .slice(0, 10);
+
+            const topVulnTypes = topIndices.map(i => vulnTypes[i]);
+            const topVulnCounts = topIndices.map(i => vulnCounts[i]);
+
+            try {
+                Plotly.newPlot('vuln-type-chart', [{
+                    x: topVulnTypes,
+                    y: topVulnCounts,
+                    type: 'bar',
+                    marker: { color: '#9C27B0' },
+                    text: topVulnCounts,
+                    textposition: 'auto'
+                }], {
+                    title: 'Top 10 Vulnerability Types',
+                    xaxis: { title: 'Vulnerability Type' },
+                    yaxis: { title: 'Number of Findings' },
+                    paper_bgcolor: 'rgba(0,0,0,0)',
+                    plot_bgcolor: 'rgba(0,0,0,0)',
+                    font: { color: '#f1f5f9' }
+                }, {
+                    displayModeBar: false
+                });
+            } catch (error) {
+                console.error('Error rendering vulnerability type chart:', error);
+                document.getElementById('vuln-type-chart').innerHTML = '<p>Error rendering chart</p>';
+            }
+        }
+
+        function viewReport() {
+            if (latestRun) {
+                // Scroll to the report content
+                reportContent.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        async function downloadReport(filename) {
+            if (!latestRun) return;
+
+            try {
+                const response = await fetch(`/api/download/${encodeURIComponent(latestRun)}/${filename}`);
+                if (!response.ok) {
+                    throw new Error(`Failed to download report: ${response.status}`);
+                }
+                
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                const fileExtension = filename.split('.').pop();
+                link.href = url;
+                link.setAttribute('download', `report-${latestRun.split('/').pop()}.${fileExtension}`);
+                document.body.appendChild(link);
+                link.click();
+                link.remove();
+            } catch (error) {
+                console.error('Error downloading report:', error);
+                alert('Failed to download report: ' + error.message);
+            }
+        }
+    </script>
+</body>
+</html>

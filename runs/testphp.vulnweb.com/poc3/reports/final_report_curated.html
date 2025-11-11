@@ -1,0 +1,1048 @@
+<h1 id="curated-scan-report">Curated Scan Report</h1>
+<ul>
+<li>Run: <code>poc3</code></li>
+<li>Reports dir: <code>reports/</code></li>
+</ul>
+<h2 id="severity-legend">Severity Legend</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Score</th>
+<th>Level</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Info</td>
+<td>Informational, negligible risk</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Low</td>
+<td>Low risk, minor impact</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Medium</td>
+<td>Moderate risk, requires attention</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>High</td>
+<td>Serious risk, exploitable</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Critical</td>
+<td>Critical risk, immediate remediation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary">Summary</h2>
+<ul>
+<li>Consolidated findings: <strong>33</strong></li>
+<li>PoCs discovered (compact): <strong>14</strong></li>
+</ul>
+<h3 id="severity-table">Severity Table</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 33%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Target</th>
+<th>Severity</th>
+<th>PoCs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>sqli-error</td>
+<td>http://testphp.vulnweb.com/search.php?test=query</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>sqli-error</td>
+<td>http://testphp.vulnweb.com/secured/newuser.php</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>xss-reflected</td>
+<td>http://testphp.vulnweb.com/guestbook.php</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>xss-reflected</td>
+<td>http://testphp.vulnweb.com/search.php?test=query</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>xss-reflected</td>
+<td>http://testphp.vulnweb.com/secured/newuser.php</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>xss-none</td>
+<td>http://testphp.vulnweb.com/</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>sqli-none</td>
+<td>http://testphp.vulnweb.com/</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>xss-none</td>
+<td>http://testphp.vulnweb.com/artists.php?artist=1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>sqli-none</td>
+<td>http://testphp.vulnweb.com/artists.php?artist=1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>xss-none</td>
+<td>http://testphp.vulnweb.com/artists.php?artist=2</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>sqli-none</td>
+<td>http://testphp.vulnweb.com/artists.php?artist=2</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>xss-none</td>
+<td>http://testphp.vulnweb.com/artists.php?artist=3</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>sqli-none</td>
+<td>http://testphp.vulnweb.com/artists.php?artist=3</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>xss-none</td>
+<td>http://testphp.vulnweb.com/guestbook.php</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>sqli-none</td>
+<td>http://testphp.vulnweb.com/guestbook.php</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>xss-none</td>
+<td>http://testphp.vulnweb.com/hpp/?pp=12</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>sqli-none</td>
+<td>http://testphp.vulnweb.com/hpp/?pp=12</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>xss-none</td>
+<td>http://testphp.vulnweb.com/hpp/params.php?p=valid&amp;pp=12</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>sqli-none</td>
+<td>http://testphp.vulnweb.com/hpp/params.php?p=valid&amp;pp=12</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>xss-none</td>
+<td>http://testphp.vulnweb.com/listproducts.php?cat=1</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>sqli-none</td>
+<td>http://testphp.vulnweb.com/listproducts.php?cat=1</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>xss-none</td>
+<td>http://testphp.vulnweb.com/listproducts.php?cat=2</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>sqli-none</td>
+<td>http://testphp.vulnweb.com/listproducts.php?cat=2</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>xss-none</td>
+<td>http://testphp.vulnweb.com/listproducts.php?cat=3</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>sqli-none</td>
+<td>http://testphp.vulnweb.com/listproducts.php?cat=3</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>xss-none</td>
+<td>http://testphp.vulnweb.com/listproducts.php?cat=4</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>sqli-none</td>
+<td>http://testphp.vulnweb.com/listproducts.php?cat=4</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>xss-none</td>
+<td>http://testphp.vulnweb.com/search.php?test=query</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>sqli-none</td>
+<td>http://testphp.vulnweb.com/search.php?test=query</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>xss-none</td>
+<td>http://testphp.vulnweb.com/secured/newuser.php</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>sqli-none</td>
+<td>http://testphp.vulnweb.com/secured/newuser.php</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>xss-none</td>
+<td>http://testphp.vulnweb.com/userinfo.php</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>sqli-none</td>
+<td>http://testphp.vulnweb.com/userinfo.php</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3
+id="sqli-error-httptestphp.vulnweb.comsearch.phptestquery">sqli-error —
+<code>http://testphp.vulnweb.com/search.php?test=query</code></h3>
+<ul>
+<li><strong>Severity:</strong> 5</li>
+<li><strong>Occurrences merged:</strong> 6</li>
+<li><strong>PoCs (1):</strong>
+<ul>
+<li><a
+href="pocs/snippets/http_testphp.vulnweb.com_search.php_test_query_fc4c1079cd.html">http://testphp.vulnweb.com/search.php?test=query</a>
+— status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong> evidence:</li>
+</ul>
+<pre><code>SQL syntax</code></pre>
+<ul>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Use parameterized queries / prepared statements. Validate and escape
+inputs. Review DB permissions.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="sqli-error-httptestphp.vulnweb.comsecurednewuser.php">sqli-error
+— <code>http://testphp.vulnweb.com/secured/newuser.php</code></h3>
+<ul>
+<li><strong>Severity:</strong> 5</li>
+<li><strong>Occurrences merged:</strong> 2</li>
+<li><strong>PoCs (1):</strong>
+<ul>
+<li><a
+href="pocs/snippets/http_testphp.vulnweb.com_secured_newuser.php_2e10db35d2.html">http://testphp.vulnweb.com/secured/newuser.php</a>
+— status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong> evidence:</li>
+</ul>
+<pre><code>SQL syntax</code></pre>
+<ul>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Use parameterized queries / prepared statements. Validate and escape
+inputs. Review DB permissions.</li>
+</ul></li>
+</ul>
+<hr />
+<h3
+id="xss-reflected-httptestphp.vulnweb.comguestbook.php">xss-reflected —
+<code>http://testphp.vulnweb.com/guestbook.php</code></h3>
+<ul>
+<li><strong>Severity:</strong> 4</li>
+<li><strong>Occurrences merged:</strong> 6</li>
+<li><strong>PoCs (1):</strong>
+<ul>
+<li><a
+href="pocs/snippets/http_testphp.vulnweb.com_guestbook.php_5304e0614c.html">http://testphp.vulnweb.com/guestbook.php</a>
+— status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Sanitize and encode untrusted input before rendering. Use
+context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul></li>
+</ul>
+<hr />
+<h3
+id="xss-reflected-httptestphp.vulnweb.comsearch.phptestquery">xss-reflected
+— <code>http://testphp.vulnweb.com/search.php?test=query</code></h3>
+<ul>
+<li><strong>Severity:</strong> 4</li>
+<li><strong>Occurrences merged:</strong> 4</li>
+<li><strong>PoCs (1):</strong>
+<ul>
+<li><a
+href="pocs/snippets/http_testphp.vulnweb.com_search.php_test_query_fc4c1079cd.html">http://testphp.vulnweb.com/search.php?test=query</a>
+— status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Sanitize and encode untrusted input before rendering. Use
+context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul></li>
+</ul>
+<hr />
+<h3
+id="xss-reflected-httptestphp.vulnweb.comsecurednewuser.php">xss-reflected
+— <code>http://testphp.vulnweb.com/secured/newuser.php</code></h3>
+<ul>
+<li><strong>Severity:</strong> 4</li>
+<li><strong>Occurrences merged:</strong> 2</li>
+<li><strong>PoCs (1):</strong>
+<ul>
+<li><a
+href="pocs/snippets/http_testphp.vulnweb.com_secured_newuser.php_2e10db35d2.html">http://testphp.vulnweb.com/secured/newuser.php</a>
+— status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Sanitize and encode untrusted input before rendering. Use
+context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="xss-none-httptestphp.vulnweb.com">xss-none —
+<code>http://testphp.vulnweb.com/</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Sanitize and encode untrusted input before rendering. Use
+context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="sqli-none-httptestphp.vulnweb.com">sqli-none —
+<code>http://testphp.vulnweb.com/</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Use parameterized queries / prepared statements. Validate and escape
+inputs. Review DB permissions.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="xss-none-httptestphp.vulnweb.comartists.phpartist1">xss-none —
+<code>http://testphp.vulnweb.com/artists.php?artist=1</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (3):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=1</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=2</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=3</code> —
+status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Sanitize and encode untrusted input before rendering. Use
+context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="sqli-none-httptestphp.vulnweb.comartists.phpartist1">sqli-none —
+<code>http://testphp.vulnweb.com/artists.php?artist=1</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (3):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=1</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=2</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=3</code> —
+status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Use parameterized queries / prepared statements. Validate and escape
+inputs. Review DB permissions.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="xss-none-httptestphp.vulnweb.comartists.phpartist2">xss-none —
+<code>http://testphp.vulnweb.com/artists.php?artist=2</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (3):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=1</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=2</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=3</code> —
+status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Sanitize and encode untrusted input before rendering. Use
+context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="sqli-none-httptestphp.vulnweb.comartists.phpartist2">sqli-none —
+<code>http://testphp.vulnweb.com/artists.php?artist=2</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (3):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=1</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=2</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=3</code> —
+status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Use parameterized queries / prepared statements. Validate and escape
+inputs. Review DB permissions.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="xss-none-httptestphp.vulnweb.comartists.phpartist3">xss-none —
+<code>http://testphp.vulnweb.com/artists.php?artist=3</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (3):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=1</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=2</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=3</code> —
+status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Sanitize and encode untrusted input before rendering. Use
+context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="sqli-none-httptestphp.vulnweb.comartists.phpartist3">sqli-none —
+<code>http://testphp.vulnweb.com/artists.php?artist=3</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (3):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=1</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=2</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/artists.php?artist=3</code> —
+status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Use parameterized queries / prepared statements. Validate and escape
+inputs. Review DB permissions.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="xss-none-httptestphp.vulnweb.comguestbook.php">xss-none —
+<code>http://testphp.vulnweb.com/guestbook.php</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (1):</strong>
+<ul>
+<li><a
+href="pocs/snippets/http_testphp.vulnweb.com_guestbook.php_5304e0614c.html">http://testphp.vulnweb.com/guestbook.php</a>
+— status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Sanitize and encode untrusted input before rendering. Use
+context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="sqli-none-httptestphp.vulnweb.comguestbook.php">sqli-none —
+<code>http://testphp.vulnweb.com/guestbook.php</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (1):</strong>
+<ul>
+<li><a
+href="pocs/snippets/http_testphp.vulnweb.com_guestbook.php_5304e0614c.html">http://testphp.vulnweb.com/guestbook.php</a>
+— status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Use parameterized queries / prepared statements. Validate and escape
+inputs. Review DB permissions.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="xss-none-httptestphp.vulnweb.comhpppp12">xss-none —
+<code>http://testphp.vulnweb.com/hpp/?pp=12</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (2):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/hpp/?pp=12</code> — status:
+<code>200</code></li>
+<li><code>http://testphp.vulnweb.com/hpp/params.php?p=valid&amp;pp=12</code>
+— status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Sanitize and encode untrusted input before rendering. Use
+context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="sqli-none-httptestphp.vulnweb.comhpppp12">sqli-none —
+<code>http://testphp.vulnweb.com/hpp/?pp=12</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (2):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/hpp/?pp=12</code> — status:
+<code>200</code></li>
+<li><code>http://testphp.vulnweb.com/hpp/params.php?p=valid&amp;pp=12</code>
+— status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Use parameterized queries / prepared statements. Validate and escape
+inputs. Review DB permissions.</li>
+</ul></li>
+</ul>
+<hr />
+<h3
+id="xss-none-httptestphp.vulnweb.comhppparams.phppvalidpp12">xss-none —
+<code>http://testphp.vulnweb.com/hpp/params.php?p=valid&amp;pp=12</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (2):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/hpp/?pp=12</code> — status:
+<code>200</code></li>
+<li><code>http://testphp.vulnweb.com/hpp/params.php?p=valid&amp;pp=12</code>
+— status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Sanitize and encode untrusted input before rendering. Use
+context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul></li>
+</ul>
+<hr />
+<h3
+id="sqli-none-httptestphp.vulnweb.comhppparams.phppvalidpp12">sqli-none
+—
+<code>http://testphp.vulnweb.com/hpp/params.php?p=valid&amp;pp=12</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (2):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/hpp/?pp=12</code> — status:
+<code>200</code></li>
+<li><code>http://testphp.vulnweb.com/hpp/params.php?p=valid&amp;pp=12</code>
+— status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Use parameterized queries / prepared statements. Validate and escape
+inputs. Review DB permissions.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="xss-none-httptestphp.vulnweb.comlistproducts.phpcat1">xss-none —
+<code>http://testphp.vulnweb.com/listproducts.php?cat=1</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (4):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=1</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=2</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=3</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=4</code> —
+status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Sanitize and encode untrusted input before rendering. Use
+context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="sqli-none-httptestphp.vulnweb.comlistproducts.phpcat1">sqli-none
+— <code>http://testphp.vulnweb.com/listproducts.php?cat=1</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (4):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=1</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=2</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=3</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=4</code> —
+status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Use parameterized queries / prepared statements. Validate and escape
+inputs. Review DB permissions.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="xss-none-httptestphp.vulnweb.comlistproducts.phpcat2">xss-none —
+<code>http://testphp.vulnweb.com/listproducts.php?cat=2</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (4):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=1</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=2</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=3</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=4</code> —
+status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Sanitize and encode untrusted input before rendering. Use
+context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="sqli-none-httptestphp.vulnweb.comlistproducts.phpcat2">sqli-none
+— <code>http://testphp.vulnweb.com/listproducts.php?cat=2</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (4):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=1</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=2</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=3</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=4</code> —
+status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Use parameterized queries / prepared statements. Validate and escape
+inputs. Review DB permissions.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="xss-none-httptestphp.vulnweb.comlistproducts.phpcat3">xss-none —
+<code>http://testphp.vulnweb.com/listproducts.php?cat=3</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (4):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=1</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=2</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=3</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=4</code> —
+status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Sanitize and encode untrusted input before rendering. Use
+context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="sqli-none-httptestphp.vulnweb.comlistproducts.phpcat3">sqli-none
+— <code>http://testphp.vulnweb.com/listproducts.php?cat=3</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (4):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=1</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=2</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=3</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=4</code> —
+status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Use parameterized queries / prepared statements. Validate and escape
+inputs. Review DB permissions.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="xss-none-httptestphp.vulnweb.comlistproducts.phpcat4">xss-none —
+<code>http://testphp.vulnweb.com/listproducts.php?cat=4</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (4):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=1</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=2</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=3</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=4</code> —
+status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Sanitize and encode untrusted input before rendering. Use
+context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="sqli-none-httptestphp.vulnweb.comlistproducts.phpcat4">sqli-none
+— <code>http://testphp.vulnweb.com/listproducts.php?cat=4</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (4):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=1</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=2</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=3</code> —
+status: <code>200</code></li>
+<li><code>http://testphp.vulnweb.com/listproducts.php?cat=4</code> —
+status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Use parameterized queries / prepared statements. Validate and escape
+inputs. Review DB permissions.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="xss-none-httptestphp.vulnweb.comsearch.phptestquery">xss-none —
+<code>http://testphp.vulnweb.com/search.php?test=query</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (1):</strong>
+<ul>
+<li><a
+href="pocs/snippets/http_testphp.vulnweb.com_search.php_test_query_fc4c1079cd.html">http://testphp.vulnweb.com/search.php?test=query</a>
+— status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Sanitize and encode untrusted input before rendering. Use
+context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="sqli-none-httptestphp.vulnweb.comsearch.phptestquery">sqli-none
+— <code>http://testphp.vulnweb.com/search.php?test=query</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (1):</strong>
+<ul>
+<li><a
+href="pocs/snippets/http_testphp.vulnweb.com_search.php_test_query_fc4c1079cd.html">http://testphp.vulnweb.com/search.php?test=query</a>
+— status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Use parameterized queries / prepared statements. Validate and escape
+inputs. Review DB permissions.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="xss-none-httptestphp.vulnweb.comsecurednewuser.php">xss-none —
+<code>http://testphp.vulnweb.com/secured/newuser.php</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (1):</strong>
+<ul>
+<li><a
+href="pocs/snippets/http_testphp.vulnweb.com_secured_newuser.php_2e10db35d2.html">http://testphp.vulnweb.com/secured/newuser.php</a>
+— status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Sanitize and encode untrusted input before rendering. Use
+context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="sqli-none-httptestphp.vulnweb.comsecurednewuser.php">sqli-none —
+<code>http://testphp.vulnweb.com/secured/newuser.php</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (1):</strong>
+<ul>
+<li><a
+href="pocs/snippets/http_testphp.vulnweb.com_secured_newuser.php_2e10db35d2.html">http://testphp.vulnweb.com/secured/newuser.php</a>
+— status: <code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Use parameterized queries / prepared statements. Validate and escape
+inputs. Review DB permissions.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="xss-none-httptestphp.vulnweb.comuserinfo.php">xss-none —
+<code>http://testphp.vulnweb.com/userinfo.php</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (1):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/userinfo.php</code> — status:
+<code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Sanitize and encode untrusted input before rendering. Use
+context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="sqli-none-httptestphp.vulnweb.comuserinfo.php">sqli-none —
+<code>http://testphp.vulnweb.com/userinfo.php</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (1):</strong>
+<ul>
+<li><code>http://testphp.vulnweb.com/userinfo.php</code> — status:
+<code>200</code></li>
+</ul></li>
+<li><strong>Examples / notes:</strong>
+<ul>
+<li>(no compact excerpt available)</li>
+</ul></li>
+<li><strong>Recommended remediation (high level):</strong>
+<ul>
+<li>Use parameterized queries / prepared statements. Validate and escape
+inputs. Review DB permissions.</li>
+</ul></li>
+</ul>
+<hr />

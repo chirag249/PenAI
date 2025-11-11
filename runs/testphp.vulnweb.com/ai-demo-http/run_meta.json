@@ -1,0 +1,7 @@
+{
+  "targets": [
+    "http://testphp.vulnweb.com"
+  ],
+  "mode": "destructive",
+  "primary_domain": "testphp.vulnweb.com"
+}

@@ -1,0 +1,849 @@
+{
+  "meta": {
+    "passive": {
+      "http://testphp.vulnweb.com": {
+        "status": 200,
+        "title": "Home of Acunetix Art",
+        "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>Home of Acunetix Art</title>\n<!-- Insta",
+        "used_url": "http://testphp.vulnweb.com/"
+      }
+    },
+    "active": {
+      "http://testphp.vulnweb.com": {
+        "status": 200,
+        "headers": {
+          "server": "nginx/1.19.0",
+          "date": "Sat, 04 Oct 2025 16:39:38 GMT",
+          "content-type": "text/html; charset=UTF-8",
+          "connection": "keep-alive",
+          "x-powered-by": "PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1",
+          "content-encoding": "gzip"
+        },
+        "used_url": "http://testphp.vulnweb.com/"
+      },
+      "ports": {
+        "testphp.vulnweb.com": {
+          "80": true,
+          "443": false,
+          "8080": false,
+          "8000": false,
+          "22": false,
+          "21": false
+        }
+      }
+    },
+    "crawl_count": 18,
+    "fingerprint": {
+      "http://testphp.vulnweb.com": {
+        "used_url": "http://testphp.vulnweb.com/",
+        "status": 200,
+        "headers": {
+          "server": "nginx/1.19.0",
+          "x-powered-by": "PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1"
+        },
+        "versions": [
+          [
+            "nginx",
+            "1.19.0"
+          ]
+        ]
+      }
+    },
+    "pocs_summary": {
+      "count": 2
+    },
+    "pocs_file": "reports/pocs.json"
+  },
+  "findings": [
+    {
+      "type": "xss-none",
+      "target": "http://testphp.vulnweb.com",
+      "used_url": "http://testphp.vulnweb.com/",
+      "confidence": "low",
+      "note": "marker not found",
+      "status": 200,
+      "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+      "severity": 2,
+      "ai": {
+        "vuln_type": "xss",
+        "confidence": 0.9230769230769231,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "xss",
+          "confidence": 0.9230769230769231,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "sqli-none",
+      "target": "http://testphp.vulnweb.com",
+      "used_url": "http://testphp.vulnweb.com/",
+      "confidence": "low",
+      "status": 200,
+      "note": "no error signatures",
+      "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+      "severity": 2,
+      "ai": {
+        "vuln_type": "sqli",
+        "confidence": 0.9411764705882353,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "sqli",
+          "confidence": 0.9411764705882353,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "xss-none",
+      "target": "http://testphp.vulnweb.com/search.php?test=query",
+      "used_url": "http://testphp.vulnweb.com/search.php?test=query",
+      "confidence": "low",
+      "note": "marker not found",
+      "status": 200,
+      "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+      "severity": 2,
+      "ai": {
+        "vuln_type": "xss",
+        "confidence": 0.9230769230769231,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "xss",
+          "confidence": 0.9230769230769231,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "sqli-none",
+      "target": "http://testphp.vulnweb.com/search.php?test=query",
+      "used_url": "http://testphp.vulnweb.com/search.php?test=query",
+      "confidence": "low",
+      "status": 200,
+      "note": "no error signatures",
+      "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-",
+      "severity": 2,
+      "ai": {
+        "vuln_type": "sqli",
+        "confidence": 0.9411764705882353,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "sqli",
+          "confidence": 0.9411764705882353,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "xss-none",
+      "target": "http://testphp.vulnweb.com/userinfo.php",
+      "used_url": "http://testphp.vulnweb.com/userinfo.php",
+      "confidence": "low",
+      "note": "marker not found",
+      "status": 302,
+      "snippet": "you must login",
+      "severity": 2,
+      "ai": {
+        "vuln_type": "xss",
+        "confidence": 0.9230769230769231,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "xss",
+          "confidence": 0.9230769230769231,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "sqli-none",
+      "target": "http://testphp.vulnweb.com/userinfo.php",
+      "used_url": "http://testphp.vulnweb.com/userinfo.php",
+      "confidence": "low",
+      "status": 302,
+      "note": "no error signatures",
+      "snippet": "you must login",
+      "severity": 2,
+      "ai": {
+        "vuln_type": "sqli",
+        "confidence": 0.9411764705882353,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "sqli",
+          "confidence": 0.9411764705882353,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "xss-none",
+      "target": "http://testphp.vulnweb.com/hpp/?pp=12",
+      "used_url": "http://testphp.vulnweb.com/hpp/?pp=12",
+      "confidence": "low",
+      "note": "marker not found",
+      "status": 200,
+      "snippet": "<title>HTTP Parameter Pollution Example</title>\r\n\r\n<a href=\"?pp=12\">check</a><br/>\r\n<a href=\"params.php?p=valid&pp=12\">link1</a><br/><a href=\"params.php?p=valid&pp=12\">link2</a><br/><form action=\"params.php?p=valid&pp=12\"><input type=submit name=aaaa/></form><br/>\r\n<hr>\r\n<a href='http://blog.mindeds",
+      "severity": 2,
+      "ai": {
+        "vuln_type": "xss",
+        "confidence": 0.9230769230769231,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "xss",
+          "confidence": 0.9230769230769231,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "sqli-none",
+      "target": "http://testphp.vulnweb.com/hpp/?pp=12",
+      "used_url": "http://testphp.vulnweb.com/hpp/?pp=12",
+      "confidence": "low",
+      "status": 200,
+      "note": "no error signatures",
+      "snippet": "<title>http parameter pollution example</title>\r\n\r\n<a href=\"?pp=12\">check</a><br/>\r\n<a href=\"params.php?p=valid&pp=12\">link1</a><br/><a href=\"params.php?p=valid&pp=12\">link2</a><br/><form action=\"params.php?p=valid&pp=12\"><input type=submit name=aaaa/></form><br/>\r\n<hr>\r\n<a href='http://blog.mindeds",
+      "severity": 2,
+      "ai": {
+        "vuln_type": "sqli",
+        "confidence": 0.9411764705882353,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "sqli",
+          "confidence": 0.9411764705882353,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "xss-none",
+      "target": "http://testphp.vulnweb.com/secured/newuser.php",
+      "used_url": "http://testphp.vulnweb.com/secured/newuser.php",
+      "confidence": "low",
+      "note": "marker not found",
+      "status": 200,
+      "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<title>add new user</title>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">\r\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\">\r\n</head>\r\n<body>\r\n<d",
+      "severity": 2,
+      "ai": {
+        "vuln_type": "xss",
+        "confidence": 0.9230769230769231,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "xss",
+          "confidence": 0.9230769230769231,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "sqli-none",
+      "target": "http://testphp.vulnweb.com/secured/newuser.php",
+      "used_url": "http://testphp.vulnweb.com/secured/newuser.php",
+      "confidence": "low",
+      "status": 200,
+      "note": "no error signatures",
+      "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\" \"http://www.w3.org/tr/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<title>add new user</title>\r\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-1\">\r\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\">\r\n</head>\r\n<body>\r\n<d",
+      "severity": 2,
+      "ai": {
+        "vuln_type": "sqli",
+        "confidence": 0.9411764705882353,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "sqli",
+          "confidence": 0.9411764705882353,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "xss-none",
+      "target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+      "used_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+      "confidence": "low",
+      "note": "marker not found",
+      "status": 200,
+      "snippet": "valid12",
+      "severity": 2,
+      "ai": {
+        "vuln_type": "xss",
+        "confidence": 0.9230769230769231,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "xss",
+          "confidence": 0.9230769230769231,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "sqli-none",
+      "target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+      "used_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+      "confidence": "low",
+      "status": 200,
+      "note": "no error signatures",
+      "snippet": "valid12",
+      "severity": 2,
+      "ai": {
+        "vuln_type": "sqli",
+        "confidence": 0.9411764705882353,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "sqli",
+          "confidence": 0.9411764705882353,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "xss-none",
+      "target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+      "used_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+      "confidence": "low",
+      "note": "marker not found",
+      "status": 200,
+      "snippet": "valid12",
+      "severity": 2,
+      "ai": {
+        "vuln_type": "xss",
+        "confidence": 0.9230769230769231,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "xss",
+          "confidence": 0.9230769230769231,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "sqli-none",
+      "target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+      "used_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+      "confidence": "low",
+      "status": 200,
+      "note": "no error signatures",
+      "snippet": "valid12",
+      "severity": 2,
+      "ai": {
+        "vuln_type": "sqli",
+        "confidence": 0.9411764705882353,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "sqli",
+          "confidence": 0.9411764705882353,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "xss-none",
+      "target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+      "used_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+      "confidence": "low",
+      "note": "marker not found",
+      "status": 200,
+      "snippet": "valid12",
+      "severity": 2,
+      "ai": {
+        "vuln_type": "xss",
+        "confidence": 0.9230769230769231,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "xss",
+          "confidence": 0.9230769230769231,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "sqli-none",
+      "target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+      "used_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+      "confidence": "low",
+      "status": 200,
+      "note": "no error signatures",
+      "snippet": "valid12",
+      "severity": 2,
+      "ai": {
+        "vuln_type": "sqli",
+        "confidence": 0.9411764705882353,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "sqli",
+          "confidence": 0.9411764705882353,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "xss-reflected",
+      "target": "http://testphp.vulnweb.com/search.php?test=query",
+      "param": "searchFor",
+      "payload": "<script>penai_xss</script>",
+      "method": "post",
+      "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+      "confidence": "high",
+      "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- InstanceEndEditable",
+      "severity": 4,
+      "ai": {
+        "vuln_type": "xss",
+        "confidence": 1.0,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "xss",
+          "confidence": 1.0,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "sqli-error",
+      "target": "http://testphp.vulnweb.com/search.php?test=query",
+      "param": "searchFor",
+      "payload": "' OR '1'='1' -- ",
+      "method": "post",
+      "evidence": "SQL syntax",
+      "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+      "confidence": "high",
+      "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- instancebegineditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- instanceendeditable",
+      "severity": 5,
+      "ai": {
+        "vuln_type": "sqli",
+        "confidence": 0.9230769230769231,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "sqli",
+          "confidence": 0.9230769230769231,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "sqli-error",
+      "target": "http://testphp.vulnweb.com/search.php?test=query",
+      "param": "searchFor",
+      "payload": "'; DROP TABLE users; --",
+      "method": "post",
+      "evidence": "SQL syntax",
+      "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+      "confidence": "high",
+      "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- instancebegineditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- instanceendeditable",
+      "severity": 5,
+      "ai": {
+        "vuln_type": "sqli",
+        "confidence": 0.9230769230769231,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "sqli",
+          "confidence": 0.9230769230769231,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "sqli-error",
+      "target": "http://testphp.vulnweb.com/search.php?test=query",
+      "param": "searchFor",
+      "payload": "1' OR '1'='1' /*",
+      "method": "post",
+      "evidence": "SQL syntax",
+      "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+      "confidence": "high",
+      "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- instancebegineditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- instanceendeditable",
+      "severity": 5,
+      "ai": {
+        "vuln_type": "sqli",
+        "confidence": 0.9230769230769231,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "sqli",
+          "confidence": 0.9230769230769231,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "xss-reflected",
+      "target": "http://testphp.vulnweb.com/search.php?test=query",
+      "method": "post",
+      "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+      "confidence": "high",
+      "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- InstanceEndEditable",
+      "severity": 4,
+      "ai": {
+        "vuln_type": "xss",
+        "confidence": 1.0,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "xss",
+          "confidence": 1.0,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "xss-reflected",
+      "target": "http://testphp.vulnweb.com/secured/newuser.php",
+      "method": "post",
+      "proof_used_url": "http://testphp.vulnweb.com/secured/newuser.php",
+      "confidence": "high",
+      "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<title>add new user</title>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">\r\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\">\r\n</head>\r\n<body>\r\n<div id=\"masthead\"> \r\n  <h1 id=\"siteName\">ACUNETIX ART</h1> \r\n</div>\r\n<div id=\"content\">\r\n\t<p>You have",
+      "severity": 4,
+      "ai": {
+        "vuln_type": "xss",
+        "confidence": 1.0,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "xss",
+          "confidence": 1.0,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "sqli-error",
+      "target": "http://testphp.vulnweb.com/secured/newuser.php",
+      "method": "post",
+      "evidence": "SQL syntax",
+      "proof_used_url": "http://testphp.vulnweb.com/secured/newuser.php",
+      "confidence": "high",
+      "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\" \"http://www.w3.org/tr/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<title>add new user</title>\r\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-1\">\r\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\">\r\n</head>\r\n<body>\r\n<div id=\"masthead\"> \r\n  <h1 id=\"sitename\">acunetix art</h1> \r\n</div>\r\n<div id=\"content\">\r\n\tunable to a",
+      "severity": 5,
+      "ai": {
+        "vuln_type": "sqli",
+        "confidence": 0.9230769230769231,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "sqli",
+          "confidence": 0.9230769230769231,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "external-tool-sqlmap",
+      "target": null,
+      "severity": 2,
+      "evidence": "{\"meta\": {\"tool\": \"sqlmap\", \"status\": \"ran\"}, \"result\": {\"cmd\": [\"/usr/bin/sqlmap\", \"-u\", \"http://testphp.vulnweb.com\", \"--batch\", \"--risk=1\", \"--level=1\", \"--random-agent\", \"--timeout=10\"], \"rc\": 0, \"stdout\": \"        ___\\n       __H__\\n ___ ___[']_____ ___ ___  {1.8.12#stable}\\n|_ -| . [']     | .'| . |\\n|___|_  [,]_|_|_|__,|  _|\\n      |_|V...       |_|   https://sqlmap.org\\n\\n[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program\\n\\n[*] starting @ 22:12:19 /2025-10-04/\\n\\n[22:12:19] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows; U; Windows NT 6.0; it; rv:1.9.1b2) Gecko/20081201 Firefox/3.1b2' from file '/usr/share/sqlmap/data/txt/user-agents.txt'\\n[22:12:24] [INFO] testing connection to the target URL\\n[22:12:25] [INFO] checking if the target is protected by some kind of WAF/IPS\\n[22:12:25] [INFO] testing if the target URL content is stable\\n[22:12:26] [INFO] target URL content is stable\\n[22:12:26] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1'). You are advised to rerun with '--forms --crawl=2'\\n[22:12:26] [WARNING] your sqlmap version is outdated\\n\\n[*] ending @ 22:12:26 /2025-10-04/\\n\\n\", \"stderr\": \"\"}, \"parsed_findings\": [], \"outp",
+      "source": {
+        "tool": "sqlmap",
+        "file": "generated/tools/sqlmap.json"
+      },
+      "raw_tool_output": {
+        "meta": {
+          "tool": "sqlmap",
+          "status": "ran"
+        },
+        "result": {
+          "cmd": [
+            "/usr/bin/sqlmap",
+            "-u",
+            "http://testphp.vulnweb.com",
+            "--batch",
+            "--risk=1",
+            "--level=1",
+            "--random-agent",
+            "--timeout=10"
+          ],
+          "rc": 0,
+          "stdout": "        ___\n       __H__\n ___ ___[']_____ ___ ___  {1.8.12#stable}\n|_ -| . [']     | .'| . |\n|___|_  [,]_|_|_|__,|  _|\n      |_|V...       |_|   https://sqlmap.org\n\n[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program\n\n[*] starting @ 22:12:19 /2025-10-04/\n\n[22:12:19] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows; U; Windows NT 6.0; it; rv:1.9.1b2) Gecko/20081201 Firefox/3.1b2' from file '/usr/share/sqlmap/data/txt/user-agents.txt'\n[22:12:24] [INFO] testing connection to the target URL\n[22:12:25] [INFO] checking if the target is protected by some kind of WAF/IPS\n[22:12:25] [INFO] testing if the target URL content is stable\n[22:12:26] [INFO] target URL content is stable\n[22:12:26] [CRITICAL] no parameter(s) found for testing in the provided data (e.g. GET parameter 'id' in 'www.site.com/index.php?id=1'). You are advised to rerun with '--forms --crawl=2'\n[22:12:26] [WARNING] your sqlmap version is outdated\n\n[*] ending @ 22:12:26 /2025-10-04/\n\n",
+          "stderr": ""
+        },
+        "parsed_findings": [],
+        "output_file": "runs/testphp.vulnweb.com/ai-demo-http/generated/tools/sqlmap.json",
+        "status": "ran"
+      },
+      "ai": {
+        "vuln_type": "sqli",
+        "confidence": 0.5,
+        "explanation": "heuristic"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "sqli",
+          "confidence": 0.5,
+          "explanation": "heuristic"
+        }
+      }
+    },
+    {
+      "type": "external-tool-nmap",
+      "target": "<unknown>",
+      "severity": 2,
+      "evidence": "null",
+      "source": {
+        "tool": "nmap",
+        "file": "generated/tools/nmap.json"
+      },
+      "raw_tool_output": null,
+      "ai": {
+        "vuln_type": "unknown",
+        "confidence": 1.0,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "unknown",
+          "confidence": 1.0,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "external-tool-wpscan_adapter",
+      "target": null,
+      "severity": 2,
+      "evidence": "{\"tool\": \"wpscan\", \"status\": \"ran\", \"rc\": 1, \"vulnerabilities\": [], \"stdout\": \"\", \"stderr\": \"/usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_thread_safe_level.rb:16:in `<module:LoggerThreadSafeLevel>': uninitialized constant ActiveSupport::LoggerThreadSafeLevel::Logger (NameError)\\n\\n    Logger::Severity.constants.each do |severity|\\n    ^^^^^^\\n\\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_thread_safe_level.rb:9:in `<module:ActiveSupport>'\\n\\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_thread_safe_level.rb:8:in `<top (required)>'\\n\\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\\n\\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\\n\\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_silence.rb:5:in `<top (required)>'\\n\\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\\n\\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\\n\\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger.rb:3:in `<top (required)>'\\n\\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\\n\\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require",
+      "source": {
+        "tool": "wpscan_adapter",
+        "file": "generated/tools/wpscan_adapter.json"
+      },
+      "raw_tool_output": {
+        "tool": "wpscan",
+        "status": "ran",
+        "rc": 1,
+        "vulnerabilities": [],
+        "stdout": "",
+        "stderr": "/usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_thread_safe_level.rb:16:in `<module:LoggerThreadSafeLevel>': uninitialized constant ActiveSupport::LoggerThreadSafeLevel::Logger (NameError)\n\n    Logger::Severity.constants.each do |severity|\n    ^^^^^^\n\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_thread_safe_level.rb:9:in `<module:ActiveSupport>'\n\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_thread_safe_level.rb:8:in `<top (required)>'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_silence.rb:5:in `<top (required)>'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger.rb:3:in `<top (required)>'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support.rb:29:in `<top (required)>'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/all.rb:3:in `<top (required)>'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom /var/lib/gems/3.1.0/gems/wpscan-3.8.28/lib/wpscan.rb:7:in `<top (required)>'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom /var/lib/gems/3.1.0/gems/wpscan-3.8.28/bin/wpscan:4:in `<top (required)>'\n\tfrom /usr/local/bin/wpscan:25:in `load'\n\tfrom /usr/local/bin/wpscan:25:in `<main>'\n"
+      },
+      "ai": {
+        "vuln_type": "unknown",
+        "confidence": 0.972972972972973,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "unknown",
+          "confidence": 0.972972972972973,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "external-tool-wpscan",
+      "target": null,
+      "severity": 2,
+      "evidence": "{\"tool\": \"wpscan\", \"status\": \"ran\", \"rc\": 1, \"vulnerabilities\": [], \"stdout\": \"\", \"stderr\": \"/usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_thread_safe_level.rb:16:in `<module:LoggerThreadSafeLevel>': uninitialized constant ActiveSupport::LoggerThreadSafeLevel::Logger (NameError)\\n\\n    Logger::Severity.constants.each do |severity|\\n    ^^^^^^\\n\\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_thread_safe_level.rb:9:in `<module:ActiveSupport>'\\n\\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_thread_safe_level.rb:8:in `<top (required)>'\\n\\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\\n\\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\\n\\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_silence.rb:5:in `<top (required)>'\\n\\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\\n\\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\\n\\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger.rb:3:in `<top (required)>'\\n\\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\\n\\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require",
+      "source": {
+        "tool": "wpscan",
+        "file": "generated/tools/wpscan.json"
+      },
+      "raw_tool_output": {
+        "tool": "wpscan",
+        "status": "ran",
+        "rc": 1,
+        "vulnerabilities": [],
+        "stdout": "",
+        "stderr": "/usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_thread_safe_level.rb:16:in `<module:LoggerThreadSafeLevel>': uninitialized constant ActiveSupport::LoggerThreadSafeLevel::Logger (NameError)\n\n    Logger::Severity.constants.each do |severity|\n    ^^^^^^\n\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_thread_safe_level.rb:9:in `<module:ActiveSupport>'\n\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_thread_safe_level.rb:8:in `<top (required)>'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_silence.rb:5:in `<top (required)>'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger.rb:3:in `<top (required)>'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support.rb:29:in `<top (required)>'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/all.rb:3:in `<top (required)>'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom /var/lib/gems/3.1.0/gems/wpscan-3.8.28/lib/wpscan.rb:7:in `<top (required)>'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'\n\tfrom /var/lib/gems/3.1.0/gems/wpscan-3.8.28/bin/wpscan:4:in `<top (required)>'\n\tfrom /usr/local/bin/wpscan:25:in `load'\n\tfrom /usr/local/bin/wpscan:25:in `<main>'\n",
+        "output_file": "runs/testphp.vulnweb.com/ai-demo-http/generated/tools/wpscan_adapter.json"
+      },
+      "ai": {
+        "vuln_type": "unknown",
+        "confidence": 0.972972972972973,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "unknown",
+          "confidence": 0.972972972972973,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "external-tool-nikto_adapter",
+      "target": null,
+      "severity": 2,
+      "evidence": "{\"tool\": \"nikto\", \"status\": \"ran\", \"rc\": null, \"findings\": [], \"stdout\": \"\", \"stderr\": \"timeout\"}",
+      "source": {
+        "tool": "nikto_adapter",
+        "file": "generated/tools/nikto_adapter.json"
+      },
+      "raw_tool_output": {
+        "tool": "nikto",
+        "status": "ran",
+        "rc": null,
+        "findings": [],
+        "stdout": "",
+        "stderr": "timeout"
+      },
+      "ai": {
+        "vuln_type": "unknown",
+        "confidence": 0.9787234042553191,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "unknown",
+          "confidence": 0.9787234042553191,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "external-tool-nikto",
+      "target": null,
+      "severity": 2,
+      "evidence": "{\"tool\": \"nikto\", \"status\": \"ran\", \"rc\": null, \"findings\": [], \"stdout\": \"\", \"stderr\": \"timeout\", \"output_file\": \"runs/testphp.vulnweb.com/ai-demo-http/generated/tools/nikto_adapter.json\"}",
+      "source": {
+        "tool": "nikto",
+        "file": "generated/tools/nikto.json"
+      },
+      "raw_tool_output": {
+        "tool": "nikto",
+        "status": "ran",
+        "rc": null,
+        "findings": [],
+        "stdout": "",
+        "stderr": "timeout",
+        "output_file": "runs/testphp.vulnweb.com/ai-demo-http/generated/tools/nikto_adapter.json"
+      },
+      "ai": {
+        "vuln_type": "unknown",
+        "confidence": 0.9795918367346939,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "unknown",
+          "confidence": 0.9795918367346939,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "external-tool-nuclei_adapter",
+      "target": null,
+      "severity": 2,
+      "evidence": "{\"tool\": \"nuclei\", \"status\": \"ran\", \"rc\": null, \"findings\": [], \"stdout\": \"\", \"stderr\": \"timeout\"}",
+      "source": {
+        "tool": "nuclei_adapter",
+        "file": "generated/tools/nuclei_adapter.json"
+      },
+      "raw_tool_output": {
+        "tool": "nuclei",
+        "status": "ran",
+        "rc": null,
+        "findings": [],
+        "stdout": "",
+        "stderr": "timeout"
+      },
+      "ai": {
+        "vuln_type": "unknown",
+        "confidence": 0.9782608695652174,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "unknown",
+          "confidence": 0.9782608695652174,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "external-tool-nuclei",
+      "target": null,
+      "severity": 2,
+      "evidence": "{\"tool\": \"nuclei\", \"status\": \"ran\", \"rc\": null, \"findings\": [], \"stdout\": \"\", \"stderr\": \"timeout\", \"output_file\": \"runs/testphp.vulnweb.com/ai-demo-http/generated/tools/nuclei_adapter.json\"}",
+      "source": {
+        "tool": "nuclei",
+        "file": "generated/tools/nuclei.json"
+      },
+      "raw_tool_output": {
+        "tool": "nuclei",
+        "status": "ran",
+        "rc": null,
+        "findings": [],
+        "stdout": "",
+        "stderr": "timeout",
+        "output_file": "runs/testphp.vulnweb.com/ai-demo-http/generated/tools/nuclei_adapter.json"
+      },
+      "ai": {
+        "vuln_type": "unknown",
+        "confidence": 0.9791666666666666,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "unknown",
+          "confidence": 0.9791666666666666,
+          "explanation": "keyword-map"
+        }
+      }
+    },
+    {
+      "type": "external-tool-wapiti",
+      "target": null,
+      "severity": 2,
+      "evidence": "{\"status\": \"error\", \"tool\": \"wapiti\", \"error\": \"[Errno 2] No such file or directory: 'wapiti'\"}",
+      "source": {
+        "tool": "wapiti",
+        "file": "generated/tools/wapiti.json"
+      },
+      "raw_tool_output": {
+        "status": "error",
+        "tool": "wapiti",
+        "error": "[Errno 2] No such file or directory: 'wapiti'"
+      },
+      "ai": {
+        "vuln_type": "unknown",
+        "confidence": 0.9130434782608695,
+        "explanation": "keyword-map"
+      },
+      "meta": {
+        "ai_prediction": {
+          "vuln_type": "unknown",
+          "confidence": 0.9130434782608695,
+          "explanation": "keyword-map"
+        }
+      }
+    }
+  ]
+}

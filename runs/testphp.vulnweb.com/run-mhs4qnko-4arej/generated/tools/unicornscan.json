@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "tool": "unicornscan",
+    "status": "ran"
+  },
+  "result": {
+    "cmd": [
+      "/usr/bin/unicornscan",
+      "https://testphp.vulnweb.com"
+    ],
+    "rc": 0,
+    "stdout": "what host(s) should i scan?, ive got nothing to do\n",
+    "stderr": "Main [Error   cidr.c:263] dns lookup fails for `https': Unknown host\nMain [Error   getconfig.c:434] cant add workunit for argument `https://testphp.vulnweb.com': dont understand address `//testphp.vulnweb.com'\n"
+  },
+  "parsed_findings": []
+}

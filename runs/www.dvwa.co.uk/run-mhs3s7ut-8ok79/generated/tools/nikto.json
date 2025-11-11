@@ -1,0 +1,9 @@
+{
+  "tool": "nikto",
+  "status": "ran",
+  "rc": null,
+  "findings": [],
+  "stdout": "",
+  "stderr": "timeout",
+  "output_file": "runs/www.dvwa.co.uk/run-mhs3s7ut-8ok79/generated/tools/nikto_adapter.json"
+}

@@ -1,0 +1,879 @@
+{
+  "matches": [
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=1",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=1",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=1",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=1",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=1",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=2",
+      "score": 0.46680851063829787,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=1",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=2",
+      "score": 0.46680851063829787,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=1",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=3",
+      "score": 0.46680851063829787,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=1",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=3",
+      "score": 0.46680851063829787,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=2",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=2",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=2",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=2",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=2",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=1",
+      "score": 0.46680851063829787,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=2",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=1",
+      "score": 0.46680851063829787,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=2",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=3",
+      "score": 0.46680851063829787,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=2",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=3",
+      "score": 0.46680851063829787,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=3",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=3",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=3",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=3",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=3",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=1",
+      "score": 0.46680851063829787,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=3",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=1",
+      "score": 0.46680851063829787,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=3",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=2",
+      "score": 0.46680851063829787,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/artists.php?artist=3",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/artists.php?artist=2",
+      "score": 0.46680851063829787,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/guestbook.php",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/guestbook.php",
+      "score": 0.75,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/guestbook.php",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/guestbook.php",
+      "score": 0.75,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/guestbook.php",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/guestbook.php",
+      "score": 0.75,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/guestbook.php",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/guestbook.php",
+      "score": 0.75,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/guestbook.php",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/guestbook.php",
+      "score": 0.75,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/guestbook.php",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/guestbook.php",
+      "score": 0.75,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/guestbook.php",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/guestbook.php",
+      "score": 0.75,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/guestbook.php",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/guestbook.php",
+      "score": 0.75,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/hpp/?pp=12",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/hpp/?pp=12",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/hpp/?pp=12",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/hpp/?pp=12",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/hpp/?pp=12",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+      "score": 0.3436813186813187,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/hpp/?pp=12",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+      "score": 0.3436813186813187,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/hpp/?pp=12",
+      "score": 0.3436813186813187,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/hpp/?pp=12",
+      "score": 0.3436813186813187,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=2",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/listproducts.php?cat=4",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/listproducts.php?cat=3",
+      "score": 0.466938775510204,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/search.php?test=query",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/search.php?test=query",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/search.php?test=query",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/search.php?test=query",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/search.php?test=query",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/search.php?test=query",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/search.php?test=query",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/search.php?test=query",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/search.php?test=query",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/search.php?test=query",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/search.php?test=query",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/search.php?test=query",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/search.php?test=query",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/search.php?test=query",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/search.php?test=query",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/search.php?test=query",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/search.php?test=query",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/search.php?test=query",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/search.php?test=query",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/search.php?test=query",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/search.php?test=query",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/search.php?test=query",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/search.php?test=query",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/search.php?test=query",
+      "score": 1.0,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/secured/newuser.php",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/secured/newuser.php",
+      "score": 0.75,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/secured/newuser.php",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/secured/newuser.php",
+      "score": 0.75,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/secured/newuser.php",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/secured/newuser.php",
+      "score": 0.75,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/secured/newuser.php",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/secured/newuser.php",
+      "score": 0.75,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/secured/newuser.php",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/secured/newuser.php",
+      "score": 0.75,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/secured/newuser.php",
+        "finding_type": "xss-reflected",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/secured/newuser.php",
+      "score": 0.75,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/userinfo.php",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/userinfo.php",
+      "score": 0.75,
+      "attached_to": "multi"
+    },
+    {
+      "poc": {
+        "proof_url": "http://testphp.vulnweb.com/userinfo.php",
+        "finding_type": "xss-none",
+        "status": 200
+      },
+      "finding_target": "http://testphp.vulnweb.com/userinfo.php",
+      "score": 0.75,
+      "attached_to": "multi"
+    }
+  ],
+  "unmapped": [
+    {
+      "poc": {
+        "proof_url": "https://testphp.vulnweb.com",
+        "finding_type": "xss-none",
+        "status": "error"
+      },
+      "suggested": {
+        "score": 0.3144444444444444,
+        "suggested_finding_target": "http://testphp.vulnweb.com/",
+        "suggested_finding_type": "xss-none",
+        "topN": []
+      }
+    }
+  ]
+}

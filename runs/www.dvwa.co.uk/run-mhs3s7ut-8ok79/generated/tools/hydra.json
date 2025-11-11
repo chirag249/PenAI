@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "tool": "hydra",
+    "status": "ran"
+  },
+  "result": {
+    "cmd": [
+      "/usr/bin/hydra",
+      "http://www.dvwa.co.uk/"
+    ],
+    "rc": 255,
+    "stdout": "Hydra v9.4 (c) 2022 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).\n\nHydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-11-10 00:56:51\n",
+    "stderr": "[ERROR] There is no service \"http\", most likely you mean one of the many web modules, e.g. http-get or http-form-post. Read it up!\n"
+  },
+  "parsed_findings": []
+}

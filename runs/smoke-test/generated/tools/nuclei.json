@@ -1,0 +1,9 @@
+{
+  "tool": "nuclei",
+  "status": "ran",
+  "rc": null,
+  "findings": [],
+  "stdout": "",
+  "stderr": "timeout",
+  "output_file": "runs/smoke-test/generated/tools/nuclei_adapter.json"
+}

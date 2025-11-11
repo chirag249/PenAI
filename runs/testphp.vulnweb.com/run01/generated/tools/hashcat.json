@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "tool": "hashcat",
+    "status": "ran"
+  },
+  "result": {
+    "cmd": [
+      "/usr/bin/hashcat",
+      "https://testphp.vulnweb.com"
+    ],
+    "rc": 255,
+    "stdout": "hashcat (v6.2.6) starting in autodetect mode\n\nOpenCL API (OpenCL 3.0 PoCL 3.1+debian  Linux, None+Asserts, RELOC, SPIR, LLVM 15.0.6, SLEEF, DISTRO, POCL_DEBUG) - Platform #1 [The pocl project]\n==================================================================================================================================================\n* Device #1: pthread-haswell-AMD Ryzen 7 4800H with Radeon Graphics, 6649/13362 MB (2048 MB allocatable), 16MCU\n\nAutodetecting hash-modes. Please be patient...Autodetected hash-modesStarted: Sun Oct 26 19:31:31 2025\nStopped: Sun Oct 26 19:31:32 2025\n",
+    "stderr": "No hash-mode matches the structure of the input hash.\n\n"
+  },
+  "parsed_findings": []
+}

@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "tool": "msfconsole",
+    "status": "timeout"
+  },
+  "result": {
+    "cmd": [
+      "/usr/bin/msfconsole",
+      "https://testphp.vulnweb.com"
+    ],
+    "rc": null,
+    "stderr": "timeout"
+  },
+  "parsed_findings": []
+}

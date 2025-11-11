@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "tool": "searchsploit",
+    "status": "mocked_no_binary"
+  },
+  "result": {
+    "stdout": "mock output for searchsploit"
+  },
+  "parsed_findings": []
+}

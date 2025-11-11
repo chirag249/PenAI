@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "tool": "subfinder",
+    "status": "mocked_no_binary"
+  },
+  "result": {
+    "stdout": "mock output for subfinder"
+  },
+  "parsed_findings": []
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "url": "https://testphp.vulnweb.com",
+    "used_url": "http://testphp.vulnweb.com/",
+    "status": 200,
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>Home of Acunetix Art</title>\n<!-- InstanceEndEditable -->\n<link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\">\n<!-- InstanceBeginEditable name=\"headers_rgn\" -->\n<!-- here goes headers headers -->\n<!-- InstanceEndEditable -->\n<script language=\"JavaScript\" type=\"text/JavaScript\">\n<!--\nfunction MM_reloadPage(init) {  //reloads the window if Nav4 resized\n  if (init==true) with (navigator) {if ((appName==\"Netscape\")&&(parseInt(appVersio"
+  },
+  {
+    "url": "http://testphp.vulnweb.com/style.css",
+    "used_url": "http://testphp.vulnweb.com/style.css",
+    "status": 200,
+    "snippet": "body{\r\n\tfont-family: Arial,sans-serif;\r\n\tcolor: #333333;\r\n\tline-height: 1.166;\t\r\n\tmargin: 0px;\r\n\tpadding: 0px;\r\n}\r\n\r\na:link, a:visited{\r\n\tcolor: #006699;\r\n\ttext-decoration: none;\r\n}\r\n\r\na:hover {\r\n\ttext-decoration: underline;\r\n}\r\n\r\nh1, h2, h3, h4, h5, h6 {\r\n\tfont-family: Arial,sans-serif;\r\n\tmargin: 0px;\r\n\tpadding: 0px;\r\n}\r\n\r\nh1{\r\n font-family: Verdana,Arial,sans-serif;\r\n font-size: 120%;\r\n color: #334d55;\r\n}\r\n\r\nh2{\r\n font-size: 114%;\r\n color: #006699;\r\n}\r\n\r\nh3{\r\n font-size: 100%;\r\n color: #334d55;\r\n}\r\n\r\nh4{\r\n font-size: 100%;\r\n font-weight: normal;\r\n color: #333333;\r\n}\r\n\r\nh5{\r\n font-size: 100%;\r\n color: #334d55;\r\n}\r\n\r\nul{\r\n list-style-type: square;\r\n}\r\n\r\nul ul{\r\n list-style-type: disc;\r\n}\r\n\r\nul ul ul{\r\n list-style-type: none;\r\n}\r\n\r\nlabel{\r\n font: bold 100% Arial,sans-serif;\r\n color: #334d55"
+  },
+  {
+    "url": "http://testphp.vulnweb.com/index.php",
+    "used_url": "http://testphp.vulnweb.com/index.php",
+    "status": 200,
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>Home of Acunetix Art</title>\n<!-- InstanceEndEditable -->\n<link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\">\n<!-- InstanceBeginEditable name=\"headers_rgn\" -->\n<!-- here goes headers headers -->\n<!-- InstanceEndEditable -->\n<script language=\"JavaScript\" type=\"text/JavaScript\">\n<!--\nfunction MM_reloadPage(init) {  //reloads the window if Nav4 resized\n  if (init==true) with (navigator) {if ((appName==\"Netscape\")&&(parseInt(appVersio"
+  },
+  {
+    "url": "http://testphp.vulnweb.com/categories.php",
+    "used_url": "http://testphp.vulnweb.com/categories.php",
+    "status": 200,
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>picture categories</title>\n<!-- InstanceEndEditable -->\n<link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\">\n<!-- InstanceBeginEditable name=\"headers_rgn\" -->\n<!-- here goes headers headers -->\n<!-- InstanceEndEditable -->\n<script language=\"JavaScript\" type=\"text/JavaScript\">\n<!--\nfunction MM_reloadPage(init) {  //reloads the window if Nav4 resized\n  if (init==true) with (navigator) {if ((appName==\"Netscape\")&&(parseInt(appVersion)"
+  },
+  {
+    "url": "http://testphp.vulnweb.com/artists.php",
+    "used_url": "http://testphp.vulnweb.com/artists.php",
+    "status": 200,
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>artists</title>\n<!-- InstanceEndEditable -->\n<link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\">\n<!-- InstanceBeginEditable name=\"headers_rgn\" -->\n<!-- here goes headers headers -->\n<!-- InstanceEndEditable -->\n<script language=\"JavaScript\" type=\"text/JavaScript\">\n<!--\nfunction MM_reloadPage(init) {  //reloads the window if Nav4 resized\n  if (init==true) with (navigator) {if ((appName==\"Netscape\")&&(parseInt(appVersion)==4)) {\n   "
+  },
+  {
+    "url": "http://testphp.vulnweb.com/disclaimer.php",
+    "used_url": "http://testphp.vulnweb.com/disclaimer.php",
+    "status": 200,
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>disclaimer</title>\n<!-- InstanceEndEditable -->\n<link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\">\n<!-- InstanceBeginEditable name=\"headers_rgn\" -->\n<!-- here goes headers headers -->\n<!-- InstanceEndEditable -->\n<script language=\"JavaScript\" type=\"text/JavaScript\">\n<!--\nfunction MM_reloadPage(init) {  //reloads the window if Nav4 resized\n  if (init==true) with (navigator) {if ((appName==\"Netscape\")&&(parseInt(appVersion)==4)) {\n"
+  },
+  {
+    "url": "http://testphp.vulnweb.com/cart.php",
+    "used_url": "http://testphp.vulnweb.com/cart.php",
+    "status": 200,
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>you cart</title>\n<!-- InstanceEndEditable -->\n<link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\">\n<!-- InstanceBeginEditable name=\"headers_rgn\" -->\n<!-- here goes headers headers -->\n<!-- InstanceEndEditable -->\n<script language=\"JavaScript\" type=\"text/JavaScript\">\n<!--\nfunction MM_reloadPage(init) {  //reloads the window if Nav4 resized\n  if (init==true) with (navigator) {if ((appName==\"Netscape\")&&(parseInt(appVersion)==4)) {\n  "
+  },
+  {
+    "url": "http://testphp.vulnweb.com/guestbook.php",
+    "used_url": "http://testphp.vulnweb.com/guestbook.php",
+    "status": 200,
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>guestbook</title>\n<!-- InstanceEndEditable -->\n<link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\">\n<!-- InstanceBeginEditable name=\"headers_rgn\" -->\n<!-- InstanceEndEditable -->\n<script language=\"JavaScript\" type=\"text/JavaScript\">\n<!--\nfunction MM_reloadPage(init) {  //reloads the window if Nav4 resized\n  if (init==true) with (navigator) {if ((appName==\"Netscape\")&&(parseInt(appVersion)==4)) {\n    document.MM_pgW=innerWidth; docu"
+  },
+  {
+    "url": "http://testphp.vulnweb.com/AJAX/index.php",
+    "used_url": "http://testphp.vulnweb.com/AJAX/index.php",
+    "status": 200,
+    "snippet": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\" />\r\n<title>ajax test</title>\r\n<link href=\"styles.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n<script type=\"text/javascript\">\r\n\tvar httpreq = null;\t\r\n\r\n\tfunction SetContent(XML) {\r\n\t\tvar items = XML.getElementsByTagName('items').item(0).getElementsByTagName('item');\r\n\t\tvar inner = '<ul>';\r\n\t\tfor(i=0; i<items.length; i++){\r\n\t\t\tinner = inner + '<li><a href=\"javascript:getInfo(\\'' + items[i].attributes.item(0).value + '\\', \\'' + items[i].attributes.item(1).value + '\\')\">' + items[i].firstChild.nodeValue + '</a></li>';\r\n\t\t}\r\n\t\t\r\n\t\tinner = inner + '</ul>"
+  },
+  {
+    "url": "http://testphp.vulnweb.com/login.php",
+    "used_url": "http://testphp.vulnweb.com/login.php",
+    "status": 200,
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>login page</title>\n<!-- InstanceEndEditable -->\n<link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\">\n<!-- InstanceBeginEditable name=\"headers_rgn\" -->\n<!-- here goes headers headers -->\n<!-- InstanceEndEditable -->\n<script language=\"JavaScript\" type=\"text/JavaScript\">\n<!--\nfunction MM_reloadPage(init) {  //reloads the window if Nav4 resized\n  if (init==true) with (navigator) {if ((appName==\"Netscape\")&&(parseInt(appVersion)==4)) {\n"
+  },
+  {
+    "url": "http://testphp.vulnweb.com/userinfo.php",
+    "used_url": "http://testphp.vulnweb.com/userinfo.php",
+    "status": 302,
+    "snippet": "you must login"
+  },
+  {
+    "url": "http://testphp.vulnweb.com/privacy.php",
+    "used_url": "http://testphp.vulnweb.com/privacy.php",
+    "status": 404,
+    "snippet": "File not found.\n"
+  },
+  {
+    "url": "http://testphp.vulnweb.com/Mod_Rewrite_Shop/",
+    "used_url": "http://testphp.vulnweb.com/Mod_Rewrite_Shop/",
+    "status": 200,
+    "snippet": "<html>\r\n<div id=\"content\">\r\n\t<div class='product'><table><tr><td width='180px'><img src='images/1.jpg'></td><td width='400px'><a href='Details/network-attached-storage-dlink/1/'>Network Storage D-Link DNS-313 enclosure 1 x SATA</a></td><td width='50px' bgcolor='#F8F8F8'><a href='Details/network-attached-storage-dlink/1/'>Price<br>359 &euro;</a></td></table></tr></div><div class='product'><table><tr><td width='180px'><img src='images/2.jpg'></td><td width='400px'><a href='Details/web-camera-a4tech/2/'>Web Camera A4Tech PK-335E</a></td><td width='50px' bgcolor='#F8F8F8'><a href='Details/web-camera-a4tech/2/'>Price<br>10 &euro;</a></td></table></tr></div><div class='product'><table><tr><td width='180px'><img src='images/3.jpg'></td><td width='400px'><a href='Details/color-printer/3/'>Laser Co"
+  },
+  {
+    "url": "http://testphp.vulnweb.com/hpp/",
+    "used_url": "http://testphp.vulnweb.com/hpp/",
+    "status": 200,
+    "snippet": "<title>HTTP Parameter Pollution Example</title>\r\n\r\n<a href=\"?pp=12\">check</a><br/>\r\n\r\n<hr>\r\n<a href='http://blog.mindedsecurity.com/2009/05/client-side-http-parameter-pollution.html'>Original article</a>"
+  },
+  {
+    "url": "http://testphp.vulnweb.com/AJAX/styles.css",
+    "used_url": "http://testphp.vulnweb.com/AJAX/styles.css",
+    "status": 200,
+    "snippet": "body {\r\n  font-family: Verdana, Geneva, Arial, helvetica, sans-serif;\r\n}\r\n\r\ntd {\r\n\tfont-family: Verdana, Geneva, Arial, helvetica, sans-serif;\r\n}\r\n\r\nth {\r\n\tfont-family: Verdana, Geneva, Arial, helvetica, sans-serif;\r\n}\r\n\r\na {\r\n\ttext-decoration: none;\r\n\tcolor:#333333;\r\n}\r\n\r\na:hover {\r\n\tbackground-color: #FFEE00;\r\n}\r\n\r\ntd.bordered {\r\n\tborder: 1px solid #CCCCCC;\r\n\tbackground:#FFCC00;\r\n}\r\n\r\n#contentDiv {\r\n\tborder: 1px solid #CCCCCC;\r\n}\r\n\r\n#xmlDiv {\r\n\tfont-family: \"Courier New\", Courier, mono;\r\n\tfont-size: 12px;\r\n\tcolor: #33CC00;\r\n\tbackground-color: #000000;\r\n}"
+  },
+  {
+    "url": "http://testphp.vulnweb.com/signup.php",
+    "used_url": "http://testphp.vulnweb.com/signup.php",
+    "status": 200,
+    "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>signup</title>\n<!-- InstanceEndEditable -->\n<link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\">\n<!-- InstanceBeginEditable name=\"headers_rgn\" -->\n\n<!-- InstanceEndEditable -->\n<script language=\"JavaScript\" type=\"text/JavaScript\">\n<!--\nfunction MM_reloadPage(init) {  //reloads the window if Nav4 resized\n  if (init==true) with (navigator) {if ((appName==\"Netscape\")&&(parseInt(appVersion)==4)) {\n    document.MM_pgW=innerWidth; docume"
+  },
+  {
+    "url": "http://testphp.vulnweb.com/hpp/?pp=12",
+    "used_url": "http://testphp.vulnweb.com/hpp/?pp=12",
+    "status": 200,
+    "snippet": "<title>HTTP Parameter Pollution Example</title>\r\n\r\n<a href=\"?pp=12\">check</a><br/>\r\n<a href=\"params.php?p=valid&pp=12\">link1</a><br/><a href=\"params.php?p=valid&pp=12\">link2</a><br/><form action=\"params.php?p=valid&pp=12\"><input type=submit name=aaaa/></form><br/>\r\n<hr>\r\n<a href='http://blog.mindedsecurity.com/2009/05/client-side-http-parameter-pollution.html'>Original article</a>"
+  },
+  {
+    "url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+    "used_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+    "status": 200,
+    "snippet": "valid12"
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "targets": [
+    "http://www.dvwa.co.uk/"
+  ],
+  "mode": "non-destructive",
+  "primary_domain": "www.dvwa.co.uk"
+}

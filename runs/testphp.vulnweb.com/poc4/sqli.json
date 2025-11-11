@@ -1,0 +1,11 @@
+[
+  {
+    "type": "sqli-none",
+    "target": "http://testphp.vulnweb.com/artists.php?artist=2",
+    "used_url": "http://testphp.vulnweb.com/artists.php?artist=2",
+    "confidence": "low",
+    "status": 200,
+    "note": "no error signatures",
+    "snippet": "<!doctype html public \"-//w3c//dtd html 4.01 transitional//en\"\n\"http://www.w3.org/tr/html4/loose.dtd\">\n<html><!-- instancebegin template=\"/templates/main_dynamic_template.dwt.php\" codeoutsidehtmlislocked=\"false\" -->\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "tool": "smtp-user-enum",
+    "status": "ran"
+  },
+  "result": {
+    "cmd": [
+      "/usr/bin/smtp-user-enum",
+      "http://www.dvwa.co.uk/"
+    ],
+    "rc": 1,
+    "stdout": "smtp-user-enum v1.2 ( http://pentestmonkey.net/tools/smtp-user-enum )\n\nUsage: smtp-user-enum [options] ( -u username | -U file-of-usernames ) ( -t host | -T file-of-targets )\n\noptions are:\n        -m n     Maximum number of processes (default: 5)\n\t-M mode  Method to use for username guessing EXPN, VRFY or RCPT (default: VRFY)\n\t-u user  Check if user exists on remote system\n\t-f addr  MAIL FROM email address.  Used only in \"RCPT TO\" mode (default: user@example.com)\n        -D dom   Domain to append to supplied user list to make email addresses (Default: none)\n                 Use this option when you want to guess valid email addresses instead of just usernames\n                 e.g. \"-D example.com\" would guess foo@example.com, bar@example.com, etc.  Instead of \n                      simply the usernames foo and bar.\n\t-U file  File of usernames to check via smtp service\n\t-t host  Server host running smtp service\n\t-T file  File of hostnames running the smtp service\n\t-p port  TCP port on which smtp service runs (default: 25)\n\t-d       Debugging output\n\t-w n     Wait a maximum of n seconds for reply (default: 5)\n\t-v       Verbose\n\t-h       This help message\n\nAlso see smtp-user-enum-user-docs.pdf from the smtp-user-enum tar ball.\n\nExamples:\n\n$ smtp-user-enum -M VRFY -U users.txt -t 10.0.0.1\n$ smtp-user-enum -M EXPN -u admin1 -t 10.0.0.1\n$ smtp-user-enum -M RCPT -U users.txt -T mail-server-ips.txt\n$ smtp-user-enum -M EXPN -D example.com -U users.txt -t 10.0.0.1\n\n",
+    "stderr": ""
+  },
+  "parsed_findings": []
+}

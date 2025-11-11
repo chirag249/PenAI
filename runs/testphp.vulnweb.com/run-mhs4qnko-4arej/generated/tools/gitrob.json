@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "tool": "gitrob",
+    "status": "mocked_no_binary"
+  },
+  "result": {
+    "stdout": "mock output for gitrob"
+  },
+  "parsed_findings": []
+}

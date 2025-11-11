@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machine Learning Model Evaluation Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .chart-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .chart-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .description {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #007acc;
+        }
+        .placeholder {
+            background-color: #f0f0f0;
+            border: 2px dashed #ccc;
+            padding: 50px;
+            margin: 20px 0;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Machine Learning Model Evaluation Report</h1>
+        
+        <div class="description">
+            <p>This report demonstrates four distinct data visualization charts for machine learning model evaluation:</p>
+            <ol>
+                <li><strong>ROC Curve</strong>: Showing true positive rate vs false positive rate with AUC metric</li>
+                <li><strong>Confusion Matrix</strong>: Displaying actual vs predicted classifications with color coding</li>
+                <li><strong>Performance Comparison</strong>: Bar chart comparing performance metrics between different tools/models</li>
+                <li><strong>F1 Scores</strong>: Separate bar chart specifically for F1 scores of each class or model</li>
+            </ol>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart-title">1. ROC Curve - True Positive Rate vs False Positive Rate</div>
+            <div class="placeholder">Visualization would appear here<br>(Run with matplotlib and seaborn installed to generate actual charts)</div>
+            <p>The ROC curve shows the trade-off between sensitivity (true positive rate) and specificity (1 – false positive rate). 
+            The AUC (Area Under Curve) metric quantifies the overall performance of the model.</p>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart-title">2. Confusion Matrix - Actual vs Predicted Classifications</div>
+            <div class="placeholder">Visualization would appear here<br>(Run with matplotlib and seaborn installed to generate actual charts)</div>
+            <p>The confusion matrix displays the performance of a classification algorithm. Each row represents the instances in an actual class, 
+            while each column represents the instances in a predicted class. Color coding helps visualize the distribution.</p>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart-title">3. Performance Metrics Comparison</div>
+            <div class="placeholder">Visualization would appear here<br>(Run with matplotlib and seaborn installed to generate actual charts)</div>
+            <p>This grouped bar chart compares key performance metrics (accuracy, precision, recall, F1-score) across different models or tools. 
+            It enables easy comparison of model effectiveness across multiple dimensions.</p>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart-title">4. F1 Scores by Class/Model</div>
+            <div class="placeholder">Visualization would appear here<br>(Run with matplotlib and seaborn installed to generate actual charts)</div>
+            <p>This bar chart specifically focuses on F1 scores for each class or model. The F1 score is the harmonic mean of precision and recall, 
+            providing a balanced measure of a model's accuracy.</p>
+        </div>
+    </div>
+</body>
+</html>
+    

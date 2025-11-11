@@ -1,0 +1,5 @@
+{
+  "https://testphp.vulnweb.com": {
+    "error": "ConnectTimeout('')"
+  }
+}

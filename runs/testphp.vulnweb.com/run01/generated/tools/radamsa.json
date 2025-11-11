@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "tool": "radamsa",
+    "status": "mocked_no_binary"
+  },
+  "result": {
+    "stdout": "mock output for radamsa"
+  },
+  "parsed_findings": []
+}

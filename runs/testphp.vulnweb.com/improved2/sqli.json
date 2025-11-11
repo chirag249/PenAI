@@ -1,0 +1,11 @@
+[
+  {
+    "type": "sqli-none",
+    "target": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+    "used_url": "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=12",
+    "confidence": "low",
+    "status": 200,
+    "note": "no error signatures",
+    "snippet": "valid12"
+  }
+]

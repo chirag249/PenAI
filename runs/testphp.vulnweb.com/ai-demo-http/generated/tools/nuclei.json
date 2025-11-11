@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "tool": "nuclei",
+    "status": "adapter_return"
+  },
+  "result": {
+    "tool": "nuclei",
+    "status": "ran",
+    "rc": null,
+    "findings": [],
+    "stdout": "",
+    "stderr": "timeout",
+    "output_file": "runs/testphp.vulnweb.com/ai-demo-http/generated/tools/nuclei_adapter.json"
+  }
+}

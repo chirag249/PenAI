@@ -1,0 +1,238 @@
+{
+  "report_metadata": {
+    "generated_at": "2025-11-11T18:02:23.377531Z",
+    "report_version": "2.0",
+    "source_run": {
+      "primary_domain": "example.com",
+      "targets": [
+        "https://example.com"
+      ],
+      "run_id": "test-enhanced-reporting",
+      "start_time": "2025-11-11T18:02:22.297198Z",
+      "scan_profile": "thorough"
+    }
+  },
+  "executive_summary": {
+    "executive_summary": {
+      "scan_date": "2025-11-11T18:02:23.377442Z",
+      "total_vulnerabilities": 5,
+      "risk_level": "HIGH",
+      "potential_business_impact": {
+        "estimated_downtime_hours": 28,
+        "potential_data_exposure": 2,
+        "compliance_risks": {
+          "owasp_top_10_2021": [
+            "a03_injection",
+            "a01_broken_access_control",
+            "a07_identification_and_authentication_failures",
+            "a10_server_side_request_forgery"
+          ],
+          "nist_800_53": [
+            "ia_identification_and_authentication",
+            "ac_access_control"
+          ],
+          "pci_dss": [
+            "requirement_8_identify_and_authenticate_access"
+          ],
+          "iso_27001": [
+            "a_9_access_control"
+          ]
+        }
+      },
+      "immediate_actions_required": true,
+      "overall_security_posture": "CRITICAL - Immediate attention required"
+    }
+  },
+  "findings": [
+    {
+      "type": "sqli",
+      "target": "https://example.com/admin/login",
+      "severity": 5,
+      "confidence": "high",
+      "evidence": "SQL error message visible in response",
+      "description": "SQL Injection vulnerability in admin login form",
+      "adjusted_severity": 5,
+      "asset_criticality": 5.0,
+      "risk_factors": {
+        "base_severity": 5,
+        "asset_criticality": 5.0,
+        "adjusted_severity": 5
+      }
+    },
+    {
+      "type": "xss-reflected",
+      "target": "https://example.com/search?q=test",
+      "severity": 4,
+      "confidence": "medium",
+      "evidence": "<script>alert('xss')</script> executed in search results",
+      "description": "Reflected XSS in search functionality",
+      "adjusted_severity": 4,
+      "asset_criticality": 1.0,
+      "risk_factors": {
+        "base_severity": 4,
+        "asset_criticality": 1.0,
+        "adjusted_severity": 4
+      }
+    },
+    {
+      "type": "idor",
+      "target": "https://example.com/api/user/123",
+      "severity": 4,
+      "confidence": "high",
+      "evidence": "Able to access user data without authorization",
+      "description": "Insecure Direct Object Reference in user API",
+      "adjusted_severity": 5,
+      "asset_criticality": 5.0,
+      "risk_factors": {
+        "base_severity": 4,
+        "asset_criticality": 5.0,
+        "adjusted_severity": 5
+      }
+    },
+    {
+      "type": "auth-bypass",
+      "target": "https://example.com/admin/dashboard",
+      "severity": 5,
+      "confidence": "high",
+      "evidence": "Admin dashboard accessible without authentication",
+      "description": "Authentication Bypass in admin area",
+      "adjusted_severity": 5,
+      "asset_criticality": 5.0,
+      "risk_factors": {
+        "base_severity": 5,
+        "asset_criticality": 5.0,
+        "adjusted_severity": 5
+      }
+    },
+    {
+      "type": "ssrf",
+      "target": "https://example.com/api/fetch?url=http://internal",
+      "severity": 4,
+      "confidence": "medium",
+      "evidence": "Internal service metadata accessible through API",
+      "description": "Server-Side Request Forgery in fetch API",
+      "adjusted_severity": 5,
+      "asset_criticality": 5.0,
+      "risk_factors": {
+        "base_severity": 4,
+        "asset_criticality": 5.0,
+        "adjusted_severity": 5
+      }
+    }
+  ],
+  "remediation_guidance": [
+    {
+      "vulnerability_type": "sqli",
+      "severity": 5,
+      "affected_targets": [
+        "https://example.com/admin/login"
+      ],
+      "description": "SQL Injection vulnerabilities allow attackers to execute malicious SQL queries, potentially accessing, modifying, or deleting sensitive data.",
+      "remediation_steps": [
+        "Use parameterized queries or prepared statements for all database interactions",
+        "Implement input validation and sanitization for all user-supplied data",
+        "Apply the principle of least privilege for database accounts",
+        "Regularly update and patch database management systems",
+        "Use ORM frameworks that automatically handle parameterization"
+      ],
+      "secure_coding_example": "# Vulnerable code\nquery = \"SELECT * FROM users WHERE username = '\" + username + \"' AND password = '\" + password + \"'\"\n\n# Secure code using parameterized queries\nquery = \"SELECT * FROM users WHERE username = %s AND password = %s\"\ncursor.execute(query, (username, password))",
+      "configuration_fixes": [
+        "Refer to security best practices for configuration guidance"
+      ]
+    },
+    {
+      "vulnerability_type": "xss-reflected",
+      "severity": 4,
+      "affected_targets": [
+        "https://example.com/search?q=test"
+      ],
+      "description": "Reflected Cross-Site Scripting (XSS) occurs when user input is immediately returned in search results, error messages, or any other response that includes some or all of the input.",
+      "remediation_steps": [
+        "Implement proper output encoding for all user-supplied data",
+        "Use Content Security Policy (CSP) headers to restrict script execution",
+        "Validate and sanitize all input before processing",
+        "Implement proper session management and authentication",
+        "Use modern web frameworks with built-in XSS protection"
+      ],
+      "secure_coding_example": "# Vulnerable code\nprint(\"<h1>Search results for: \" + user_input + \"</h1>\")\n\n# Secure code using output encoding\nimport html\nprint(\"<h1>Search results for: \" + html.escape(user_input) + \"</h1>\")",
+      "configuration_fixes": [
+        "Refer to security best practices for configuration guidance"
+      ]
+    },
+    {
+      "vulnerability_type": "idor",
+      "severity": 4,
+      "affected_targets": [
+        "https://example.com/api/user/123"
+      ],
+      "description": "Insecure Direct Object References occur when an application exposes a reference to an internal implementation object without proper access control.",
+      "remediation_steps": [
+        "Implement proper access control checks for all object references",
+        "Use indirect object references or per-user object mappings",
+        "Validate that users have permission to access requested objects",
+        "Implement server-side session management",
+        "Use UUIDs instead of sequential IDs where possible"
+      ],
+      "secure_coding_example": "# Refer to security best practices for secure coding examples",
+      "configuration_fixes": [
+        "Refer to security best practices for configuration guidance"
+      ]
+    },
+    {
+      "vulnerability_type": "auth-bypass",
+      "severity": 5,
+      "affected_targets": [
+        "https://example.com/admin/dashboard"
+      ],
+      "description": "Authentication Bypass vulnerabilities allow attackers to gain access to restricted content without proper authentication.",
+      "remediation_steps": [
+        "Implement proper input validation",
+        "Apply security best practices",
+        "Regularly update dependencies"
+      ],
+      "secure_coding_example": "# Refer to security best practices for secure coding examples",
+      "configuration_fixes": [
+        "Implement multi-factor authentication",
+        "Enforce strong password policies",
+        "Use secure session management with proper timeouts",
+        "Implement account lockout mechanisms",
+        "Regularly review access control policies"
+      ]
+    },
+    {
+      "vulnerability_type": "ssrf",
+      "severity": 4,
+      "affected_targets": [
+        "https://example.com/api/fetch?url=http://internal"
+      ],
+      "description": "Server-Side Request Forgery (SSRF) occurs when an application fetches a remote resource without validating the user-supplied URL.",
+      "remediation_steps": [
+        "Implement proper input validation",
+        "Apply security best practices",
+        "Regularly update dependencies"
+      ],
+      "secure_coding_example": "# Refer to security best practices for secure coding examples",
+      "configuration_fixes": [
+        "Refer to security best practices for configuration guidance"
+      ]
+    }
+  ],
+  "compliance_mapping": {
+    "owasp_top_10_2021": [
+      "a03_injection",
+      "a01_broken_access_control",
+      "a07_identification_and_authentication_failures",
+      "a10_server_side_request_forgery"
+    ],
+    "nist_800_53": [
+      "ia_identification_and_authentication",
+      "ac_access_control"
+    ],
+    "pci_dss": [
+      "requirement_8_identify_and_authenticate_access"
+    ],
+    "iso_27001": [
+      "a_9_access_control"
+    ]
+  }
+}

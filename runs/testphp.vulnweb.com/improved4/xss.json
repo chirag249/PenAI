@@ -1,0 +1,7 @@
+[
+  {
+    "type": "xss-error",
+    "target": "https://testphp.vulnweb.com",
+    "error": "RuntimeError('Neither http nor https reachable for testphp.vulnweb.com')"
+  }
+]

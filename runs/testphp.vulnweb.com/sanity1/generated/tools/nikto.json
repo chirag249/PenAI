@@ -1,0 +1,11 @@
+{
+  "tool": "nikto",
+  "status": "ran",
+  "rc": 0,
+  "findings": [
+    "+ 0 host(s) tested"
+  ],
+  "stdout": "- Nikto v2.5.0\n---------------------------------------------------------------------------\n---------------------------------------------------------------------------\n+ 0 host(s) tested\n",
+  "stderr": "",
+  "output_file": "runs/testphp.vulnweb.com/sanity1/generated/tools/nikto_adapter.json"
+}

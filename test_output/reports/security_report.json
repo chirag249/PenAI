@@ -1,0 +1,59 @@
+{
+  "executive_summary": {
+    "risk_level": "HIGH",
+    "total_vulnerabilities": 5
+  },
+  "findings": [
+    {
+      "type": "sqli",
+      "target": "https://example.com/admin/login",
+      "severity": 5,
+      "confidence": "high",
+      "evidence": "SQL error message visible in response",
+      "description": "SQL Injection vulnerability in admin login form"
+    },
+    {
+      "type": "xss-reflected",
+      "target": "https://example.com/search?q=test",
+      "severity": 4,
+      "confidence": "medium",
+      "evidence": "<script>alert('xss')</script> executed in search results",
+      "description": "Reflected XSS in search functionality"
+    },
+    {
+      "type": "idor",
+      "target": "https://example.com/api/user/123",
+      "severity": 4,
+      "confidence": "high",
+      "evidence": "Able to access user data without authorization",
+      "description": "Insecure Direct Object Reference in user API"
+    },
+    {
+      "type": "auth-bypass",
+      "target": "https://example.com/admin/dashboard",
+      "severity": 5,
+      "confidence": "high",
+      "evidence": "Admin dashboard accessible without authentication",
+      "description": "Authentication Bypass in admin area"
+    },
+    {
+      "type": "ssrf",
+      "target": "https://example.com/api/fetch?url=http://internal",
+      "severity": 4,
+      "confidence": "medium",
+      "evidence": "Internal service metadata accessible through API",
+      "description": "Server-Side Request Forgery in fetch API"
+    }
+  ],
+  "remediation_guidance": [
+    {
+      "vulnerability_type": "sqli",
+      "severity": 5,
+      "description": "SQL Injection vulnerability",
+      "remediation_steps": [
+        "Use parameterized queries",
+        "Implement input validation"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "finding_index": 0,
+    "finding_type": "xss-error",
+    "target": "https://testphp.vulnweb.com",
+    "proof_url": "https://testphp.vulnweb.com",
+    "captured": {
+      "url": "https://testphp.vulnweb.com",
+      "status": "error",
+      "error": "ConnectError('[Errno -3] Temporary failure in name resolution')"
+    },
+    "timestamp": 1757521844
+  }
+]

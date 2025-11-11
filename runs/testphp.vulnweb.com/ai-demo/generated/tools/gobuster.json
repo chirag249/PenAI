@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "tool": "gobuster",
+    "status": "ran"
+  },
+  "result": {
+    "cmd": [
+      "/usr/bin/gobuster",
+      "https://testphp.vulnweb.com"
+    ],
+    "rc": 1,
+    "stdout": "",
+    "stderr": "Error: unknown command \"https://testphp.vulnweb.com\" for \"gobuster\"\nRun 'gobuster --help' for usage.\n"
+  },
+  "parsed_findings": []
+}

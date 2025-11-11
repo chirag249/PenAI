@@ -1,0 +1,35 @@
+{
+  "count": 2,
+  "pocs": [
+    {
+      "proof_url": "https://example.com",
+      "finding_type": "sqli-error",
+      "status": "error",
+      "raw": {
+        "proof_url": "https://example.com",
+        "finding_type": "sqli-error",
+        "target": "https://example.com",
+        "used_url": null,
+        "status": "error",
+        "content_type": null,
+        "snippet_path": null,
+        "error": "client error after 4 attempts: Cannot connect to host example.com:443 ssl:default [Temporary failure in name resolution]"
+      }
+    },
+    {
+      "proof_url": "https://example.com",
+      "finding_type": "sqli-error",
+      "status": "error",
+      "raw": {
+        "proof_url": "https://example.com",
+        "finding_type": "sqli-error",
+        "target": "https://example.com",
+        "used_url": null,
+        "status": "error",
+        "content_type": null,
+        "snippet_path": null,
+        "error": "client error after 4 attempts: Cannot connect to host example.com:443 ssl:default [Temporary failure in name resolution]"
+      }
+    }
+  ]
+}

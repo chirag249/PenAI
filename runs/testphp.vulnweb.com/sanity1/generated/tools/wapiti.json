@@ -1,0 +1,5 @@
+{
+  "status": "error",
+  "tool": "wapiti",
+  "error": "[Errno 2] No such file or directory: 'wapiti'"
+}

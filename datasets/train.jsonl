@@ -1,0 +1,6 @@
+
+{"text":"SQL syntax error in parameter","label":"sqli"}
+{"text":"<script>alert('xss')</script> reflected output","label":"xss"}
+{"text":"login brute force detected","label":"auth"}
+{"text":"SSL certificate expired","label":"ssl"}
+{"text":"command injection via parameter","label":"rce"}

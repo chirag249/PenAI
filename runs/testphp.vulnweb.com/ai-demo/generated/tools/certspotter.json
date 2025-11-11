@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "tool": "certspotter",
+    "status": "mocked_no_binary"
+  },
+  "result": {
+    "stdout": "mock output for certspotter"
+  },
+  "parsed_findings": []
+}

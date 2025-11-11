@@ -1,0 +1,1165 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='utf-8'/>
+<meta name='viewport' content='width=device-width,initial-scale=1'/>
+<title>Curated Report</title>
+</head>
+<body>
+<h1>Curated Scan Report</h1>
+<ul>
+<li>Run: <code>ai-demo</code></li>
+<li>Reports dir: <code>reports/</code></li>
+</ul>
+<h2>Summary</h2>
+<ul>
+<li>Consolidated findings: <strong>81</strong></li>
+<li>PoCs discovered (compact): <strong>3</strong></li>
+</ul>
+<hr />
+<h3>sqli-error — <code>http://testphp.vulnweb.com/search.php?test=query</code></h3>
+<ul>
+<li><strong>Severity:</strong> 5</li>
+<li><strong>Occurrences merged:</strong> 45</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: SQL syntax</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Use parameterized queries / prepared statements. Validate and escape inputs. Review DB permissions.</li>
+</ul>
+<hr />
+<h3>sqli-error — <code>http://testphp.vulnweb.com/secured/newuser.php</code></h3>
+<ul>
+<li><strong>Severity:</strong> 5</li>
+<li><strong>Occurrences merged:</strong> 12</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: SQL syntax</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Use parameterized queries / prepared statements. Validate and escape inputs. Review DB permissions.</li>
+</ul>
+<hr />
+<h3>xss-reflected — <code>http://testphp.vulnweb.com/guestbook.php</code></h3>
+<ul>
+<li><strong>Severity:</strong> 4</li>
+<li><strong>Occurrences merged:</strong> 41</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>xss</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Sanitize and encode untrusted input before rendering. Use context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul>
+<hr />
+<h3>xss-reflected — <code>http://testphp.vulnweb.com/search.php?test=query</code></h3>
+<ul>
+<li><strong>Severity:</strong> 4</li>
+<li><strong>Occurrences merged:</strong> 30</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>xss</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Sanitize and encode untrusted input before rendering. Use context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul>
+<hr />
+<h3>xss-reflected — <code>http://testphp.vulnweb.com/secured/newuser.php</code></h3>
+<ul>
+<li><strong>Severity:</strong> 4</li>
+<li><strong>Occurrences merged:</strong> 12</li>
+<li><strong>PoCs (1):</strong></li>
+<li><a href="pocs/snippets/http_testphp.vulnweb.com_secured_newuser.php_2e10db35d2.html">http://testphp.vulnweb.com/secured/newuser.php</a> — status: <code>200</code></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>xss</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Sanitize and encode untrusted input before rendering. Use context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul>
+<hr />
+<h3>xss-none — <code>http://testphp.vulnweb.com/hpp/params.php?p=valid&amp;pp=12</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 3</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>xss</code> (confidence: 0.50)</li>
+<li>explanation: heuristic</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Sanitize and encode untrusted input before rendering. Use context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul>
+<hr />
+<h3>sqli-none — <code>http://testphp.vulnweb.com/hpp/params.php?p=valid&amp;pp=12</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 3</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Use parameterized queries / prepared statements. Validate and escape inputs. Review DB permissions.</li>
+</ul>
+<hr />
+<h3>external-tool-amass — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "amass", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for amass"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-arachni — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "arachni", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for arachni"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-boofuzz — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "boofuzz", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for boofuzz"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-certspotter — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "certspotter", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for certspotter"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-commix — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"status": "skipped_by_safety", "tool": "commix"}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>unknown</code> (confidence: 0.00)</li>
+<li>explanation: no-model</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-create_proof — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"status": "error", "tool": "create_proof", "error": "main() takes 0 positional arguments but 2 were given"}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-crtsh — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "crtsh", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for crtsh"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-dalfox — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "dalfox", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for dalfox"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-dirb — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "dirb", "status": "timeout"}, "result": {"cmd": ["/usr/bin/dirb", "https://testphp.vulnweb.com"], "rc": null, "stderr": "timeout"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-enum4linux — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "enum4linux", "status": "ran"}, "result": {"cmd": ["/usr/bin/enum4linux", "https://testphp.vulnweb.com"], "rc": 1, "stdout": "ERROR: Target hostname \"https://testphp.vulnweb.com\" contains some illegal characters\n", "stderr": ""}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-ffuf — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "ffuf", "status": "ran"}, "result": {"cmd": ["/usr/bin/ffuf", "https://testphp.vulnweb.com"], "rc": 1, "stdout": "Fuzz Faster U Fool - v2.1.0-dev\n\nHTTP OPTIONS:\n  -H                  Header <code>\"Name: Value\"</code>, separated by colon. Multiple -H flags are accepted.\n  -X                  HTTP method to use\n  -b                  Cookie data <code>\"NAME1=VALUE1; NAME2=VALUE2\"</code> for copy as curl functionality.\n  -cc                 Client cert for authentication. Client key needs to be defined as well for this to work\n  -ck                 Client key for authentication. Client certificate needs to be defined as well for this to work\n  -d                  POST data\n  -http2              Use HTTP2 protocol (default: false)\n  -ignore-body        Do not fetch the response content. (default: false)\n  -r                  Follow redirects (default: false)\n  -raw                Do not encode URI (default: false)\n  -recursion          Scan recursively. Only FUZZ keyword is supported, and URL (-u) has to end in it. (default: false)\n  -recursion-depth    Maximum recursion depth. (default: 0)\n  -recursion-strategy Recursion strategy: \"default\" for a redirect based, and \"greedy\" to recurse on all matches (default: default)\n  -replay-proxy       Replay matched requests using this proxy.\n  -sni                Target TLS SNI, does not support FUZZ keyword\n  -timeout            HTTP request timeout in seconds. (default: 10)\n  -u                  Target URL\n  -x   </li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-gitleaks — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "gitleaks", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for gitleaks"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-gitrob — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "gitrob", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for gitrob"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-gobuster — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "gobuster", "status": "ran"}, "result": {"cmd": ["/usr/bin/gobuster", "https://testphp.vulnweb.com"], "rc": 1, "stdout": "", "stderr": "Error: unknown command \"https://testphp.vulnweb.com\" for \"gobuster\"\nRun 'gobuster --help' for usage.\n"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.67)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-graphql-fuzzer — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "graphql-fuzzer", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for graphql-fuzzer"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-hashcat — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"status": "skipped_by_safety", "tool": "hashcat"}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>unknown</code> (confidence: 0.00)</li>
+<li>explanation: no-model</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-httprobe — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "httprobe", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for httprobe"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-hydra — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"status": "skipped_by_safety", "tool": "hydra"}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>unknown</code> (confidence: 0.00)</li>
+<li>explanation: no-model</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-john — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"status": "skipped_by_safety", "tool": "john"}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>unknown</code> (confidence: 0.00)</li>
+<li>explanation: no-model</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-masscan — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "masscan", "status": "ran"}, "result": {"cmd": ["/usr/bin/masscan", "https://testphp.vulnweb.com"], "rc": 1, "stdout": "", "stderr": "FAIL: unknown command-line parameter \"https://testphp.vulnweb.com\"\n [hint] did you want \"--https://testphp.vulnweb.com\"?\n"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-medusa — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"status": "skipped_by_safety", "tool": "medusa"}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>unknown</code> (confidence: 0.00)</li>
+<li>explanation: no-model</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-msfconsole — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"status": "skipped_by_safety", "tool": "msfconsole"}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>unknown</code> (confidence: 0.00)</li>
+<li>explanation: no-model</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-newman — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "newman", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for newman"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-nikto — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"tool": "nikto", "status": "ran", "rc": 0, "findings": ["+ 0 host(s) tested"], "stdout": "- Nikto v2.5.0\n---------------------------------------------------------------------------\n---------------------------------------------------------------------------\n+ 0 host(s) tested\n", "stderr": "", "output_file": "runs/testphp.vulnweb.com/ai-demo/generated/tools/nikto_adapter.json"}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-nikto_adapter — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"tool": "nikto", "status": "ran", "rc": 0, "findings": ["+ 0 host(s) tested"], "stdout": "- Nikto v2.5.0\n---------------------------------------------------------------------------\n---------------------------------------------------------------------------\n+ 0 host(s) tested\n", "stderr": ""}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-nuclei — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"tool": "nuclei", "status": "adapter_missing_binary", "note": "nuclei not found on PATH"}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-nuclei_adapter — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"tool": "nuclei", "status": "ran", "rc": null, "findings": [], "stdout": "", "stderr": "timeout"}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-radamsa — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "radamsa", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for radamsa"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-searchsploit — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "searchsploit", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for searchsploit"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-smbclient — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "smbclient", "status": "ran"}, "result": {"cmd": ["/usr/bin/smbclient", "https://testphp.vulnweb.com"], "rc": 1, "stdout": "\nhttps:\\testphp.vulnweb.com: Not enough '\' characters in service\n", "stderr": "Usage: smbclient [-?EgqBNPkV] [-?|--help] [--usage] [-M|--message=HOST]\n        [-I|--ip-address=IP] [-E|--stderr] [-L|--list=HOST]\n        [-T|--tar=<c|x>IXFvgbNan] [-D|--directory=DIR] [-c|--command=STRING]\n        [-b|--send-buffer=BYTES] [-t|--timeout=SECONDS] [-p|--port=PORT]\n        [-g|--grepable] [-q|--quiet] [-B|--browse]\n        [-d|--debuglevel=DEBUGLEVEL] [--debug-stdout]\n        [-s|--configfile=CONFIGFILE] [--option=name=value]\n        [-l|--log-basename=LOGFILEBASE] [--leak-report] [--leak-report-full]\n        [-R|--name-resolve=NAME-RESOLVE-ORDER]\n        [-O|--socket-options=SOCKETOPTIONS] [-m|--max-protocol=MAXPROTOCOL]\n        [-n|--netbiosname=NETBIOSNAME] [--netbios-scope=SCOPE]\n        [-W|--workgroup=WORKGROUP] [--realm=REALM]\n        [-U|--user=[DOMAIN/]USERNAME[%PASSWORD]] [-N|--no-pass]\n        [--password=STRING] [--pw-nt-hash] [-A|--authentication-file=FILE]\n        [-P|--machine-pass] [--simple-bind-dn=DN]\n        [--use-kerberos=desired|required|off] [--use-krb5-ccache=CCACHE]\n        [--use-winbind-ccache] [--client-protection=sign|encrypt|off]\n        [-k|--kerberos] [-V|--version] [OPTIONS] service <password>\n"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-smtp-user-enum — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "smtp-user-enum", "status": "ran"}, "result": {"cmd": ["/usr/bin/smtp-user-enum", "https://testphp.vulnweb.com"], "rc": 1, "stdout": "smtp-user-enum v1.2 ( http://pentestmonkey.net/tools/smtp-user-enum )\n\nUsage: smtp-user-enum [options] ( -u username | -U file-of-usernames ) ( -t host | -T file-of-targets )\n\noptions are:\n        -m n     Maximum number of processes (default: 5)\n\t-M mode  Method to use for username guessing EXPN, VRFY or RCPT (default: VRFY)\n\t-u user  Check if user exists on remote system\n\t-f addr  MAIL FROM email address.  Used only in \"RCPT TO\" mode (default: user@example.com)\n        -D dom   Domain to append to supplied user list to make email addresses (Default: none)\n                 Use this option when you want to guess valid email addresses instead of just usernames\n                 e.g. \"-D example.com\" would guess foo@example.com, bar@example.com, etc.  Instead of \n                      simply the usernames foo and bar.\n\t-U file  File of usernames to check via smtp service\n\t-t host  Server host running smtp service\n\t-T file  File of hostnames running the smtp service\n\t-p port  TCP port on which smtp service runs (default: 25)\n\t-d       Debugging output\n\t-w n     Wait a maximum of n seconds for reply (default: 5)\n\t-v       Verbose\n\t-h       This help message\n\nAlso see smtp-user-enum-user-docs.pdf from the smtp-user-enum tar ball.\n\nExamples:\n\n$ smtp-user-enum -M VRFY -U users.txt -t 10.0.0.1\n</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.33)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-sqlmap — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"status": "skipped_by_safety", "tool": "sqlmap"}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-sslyze — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "sslyze", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for sslyze"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.33)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-subfinder — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "subfinder", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for subfinder"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-trufflehog — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "trufflehog", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for trufflehog"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-unicornscan — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "unicornscan", "status": "ran"}, "result": {"cmd": ["/usr/bin/unicornscan", "https://testphp.vulnweb.com"], "rc": 0, "stdout": "what host(s) should i scan?, ive got nothing to do\n", "stderr": "Main [Error   cidr.c:263] dns lookup fails for <code>https': Unknown host\nMain [Error   getconfig.c:434] cant add workunit for argument</code>https://testphp.vulnweb.com': dont understand address `//testphp.vulnweb.com'\n"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-w3af — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "w3af", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for w3af"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-wapiti — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"status": "error", "tool": "wapiti", "error": "[Errno 2] No such file or directory: 'wapiti'"}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-wappalyzer — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "wappalyzer", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for wappalyzer"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-wfuzz — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "wfuzz", "status": "ran"}, "result": {"cmd": ["/usr/bin/wfuzz", "https://testphp.vulnweb.com"], "rc": 0, "stdout": "", "stderr": " /usr/lib/python3/dist-packages/wfuzz/<strong>init</strong>.py:34: UserWarning:Pycurl is not compiled against Openssl. Wfuzz might not work correctly when fuzzing SSL sites. Check Wfuzz's documentation for more information.\n /usr/lib/python3/dist-packages/wfuzz/wfuzz.py:78: UserWarning:Fatal exception: Bad usage: You must specify a payload.\n"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-whatweb — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "whatweb", "status": "ran"}, "result": {"cmd": ["/usr/bin/whatweb", "https://testphp.vulnweb.com"], "rc": 0, "stdout": "", "stderr": "\u001b[1m\u001b[31mERROR Opening: https://testphp.vulnweb.com - execution expired\u001b[0m\n"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.67)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-wpscan — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"status": "skipped_by_safety", "tool": "wpscan"}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>unknown</code> (confidence: 0.00)</li>
+<li>explanation: no-model</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-wpscan_adapter — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"tool": "wpscan", "status": "ran", "rc": 1, "vulnerabilities": [], "stdout": "", "stderr": "/usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_thread_safe_level.rb:16:in <code>&lt;module:LoggerThreadSafeLevel&gt;': uninitialized constant ActiveSupport::LoggerThreadSafeLevel::Logger (NameError)\n\n    Logger::Severity.constants.each do |severity|\n    ^^^^^^\n\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_thread_safe_level.rb:9:in</code><module:ActiveSupport>'\n\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_thread_safe_level.rb:8:in <code>&lt;top (required)&gt;'\n\tfrom &lt;internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb&gt;:85:in</code>require'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in <code>require'\n\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger_silence.rb:5:in</code><top (required)>'\n\tfrom <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in <code>require'\n\tfrom &lt;internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb&gt;:85:in</code>require'\n\tfrom /usr/share/rubygems-integration/all/gems/activesupport-6.1.7.10/lib/active_support/logger.rb:3:in <code>&lt;top (required)&gt;'\n\tfrom &lt;internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb&gt;:85:in</code>require'\n\tfrom &lt;internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-xsstrike — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "xsstrike", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for xsstrike"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Sanitize and encode untrusted input before rendering. Use context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul>
+<hr />
+<h3>external-tool-zmap — <code>&lt;no-target&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: {"meta": {"tool": "zmap", "status": "mocked_no_binary"}, "result": {"stdout": "mock output for zmap"}, "parsed_findings": []}</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 0.50)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-<strong>init</strong> — <code>&lt;unknown&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: null</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-adapter_base — <code>&lt;unknown&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: null</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>unknown</code> (confidence: 0.00)</li>
+<li>explanation: no-model</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-manager — <code>&lt;unknown&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: null</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>unknown</code> (confidence: 0.00)</li>
+<li>explanation: no-model</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-nmap — <code>&lt;unknown&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: null</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>unknown</code> (confidence: 0.00)</li>
+<li>explanation: no-model</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>external-tool-parsers — <code>&lt;unknown&gt;</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>evidence: null</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>unknown</code> (confidence: 0.00)</li>
+<li>explanation: no-model</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Review input validation, encoding, and access controls for this endpoint.</li>
+</ul>
+<hr />
+<h3>xss-none — <code>http://testphp.vulnweb.com/</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>xss</code> (confidence: 0.50)</li>
+<li>explanation: heuristic</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Sanitize and encode untrusted input before rendering. Use context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul>
+<hr />
+<h3>sqli-none — <code>http://testphp.vulnweb.com/</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Use parameterized queries / prepared statements. Validate and escape inputs. Review DB permissions.</li>
+</ul>
+<hr />
+<h3>xss-none — <code>http://testphp.vulnweb.com/artists.php?artist=1</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>xss</code> (confidence: 0.50)</li>
+<li>explanation: heuristic</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Sanitize and encode untrusted input before rendering. Use context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul>
+<hr />
+<h3>sqli-none — <code>http://testphp.vulnweb.com/artists.php?artist=1</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Use parameterized queries / prepared statements. Validate and escape inputs. Review DB permissions.</li>
+</ul>
+<hr />
+<h3>xss-none — <code>http://testphp.vulnweb.com/artists.php?artist=2</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>xss</code> (confidence: 0.50)</li>
+<li>explanation: heuristic</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Sanitize and encode untrusted input before rendering. Use context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul>
+<hr />
+<h3>sqli-none — <code>http://testphp.vulnweb.com/artists.php?artist=2</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Use parameterized queries / prepared statements. Validate and escape inputs. Review DB permissions.</li>
+</ul>
+<hr />
+<h3>xss-none — <code>http://testphp.vulnweb.com/artists.php?artist=3</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>xss</code> (confidence: 0.50)</li>
+<li>explanation: heuristic</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Sanitize and encode untrusted input before rendering. Use context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul>
+<hr />
+<h3>sqli-none — <code>http://testphp.vulnweb.com/artists.php?artist=3</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Use parameterized queries / prepared statements. Validate and escape inputs. Review DB permissions.</li>
+</ul>
+<hr />
+<h3>xss-none — <code>http://testphp.vulnweb.com/guestbook.php</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (1):</strong></li>
+<li><a href="pocs/snippets/http_testphp.vulnweb.com_guestbook.php_5304e0614c.html">http://testphp.vulnweb.com/guestbook.php</a> — status: <code>200</code></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>xss</code> (confidence: 0.50)</li>
+<li>explanation: heuristic</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Sanitize and encode untrusted input before rendering. Use context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul>
+<hr />
+<h3>sqli-none — <code>http://testphp.vulnweb.com/guestbook.php</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Use parameterized queries / prepared statements. Validate and escape inputs. Review DB permissions.</li>
+</ul>
+<hr />
+<h3>xss-none — <code>http://testphp.vulnweb.com/hpp/?pp=12</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>xss</code> (confidence: 0.50)</li>
+<li>explanation: heuristic</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Sanitize and encode untrusted input before rendering. Use context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul>
+<hr />
+<h3>sqli-none — <code>http://testphp.vulnweb.com/hpp/?pp=12</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Use parameterized queries / prepared statements. Validate and escape inputs. Review DB permissions.</li>
+</ul>
+<hr />
+<h3>xss-none — <code>http://testphp.vulnweb.com/listproducts.php?cat=1</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>xss</code> (confidence: 0.50)</li>
+<li>explanation: heuristic</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Sanitize and encode untrusted input before rendering. Use context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul>
+<hr />
+<h3>sqli-none — <code>http://testphp.vulnweb.com/listproducts.php?cat=1</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Use parameterized queries / prepared statements. Validate and escape inputs. Review DB permissions.</li>
+</ul>
+<hr />
+<h3>xss-none — <code>http://testphp.vulnweb.com/listproducts.php?cat=2</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>xss</code> (confidence: 0.50)</li>
+<li>explanation: heuristic</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Sanitize and encode untrusted input before rendering. Use context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul>
+<hr />
+<h3>sqli-none — <code>http://testphp.vulnweb.com/listproducts.php?cat=2</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Use parameterized queries / prepared statements. Validate and escape inputs. Review DB permissions.</li>
+</ul>
+<hr />
+<h3>xss-none — <code>http://testphp.vulnweb.com/listproducts.php?cat=3</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>xss</code> (confidence: 0.50)</li>
+<li>explanation: heuristic</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Sanitize and encode untrusted input before rendering. Use context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul>
+<hr />
+<h3>sqli-none — <code>http://testphp.vulnweb.com/listproducts.php?cat=3</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Use parameterized queries / prepared statements. Validate and escape inputs. Review DB permissions.</li>
+</ul>
+<hr />
+<h3>xss-none — <code>http://testphp.vulnweb.com/listproducts.php?cat=4</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>xss</code> (confidence: 0.50)</li>
+<li>explanation: heuristic</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Sanitize and encode untrusted input before rendering. Use context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul>
+<hr />
+<h3>sqli-none — <code>http://testphp.vulnweb.com/listproducts.php?cat=4</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Use parameterized queries / prepared statements. Validate and escape inputs. Review DB permissions.</li>
+</ul>
+<hr />
+<h3>xss-none — <code>http://testphp.vulnweb.com/search.php?test=query</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs (1):</strong></li>
+<li><a href="pocs/snippets/http_testphp.vulnweb.com_search.php_test_query_fc4c1079cd.html">http://testphp.vulnweb.com/search.php?test=query</a> — status: <code>200</code></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>xss</code> (confidence: 0.50)</li>
+<li>explanation: heuristic</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Sanitize and encode untrusted input before rendering. Use context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul>
+<hr />
+<h3>sqli-none — <code>http://testphp.vulnweb.com/search.php?test=query</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Use parameterized queries / prepared statements. Validate and escape inputs. Review DB permissions.</li>
+</ul>
+<hr />
+<h3>xss-none — <code>http://testphp.vulnweb.com/userinfo.php</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Sanitize and encode untrusted input before rendering. Use context-specific encoding (HTML, JS, attribute). Implement CSP.</li>
+</ul>
+<hr />
+<h3>sqli-none — <code>http://testphp.vulnweb.com/userinfo.php</code></h3>
+<ul>
+<li><strong>Severity:</strong> 2</li>
+<li><strong>Occurrences merged:</strong> 1</li>
+<li><strong>PoCs:</strong> <em>none attached</em></li>
+<li><strong>Examples / notes:</strong></li>
+<li>(no compact excerpt available)</li>
+<li><strong>AI suggestion:</strong></li>
+<li>predicted type: <code>sqli</code> (confidence: 1.00)</li>
+<li>explanation: keyword-map</li>
+<li><strong>Recommended remediation (high level):</strong></li>
+<li>Use parameterized queries / prepared statements. Validate and escape inputs. Review DB permissions.</li>
+</ul>
+<hr />
+<h2>Mapping diagnostics (auto-generated)</h2>
+<ul>
+<li>mapping candidates processed: 3</li>
+<li>unmapped PoCs: 0</li>
+</ul>
+<hr />
+<p>Generated by pentest pipeline — curated output.</p>
+</body>
+</html>

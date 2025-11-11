@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "tool": "msfconsole",
+    "status": "timeout"
+  },
+  "result": {
+    "cmd": [
+      "/usr/bin/msfconsole",
+      "http://www.dvwa.co.uk/"
+    ],
+    "rc": null,
+    "stderr": "timeout"
+  },
+  "parsed_findings": []
+}
