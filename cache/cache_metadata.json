@@ -1,0 +1,16 @@
+{
+  "entries": {
+    "229d07c561867d8b7279cd6779ac611e1719d9e2bfd9868688c608c44ccd295c": {
+      "target": "example.com",
+      "scan_type": "xss",
+      "params": {
+        "param": "value"
+      },
+      "created": 1762888565.0708055,
+      "expires": 1762974965.0708058,
+      "size": 67,
+      "access_count": 0
+    }
+  },
+  "total_size": 67
+}

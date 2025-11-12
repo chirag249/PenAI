@@ -1,0 +1,157 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: penai-master
+  labels:
+    app: penai
+    component: master
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: penai
+      component: master
+  template:
+    metadata:
+      labels:
+        app: penai
+        component: master
+    spec:
+      containers:
+      - name: penai-master
+        image: penai/master:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: REDIS_HOST
+          value: "redis-service"
+        - name: REDIS_PORT
+          value: "6379"
+        - name: GEMINI_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: penai-secrets
+              key: gemini-api-key
+        volumeMounts:
+        - name: runs-storage
+          mountPath: /app/runs
+        - name: cache-storage
+          mountPath: /app/cache
+        - name: tenants-storage
+          mountPath: /app/tenants
+      volumes:
+      - name: runs-storage
+        persistentVolumeClaim:
+          claimName: penai-runs-pvc
+      - name: cache-storage
+        persistentVolumeClaim:
+          claimName: penai-cache-pvc
+      - name: tenants-storage
+        persistentVolumeClaim:
+          claimName: penai-tenants-pvc
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: penai-worker
+  labels:
+    app: penai
+    component: worker
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: penai
+      component: worker
+  template:
+    metadata:
+      labels:
+        app: penai
+        component: worker
+    spec:
+      containers:
+      - name: penai-worker
+        image: penai/worker:latest
+        env:
+        - name: REDIS_HOST
+          value: "redis-service"
+        - name: REDIS_PORT
+          value: "6379"
+        volumeMounts:
+        - name: runs-storage
+          mountPath: /app/runs
+        - name: cache-storage
+          mountPath: /app/cache
+      volumes:
+      - name: runs-storage
+        persistentVolumeClaim:
+          claimName: penai-runs-pvc
+      - name: cache-storage
+        persistentVolumeClaim:
+          claimName: penai-cache-pvc
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: penai-coordinator
+  labels:
+    app: penai
+    component: coordinator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: penai
+      component: coordinator
+  template:
+    metadata:
+      labels:
+        app: penai
+        component: coordinator
+    spec:
+      containers:
+      - name: penai-coordinator
+        image: penai/coordinator:latest
+        env:
+        - name: REDIS_HOST
+          value: "redis-service"
+        - name: REDIS_PORT
+          value: "6379"
+        volumeMounts:
+        - name: runs-storage
+          mountPath: /app/runs
+      volumes:
+      - name: runs-storage
+        persistentVolumeClaim:
+          claimName: penai-runs-pvc
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis
+  labels:
+    app: redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      containers:
+      - name: redis
+        image: redis:7-alpine
+        ports:
+        - containerPort: 6379
+        volumeMounts:
+        - name: redis-storage
+          mountPath: /data
+        command: ["redis-server"]
+        args: ["--appendonly", "yes"]
+      volumes:
+      - name: redis-storage
+        persistentVolumeClaim:
+          claimName: redis-pvc

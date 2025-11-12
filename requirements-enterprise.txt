@@ -1,0 +1,3 @@
+# Enterprise-grade deployment requirements
+redis>=4.3.4
+psutil>=5.9.0

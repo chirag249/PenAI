@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+  penai-master:
+    build: .
+    image: penai/master:latest
+    container_name: penai-master
+    ports:
+      - "5000:5000"
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    volumes:
+      - ./runs:/app/runs
+      - ./cache:/app/cache
+      - ./tenants:/app/tenants
+    depends_on:
+      - redis
+    command: ["python", "agent.py", "--help"]
+  
+  penai-worker-1:
+    build: .
+    image: penai/worker:latest
+    container_name: penai-worker-1
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    volumes:
+      - ./runs:/app/runs
+      - ./cache:/app/cache
+    depends_on:
+      - redis
+    command: ["python", "-m", "modules.distributed_scanner", "worker"]
+  
+  penai-worker-2:
+    build: .
+    image: penai/worker:latest
+    container_name: penai-worker-2
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    volumes:
+      - ./runs:/app/runs
+      - ./cache:/app/cache
+    depends_on:
+      - redis
+    command: ["python", "-m", "modules.distributed_scanner", "worker"]
+  
+  penai-coordinator:
+    build: .
+    image: penai/coordinator:latest
+    container_name: penai-coordinator
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    volumes:
+      - ./runs:/app/runs
+    depends_on:
+      - redis
+    command: ["python", "-m", "modules.distributed_scanner", "coordinator"]
+  
+  redis:
+    image: redis:7-alpine
+    container_name: penai-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+
+volumes:
+  redis-data:

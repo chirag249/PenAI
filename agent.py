@@ -63,15 +63,29 @@ except Exception:
     run_tool = None  # type: ignore
 
 try:
-    from modules.notifications import send_scan_results_notification  # type: ignore
+    from modules.distributed_scanner import initiate_distributed_scan, get_distributed_scan_results  # type: ignore
 except Exception:
-    send_scan_results_notification = None  # type: ignore
+    initiate_distributed_scan = None  # type: ignore
+    get_distributed_scan_results = None  # type: ignore
 
 try:
-    from modules.vuln_intel import correlate_findings_with_cve, get_threat_intel_feeds  # type: ignore
+    from modules.resource_monitor import get_resource_monitor, start_resource_monitoring, stop_resource_monitoring  # type: ignore
 except Exception:
-    correlate_findings_with_cve = None  # type: ignore
-    get_threat_intel_feeds = None  # type: ignore
+    get_resource_monitor = None  # type: ignore
+    start_resource_monitoring = None  # type: ignore
+    stop_resource_monitoring = None  # type: ignore
+
+try:
+    from modules.cache_manager import get_cached_results, cache_results  # type: ignore
+except Exception:
+    get_cached_results = None  # type: ignore
+    cache_results = None  # type: ignore
+
+try:
+    from modules.tenant_manager import validate_tenant_scan, get_tenant  # type: ignore
+except Exception:
+    validate_tenant_scan = None  # type: ignore
+    get_tenant = None  # type: ignore
 
 # dynamic curated generator if present
 _gen_path = os.path.join(os.path.dirname(__file__), "modules", "reporter", "generate_curated.py")
@@ -927,6 +941,18 @@ def main():
     p.add_argument("--scan-profile", choices=["quick", "normal", "thorough", "stealth"],
                    default=None,
                    help="Scan profile to use for tool configurations.")
+    p.add_argument("--distributed", action="store_true",
+                   help="Enable distributed scanning across multiple nodes.")
+    p.add_argument("--tenant-id", default=None,
+                   help="Tenant ID for multi-tenant environments.")
+    p.add_argument("--redis-host", default="localhost",
+                   help="Redis host for distributed scanning.")
+    p.add_argument("--redis-port", type=int, default=6379,
+                   help="Redis port for distributed scanning.")
+    p.add_argument("--enable-caching", action="store_true",
+                   help="Enable intelligent caching of scan results.")
+    p.add_argument("--monitor-resources", action="store_true",
+                   help="Enable resource monitoring during scans.")
     args = p.parse_args()
 
     if ScopeManager is None:
@@ -938,12 +964,38 @@ def main():
         os.environ["PENAI_CONFIG_DIR"] = args.config_dir
     if args.scan_profile:
         os.environ["PENAI_SCAN_PROFILE"] = args.scan_profile
+    
+    # Set Redis configuration for distributed scanning
+    if args.redis_host:
+        os.environ["REDIS_HOST"] = args.redis_host
+    if args.redis_port:
+        os.environ["REDIS_PORT"] = str(args.redis_port)
 
     scope = ScopeManager(args.targets, mode="non-destructive")
-    outdir = f"runs/{scope.primary_domain}/{args.run_id}"
+    
+    # Validate tenant access if tenant ID is provided
+    if args.tenant_id and validate_tenant_scan:
+        if not validate_tenant_scan(args.tenant_id, args.targets):
+            print(f"Error: Tenant {args.tenant_id} is not authorized to scan these targets", file=sys.stderr)
+            sys.exit(3)
+        
+        # Use tenant-specific output directory
+        from modules.tenant_manager import get_tenant_manager
+        tenant_manager = get_tenant_manager()
+        try:
+            outdir = tenant_manager.get_tenant_scan_dir(args.tenant_id, args.run_id)
+        except Exception as e:
+            print(f"Error: Failed to create tenant scan directory: {e}", file=sys.stderr)
+            sys.exit(4)
+    else:
+        outdir = f"runs/{scope.primary_domain}/{args.run_id}"
 
     # prepare workspace (scope method may create run_meta etc)
     scope.prepare_workspace(outdir)
+    
+    # Start resource monitoring if enabled
+    if args.monitor_resources and start_resource_monitoring:
+        start_resource_monitoring()
 
     try:
         asyncio.run(run(scope, outdir,

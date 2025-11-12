@@ -52,6 +52,8 @@ The main dependencies include:
 - `weasyprint` - PDF generation
 - `python-dotenv` - Environment variable management
 - `requests` - HTTP library for intelligence and notification integrations
+- `redis` - For distributed task queues
+- `psutil` - For system resource monitoring
 
 ## Basic Usage
 
@@ -198,6 +200,51 @@ PenAI integrates with external intelligence sources to enhance vulnerability det
 - **Exploit Correlation**: Cross-referencing with exploit databases
 
 To enable intelligence features, set your `NVD_API_KEY` environment variable.
+
+## Enterprise-Grade Performance and Scalability
+
+PenAI now includes enterprise-grade performance and scalability features for large-scale deployments:
+
+### Distributed Scanning
+
+- Multi-node orchestration using Redis task queues
+- Horizontal scaling across worker nodes
+- Fault-tolerant scan coordination
+- Real-time progress tracking
+
+### Resource Monitoring
+
+- Real-time CPU, memory, and disk usage tracking
+- Network I/O monitoring
+- Automatic scan parameter adjustment
+- Dynamic parallelization control
+
+### Intelligent Caching
+
+- Scan result caching with TTL expiration
+- LRU (Least Recently Used) eviction policy
+- Configurable size limits
+- Cache hit/miss tracking
+
+### Multi-Tenant Support
+
+- Isolated scanning environments
+- Target access control policies
+- Scan limit enforcement
+- Tenant-specific configurations
+
+### Cloud-Native Deployment
+
+- Docker containerization support
+- Kubernetes orchestration support
+- Persistent volume management
+- Secret management for sensitive configuration
+
+To enable enterprise features, use the appropriate command-line flags:
+- `--distributed` for distributed scanning
+- `--monitor-resources` for resource monitoring
+- `--enable-caching` for intelligent caching
+- `--tenant-id` for multi-tenant environments
 
 ## Customization
 
