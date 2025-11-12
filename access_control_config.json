@@ -1,0 +1,20 @@
+{
+  "users": {
+    "testuser": {
+      "password_hash": "7s9k1UGKHnSTpid+YBjPa/SpX5mVfeuM3fv5EcjuNfc=",
+      "salt": "2jrEVqMl9QYd5Xc/BF+R0/xZAEJqVI3IV5tbQ47zlVo=",
+      "roles": [
+        "testrole"
+      ],
+      "email": null,
+      "mfa_enabled": false,
+      "mfa_secret": null,
+      "created_at": "2025-11-12T14:09:32.949701",
+      "last_login": null,
+      "active": true
+    }
+  },
+  "roles": {},
+  "permissions": {},
+  "mfa_enabled": false
+}

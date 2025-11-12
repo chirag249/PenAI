@@ -10,8 +10,9 @@ Behavior changes from original:
    scope.is_destructive_allowed (treats operator answer as explicit permission).
  - --force-destructive skips interactive prompt (still forces destructive run).
  - --clear-logs will remove previous runs for the same primary domain before starting.
+ - --privacy-level allows setting privacy-preserving scanning options.
+ - --enable-audit enables comprehensive audit logging.
 """
-
 from __future__ import annotations
 import asyncio
 import argparse
@@ -86,6 +87,17 @@ try:
 except Exception:
     validate_tenant_scan = None  # type: ignore
     get_tenant = None  # type: ignore
+
+try:
+    from modules.audit_logger import initialize_audit_logger, get_audit_logger  # type: ignore
+except Exception:
+    initialize_audit_logger = None  # type: ignore
+    get_audit_logger = None  # type: ignore
+
+try:
+    from modules.compliance.privacy_preserving import initialize_privacy_scanner  # type: ignore
+except Exception:
+    initialize_privacy_scanner = None  # type: ignore
 
 # dynamic curated generator if present
 _gen_path = os.path.join(os.path.dirname(__file__), "modules", "reporter", "generate_curated.py")

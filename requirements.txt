@@ -1,36 +1,66 @@
+aiodns>=3.0.0
+aiohttp>=3.8.1
+aiosignal>=1.2.0
+anyio>=3.6.1
+async-timeout>=4.0.2
+attrs>=21.4.0
+beautifulsoup4>=4.11.1
+blinker>=1.5
+Brotli>=1.0.9
+bs4>=0.0.1
+cachetools>=5.2.0
+certifi>=2022.6.15
+cffi>=1.15.1
+charset-normalizer>=2.1.0
+click>=8.1.3
+colorama>=0.4.5
+cryptography>=3.4.8
+cssselect>=1.1.0
+dnspython>=2.2.1
+fake-useragent>=1.1.1
+Flask>=2.2.2
+frozenlist>=1.3.0
+google-ai-generativelanguage>=0.1.0
+google-api-core>=2.8.2
+google-auth>=2.9.1
+google-generativeai>=0.1.0rc2
+googleapis-common-protos>=1.56.4
+grpcio>=1.47.0
+grpcio-status>=1.47.0
+h11>=0.12.0
+html5lib>=1.1
+httpcore>=0.15.0
 httpx>=0.23.0
-fastapi>=0.95.0
-uvicorn>=0.22.0
-jinja2>=3.1.0
-beautifulsoup4>=4.12.0
-lxml>=4.9.0
-pydantic>=1.10.0
-python-dotenv>=1.0.0
-markdown>=3.4.0
-weasyprint>=62.0
-requests>=2.31.0
-redis>=4.3.4
-psutil>=5.9.0
-
-
-#  requirements-ai.txt - tuned for local sklearn training
-# numpy==1.25.6
-# scipy==1.10.1
-# scikit-learn==1.3.2
-# joblib==1.3.2
-# pandas==2.2.2
-# weasyprint==58.2  # optional, for PDF generation
-# requests==2.31.0
-# python-dotenv==1.0.0
-
-# Enhanced AI requirements (transformer-based models)
-# See requirements-ai-enhanced.txt for full transformer model support
-# torch>=1.13.0
-# transformers>=4.30.0
-# sentencepiece>=0.1.99
-
-# python3 -m venv .venv-ai
-# . .venv-ai/bin/activate
-# pip install -U pip setuptools wheel
-# pip install -r requirements-ai.txt
-# For enhanced AI capabilities: pip install -r requirements-ai-enhanced.txt
+idna>=3.3
+importlib-metadata>=4.12.0
+itsdangerous>=2.1.2
+Jinja2>=3.1.2
+lxml>=4.9.1
+MarkupSafe>=2.1.1
+multidict>=6.0.2
+numpy>=1.23.1
+pandas>=1.4.3
+proto-plus>=1.22.0
+protobuf>=4.21.2
+pyasn1>=0.4.8
+pyasn1-modules>=0.2.8
+pycares>=4.2.2
+pycparser>=2.21
+PyJWT>=2.4.0
+PySocks>=1.7.1
+python-dateutil>=2.8.2
+pytz>=2022.1
+requests>=2.28.1
+rsa>=4.8
+scipy>=1.8.1
+selenium>=4.3.0
+six>=1.16.0
+sniffio>=1.2.0
+soupsieve>=2.3.2.post1
+tqdm>=4.64.0
+typing_extensions>=4.3.0
+urllib3>=1.26.10
+webencodings>=0.5.1
+Werkzeug>=2.2.1
+yarl>=1.7.2
+zipp>=3.8.1

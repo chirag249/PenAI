@@ -4,8 +4,16 @@ import urllib.parse
 import json
 import hashlib
 import time
+import hmac
 from typing import List, Optional
 
+# Try to import cryptography modules, but handle gracefully if not available
+CRYPTO_AVAILABLE = False
+try:
+    __import__('cryptography')
+    CRYPTO_AVAILABLE = True
+except ImportError:
+    pass
 
 class ScopeManager:
     def __init__(self, targets, mode: str = "non-destructive"):
@@ -65,6 +73,21 @@ class ScopeManager:
             # If no proof file exists, accept any non-empty token as valid for this session
             # This allows for environment-based proof tokens
             return bool(token and token.strip())
+
+    def _generate_hmac_proof(self, outdir: str, secret_key: bytes) -> str:
+        """Generate HMAC-based proof for enhanced security."""
+        message = f"{outdir}:{int(time.time())}".encode()
+        return hmac.new(secret_key, message, hashlib.sha256).hexdigest()
+
+    def _validate_hmac_proof(self, token: str, outdir: str, secret_key: bytes) -> bool:
+        """Validate HMAC-based proof."""
+        try:
+            # Extract timestamp from the outdir path
+            message = f"{outdir}:{int(time.time())}".encode()
+            expected_hmac = hmac.new(secret_key, message, hashlib.sha256).hexdigest()
+            return hmac.compare_digest(token, expected_hmac)
+        except Exception:
+            return False
 
     def proof_of_control(self, outdir: str) -> bool:
         """

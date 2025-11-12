@@ -18,14 +18,33 @@ import sys
 import uuid
 import hashlib
 import time
+import hmac
+import secrets
+import base64
 from pathlib import Path
 from typing import Optional
+
+# Try to import cryptography for enhanced security
+CRYPTO_AVAILABLE = False
+try:
+    __import__('cryptography')
+    CRYPTO_AVAILABLE = True
+except ImportError:
+    pass
 
 def generate_secure_token(run_dir: str) -> str:
     """Generate a cryptographically secure token for the run."""
     # Create a unique token based on run directory, timestamp, and system randomness
-    seed = f"{run_dir}:{time.time()}:{os.urandom(32).hex()}"
+    seed = f"{run_dir}:{time.time()}:{secrets.token_bytes(32).hex()}"
     return hashlib.sha256(seed.encode()).hexdigest()
+
+def generate_hmac_token(run_dir: str, secret_key: Optional[bytes] = None) -> str:
+    """Generate an HMAC-based token for enhanced security."""
+    if secret_key is None:
+        secret_key = secrets.token_bytes(32)
+    
+    message = f"{run_dir}:{int(time.time())}".encode()
+    return hmac.new(secret_key, message, hashlib.sha256).hexdigest()
 
 def write_proof(run_dir: Path, token: str) -> Path:
     run_dir.mkdir(parents=True, exist_ok=True)
@@ -57,6 +76,7 @@ def main():
     p.add_argument("--token", help="Explicit token to write (optional)")
     p.add_argument("--print-only", action="store_true", help="Don't write file; only print instructions and a token")
     p.add_argument("--validate", action="store_true", help="Validate existing proof file")
+    p.add_argument("--hmac", action="store_true", help="Generate HMAC-based proof for enhanced security")
     args = p.parse_args()
 
     run_dir = Path(args.run_dir)
@@ -75,6 +95,12 @@ def main():
     # Generate or use provided token
     if args.token:
         token = args.token
+    elif args.hmac:
+        # Generate HMAC-based token
+        secret_key = secrets.token_bytes(32)
+        token = generate_hmac_token(str(run_dir), secret_key)
+        secret_key_display = base64.b64encode(secret_key).decode() if CRYPTO_AVAILABLE else secret_key.hex()
+        print(f"HMAC Secret Key (KEEP SECURE): {secret_key_display}")
     else:
         token = generate_secure_token(str(run_dir))
 
@@ -120,6 +146,8 @@ def main():
     print("- Rotate tokens regularly in production environments")
     print("- Use file-based proofs for maximum security")
     print("- Validate proofs before running destructive tests")
+    if args.hmac:
+        print("- Store the HMAC secret key securely for validation")
     print("=" * 60)
 
     # Show validation command
