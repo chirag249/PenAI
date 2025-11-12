@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PenAI - Penetration Testing Automation</title>
+    <title>PenAI - Professional Security Testing Platform</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary: #64748b;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --dark: #0f172a;
+            --darker: #020617;
+            --light: #f1f5f9;
+            --gray: #94a3b8;
+            --card-bg: rgba(15, 23, 42, 0.7);
+            --border: rgba(148, 163, 184, 0.2);
+        }
 
         * {
             margin: 0;
@@ -16,13 +30,13 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: #f1f5f9;
+            background: linear-gradient(135deg, var(--darker), var(--dark));
+            color: var(--light);
             min-height: 100vh;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 2rem;
         }
@@ -34,7 +48,7 @@
             padding: 1rem 2rem;
             background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+            border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -46,7 +60,7 @@
             gap: 0.75rem;
             font-size: 1.5rem;
             font-weight: 700;
-            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            background: linear-gradient(90deg, var(--primary), #60a5fa);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -63,19 +77,28 @@
         }
 
         nav a {
-            color: #cbd5e1;
+            color: var(--gray);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        nav a:hover {
-            color: #3b82f6;
+        nav a:hover, nav a.active {
+            color: var(--primary);
+        }
+
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
 
         .theme-toggle {
             background: rgba(30, 41, 59, 0.7);
-            border: 1px solid rgba(148, 163, 184, 0.3);
+            border: 1px solid var(--border);
             border-radius: 50%;
             width: 40px;
             height: 40px;
@@ -91,9 +114,79 @@
             transform: rotate(15deg);
         }
 
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .sidebar {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(2, 6, 23, 0.3);
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--light);
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 0.75rem;
+        }
+
+        .sidebar-menu a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--gray);
+            text-decoration: none;
+            padding: 0.75rem;
+            border-radius: 12px;
+            transition: all 0.2s;
+        }
+
+        .sidebar-menu a:hover, .sidebar-menu a.active {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--primary);
+        }
+
         .card {
-            background: rgba(15, 23, 42, 0.7);
-            border: 1px solid rgba(148, 163, 184, 0.2);
+            background: var(--card-bg);
+            border: 1px solid var(--border);
             border-radius: 16px;
             padding: 2rem;
             backdrop-filter: blur(10px);
@@ -110,13 +203,20 @@
         .card-header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             gap: 1rem;
             margin-bottom: 1.5rem;
         }
 
+        .card-header-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
         .card-icon {
             font-size: 1.8rem;
-            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            background: linear-gradient(135deg, var(--primary), #60a5fa);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -125,11 +225,11 @@
         .card-title {
             font-size: 1.5rem;
             font-weight: 600;
-            color: #f1f5f9;
+            color: var(--light);
         }
 
         .btn {
-            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
             border: none;
             border-radius: 12px;
@@ -154,8 +254,8 @@
 
         .btn-outline {
             background: transparent;
-            border: 2px solid #3b82f6;
-            color: #3b82f6;
+            border: 2px solid var(--primary);
+            color: var(--primary);
         }
 
         .btn-outline:hover {
@@ -163,7 +263,7 @@
         }
 
         .btn-secondary {
-            background: linear-gradient(135deg, #64748b, #94a3b8);
+            background: linear-gradient(135deg, var(--secondary), #94a3b8);
         }
 
         .btn-secondary:hover {
@@ -171,7 +271,7 @@
         }
 
         .btn-danger {
-            background: linear-gradient(135deg, #ef4444, #f87171);
+            background: linear-gradient(135deg, var(--danger), #f87171);
         }
 
         .btn-danger:hover {
@@ -186,837 +286,1013 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
-            color: #cbd5e1;
+            color: var(--gray);
         }
 
         .form-input, .form-select {
             width: 100%;
             padding: 0.8rem 1rem;
             border-radius: 12px;
-            border: 1px solid rgba(148, 163, 184, 0.3);
+            border: 1px solid var(--border);
             background: rgba(30, 41, 59, 0.5);
-            color: #f1f5f9;
+            color: var(--light);
             font-size: 1rem;
             transition: all 0.3s ease;
         }
 
         .form-input:focus, .form-select:focus {
             outline: none;
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
         }
 
-        .form-input::placeholder {
-            color: #94a3b8;
-        }
-
-        .chart-container {
-            background: rgba(30, 41, 59, 0.5);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border: 1px solid rgba(148, 163, 184, 0.2);
-        }
-
-        .report-section {
-            margin: 2rem 0;
-        }
-
-        .report-section h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: #e2e8f0;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .finding-item {
-            background: rgba(30, 41, 59, 0.5);
-            border-radius: 12px;
-            padding: 1.25rem;
-            margin-bottom: 1rem;
-            border: 1px solid rgba(148, 163, 184, 0.2);
-        }
-
-        .finding-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 0.75rem;
-        }
-
-        .finding-type {
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .finding-severity {
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .severity-critical {
-            background: rgba(239, 68, 68, 0.2);
-            color: #fecaca;
-            border: 1px solid rgba(239, 68, 68, 0.3);
-        }
-
-        .severity-high {
-            background: rgba(249, 115, 22, 0.2);
-            color: #fed7aa;
-            border: 1px solid rgba(249, 115, 22, 0.3);
-        }
-
-        .severity-medium {
-            background: rgba(234, 179, 8, 0.2);
-            color: #fef08a;
-            border: 1px solid rgba(234, 179, 8, 0.3);
-        }
-
-        .severity-low {
-            background: rgba(132, 204, 22, 0.2);
-            color: #d9f99d;
-            border: 1px solid rgba(132, 204, 22, 0.3);
-        }
-
-        .finding-target {
-            color: #94a3b8;
-            font-size: 0.9rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .finding-evidence {
-            background: rgba(15, 23, 42, 0.5);
-            border-radius: 8px;
-            padding: 1rem;
-            font-family: monospace;
-            font-size: 0.9rem;
-            white-space: pre-wrap;
-            overflow-x: auto;
-        }
-
-        .recommendations-list {
-            list-style: none;
-        }
-
-        .recommendations-list li {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
-            display: flex;
-            gap: 0.75rem;
-        }
-
-        .recommendations-list li:last-child {
-            border-bottom: none;
-        }
-
-        .recommendation-icon {
-            color: #3b82f6;
-            font-size: 1.2rem;
-        }
-
-        .spinner {
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            border: 3px solid rgba(59, 130, 246, 0.3);
-            border-radius: 50%;
-            border-top-color: #3b82f6;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        .loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            backdrop-filter: blur(4px);
-        }
-
-        .loading-content {
-            background: rgba(15, 23, 42, 0.9);
-            border-radius: 16px;
-            padding: 2rem;
-            text-align: center;
-            border: 1px solid rgba(148, 163, 184, 0.2);
-            box-shadow: 0 12px 40px rgba(2, 6, 23, 0.5);
-        }
-
-        .loading-text {
-            margin-top: 1rem;
-            font-size: 1.1rem;
-            color: #e2e8f0;
-        }
-
-        .loading-subtext {
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-            color: #94a3b8;
-        }
-
-        .actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-
-        .actions .btn {
-            flex: 1;
-            min-width: 150px;
-        }
-
-        .polling-status {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            border-radius: 12px;
-            padding: 1rem;
-            text-align: center;
-            margin: 1rem 0;
-        }
-
-        .summary-stats {
+        .metrics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
-            margin-top: 1rem;
+            margin-bottom: 2rem;
         }
 
-        .stat-card {
-            background: rgba(30, 41, 59, 0.5);
-            border-radius: 12px;
+        .metric-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
             padding: 1.5rem;
             text-align: center;
-            border: 1px solid rgba(148, 163, 184, 0.2);
+            backdrop-filter: blur(10px);
         }
 
-        .stat-value {
-            font-size: 2rem;
+        .metric-value {
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            margin: 0.5rem 0;
+            background: linear-gradient(135deg, var(--primary), #60a5fa);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .stat-label {
-            color: #94a3b8;
-            font-size: 0.9rem;
+        .metric-label {
+            color: var(--gray);
+            font-size: 1rem;
         }
 
-        .finding-confidence {
-            color: #94a3b8;
-            font-size: 0.9rem;
-            margin-bottom: 0.75rem;
-        }
+        .severity-critical { color: var(--danger); }
+        .severity-high { color: var(--warning); }
+        .severity-medium { color: #f59e0b; }
+        .severity-low { color: var(--success); }
 
-        .vulnerability-breakdown {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .vuln-item {
+        .tabs {
             display: flex;
-            justify-content: space-between;
-            padding: 0.75rem;
-            background: rgba(30, 41, 59, 0.5);
-            border-radius: 8px;
-            border: 1px solid rgba(148, 163, 184, 0.2);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
         }
 
-        .vuln-type {
+        .tab {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--gray);
+        }
+
+        .tab.active {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--primary);
             font-weight: 500;
         }
 
-        .vuln-count {
-            background: rgba(59, 130, 246, 0.2);
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table th {
+            text-align: left;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        .table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .table tr:hover {
+            background: rgba(30, 41, 59, 0.3);
+        }
+
+        .badge {
+            display: inline-block;
             padding: 0.25rem 0.75rem;
-            border-radius: 20px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .badge-critical {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--danger);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .badge-high {
+            background: rgba(245, 158, 11, 0.1);
+            color: var(--warning);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .badge-medium {
+            background: rgba(245, 158, 11, 0.1);
+            color: #f59e0b;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .badge-low {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: var(--dark);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
             font-weight: 600;
         }
 
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--gray);
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        .modal-close:hover {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--danger);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .modal-footer {
+            padding: 1.5rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1001;
+            transform: translateX(120%);
+            transition: transform 0.3s ease;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification-success {
+            border-left: 4px solid var(--success);
+        }
+
+        .notification-error {
+            border-left: 4px solid var(--danger);
+        }
+
+        .chart-container {
+            height: 300px;
+            margin: 1rem 0;
+        }
+
+        .workspace-badge {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .profile-selector {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .profile-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .profile-card:hover, .profile-card.selected {
+            background: rgba(59, 130, 246, 0.1);
+            border-color: var(--primary);
+        }
+
+        .profile-card h4 {
+            margin-bottom: 0.5rem;
+            color: var(--light);
+        }
+
+        .profile-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
         @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
+            .main-content {
+                grid-template-columns: 1fr;
             }
             
-            header {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 1rem;
+            .sidebar {
+                margin-bottom: 2rem;
             }
             
             nav ul {
                 gap: 1rem;
             }
             
-            .card {
-                padding: 1.5rem;
-            }
-            
-            .finding-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
-            }
-            
-            .actions {
-                flex-direction: column;
-            }
-            
-            .actions .btn {
-                width: 100%;
-            }
-            
-            .summary-stats {
+            .metrics-grid {
                 grid-template-columns: 1fr 1fr;
             }
-            
-            .vulnerability-breakdown {
+        }
+
+        @media (max-width: 480px) {
+            .metrics-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .tabs {
+                flex-direction: column;
             }
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-shield-alt logo-icon"></i>
+            <span>PenAI Professional</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-search"></i> Scans</a></li>
+                <li><a href="#"><i class="fas fa-file-alt"></i> Reports</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+        <div class="user-menu">
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="user-profile">
+                <div class="user-avatar">A</div>
+                <span>Admin User</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
     <div class="container">
-        <header>
-            <div class="logo">
-                <span class="logo-icon">🛡️</span>
-                <span>PenAI</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#" id="home-link">Home</a></li>
-                    <li><a href="#" id="refresh-link">Refresh</a></li>
+        <div class="main-content">
+            <div class="sidebar">
+                <h3>Navigation</h3>
+                <ul class="sidebar-menu">
+                    <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-play-circle"></i> New Scan</a></li>
+                    <li><a href="#"><i class="fas fa-history"></i> Scan History</a></li>
+                    <li><a href="#"><i class="fas fa-file-alt"></i> Reports</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Team</a></li>
+                    <li><a href="#"><i class="fas fa-cogs"></i> Profiles</a></li>
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Policies</a></li>
+                    <li><a href="#"><i class="fas fa-file-code"></i> Templates</a></li>
+                    <li><a href="#"><i class="fas fa-ruler"></i> Custom Rules</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
                 </ul>
-            </nav>
-            <div class="theme-toggle">🌙</div>
-        </header>
-
-        <main>
-            <div class="card">
-                <div class="card-header">
-                    <span class="card-icon">🚀</span>
-                    <h2 class="card-title">Start New Scan</h2>
-                </div>
-                <form id="scan-form">
-                    <div class="form-group">
-                        <label class="form-label" for="target">Target Site</label>
-                        <input
-                            type="text"
-                            id="target"
-                            class="form-input"
-                            placeholder="https://example.com"
-                            required
-                        />
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label" for="mode">Scan Mode</label>
-                        <select
-                            id="mode"
-                            class="form-select"
-                        >
-                            <option value="non-destructive">🛡️ Non-Destructive (Safe)</option>
-                            <option value="destructive">💥 Destructive (Aggressive)</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label" for="run-id">Run ID</label>
-                        <input
-                            type="text"
-                            id="run-id"
-                            class="form-input"
-                        />
-                    </div>
-
-                    <button type="submit" class="btn" id="start-btn">
-                        ▶️ Start Scan
-                    </button>
-                </form>
             </div>
 
-            <div class="card" id="latest-run-card" style="display: none;">
-                <div class="card-header">
-                    <span class="card-icon">📄</span>
-                    <h2 class="card-title">Latest Run: <span id="latest-run-title"></span></h2>
-                </div>
-                
-                <div class="actions">
-                    <button class="btn btn-outline" id="view-report-btn">
-                        📊 View Report
-                    </button>
-                    <button class="btn" id="download-md-btn">
-                        📝 Download Markdown
-                    </button>
-                    <button class="btn" id="download-html-btn">
-                        🌐 Download HTML
-                    </button>
-                    <button class="btn" id="download-pdf-btn">
-                        📄 Download PDF
-                    </button>
-                    <button class="btn" id="download-json-btn">
-                        📊 Download Summary JSON
-                    </button>
-                    <button class="btn" id="download-txt-btn">
-                        📋 Download Summary TXT
-                    </button>
+            <div class="content">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-left">
+                            <i class="fas fa-chart-line card-icon"></i>
+                            <h2 class="card-title">Security Dashboard</h2>
+                        </div>
+                        <div>
+                            <button class="btn" id="refreshDashboard">
+                                <i class="fas fa-sync-alt"></i> Refresh
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-label">Total Scans</div>
+                            <div class="metric-value" id="totalScans">0</div>
+                            <div class="metric-label">All time</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Active Scans</div>
+                            <div class="metric-value" id="activeScans">0</div>
+                            <div class="metric-label">Currently running</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Critical Vulnerabilities</div>
+                            <div class="metric-value severity-critical" id="criticalVulns">0</div>
+                            <div class="metric-label">Requires immediate attention</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">High Risk Issues</div>
+                            <div class="metric-value severity-high" id="highVulns">0</div>
+                            <div class="metric-label">Needs prompt resolution</div>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <div id="vulnerabilityChart"></div>
+                    </div>
                 </div>
 
-                <div class="polling-status" id="polling-status" style="display: none;">
-                    <p>🔄 Scan in progress... Checking for updates every 3 seconds.</p>
+                <div class="tabs">
+                    <div class="tab active" data-tab="recent">Recent Scans</div>
+                    <div class="tab" data-tab="profiles">Scanning Profiles</div>
+                    <div class="tab" data-tab="policies">Security Policies</div>
+                    <div class="tab" data-tab="templates">Report Templates</div>
                 </div>
 
-                <div id="report-content">
-                    <!-- Report content will be loaded here -->
+                <div class="tab-content active" id="recent-tab">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <i class="fas fa-history card-icon"></i>
+                                <h2 class="card-title">Recent Scans</h2>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline" id="newScanBtn">
+                                    <i class="fas fa-plus"></i> New Scan
+                                </button>
+                            </div>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Target</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Critical</th>
+                                    <th>High</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recentScansTable">
+                                <tr>
+                                    <td colspan="6" class="text-center">Loading recent scans...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
-        </main>
 
-        <div class="loading-overlay" id="loading-overlay" style="display: none;">
-            <div class="loading-content">
-                <div class="spinner" style="width: 48px; height: 48px; border-width: 4px;"></div>
-                <div class="loading-text">🚀 Starting Scan...</div>
-                <div class="loading-subtext">Initializing backend agent...</div>
+                <div class="tab-content" id="profiles-tab">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <i class="fas fa-cogs card-icon"></i>
+                                <h2 class="card-title">Scanning Profiles</h2>
+                            </div>
+                            <div>
+                                <button class="btn" id="newProfileBtn">
+                                    <i class="fas fa-plus"></i> New Profile
+                                </button>
+                            </div>
+                        </div>
+                        <div class="profile-selector" id="profilesContainer">
+                            <!-- Profiles will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="policies-tab">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <i class="fas fa-shield-alt card-icon"></i>
+                                <h2 class="card-title">Security Policies</h2>
+                            </div>
+                            <div>
+                                <button class="btn" id="newPolicyBtn">
+                                    <i class="fas fa-plus"></i> New Policy
+                                </button>
+                            </div>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Rules</th>
+                                    <th>Created</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="policiesTable">
+                                <tr>
+                                    <td colspan="5" class="text-center">Loading policies...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="templates-tab">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <i class="fas fa-file-code card-icon"></i>
+                                <h2 class="card-title">Report Templates</h2>
+                            </div>
+                            <div>
+                                <button class="btn" id="newTemplateBtn">
+                                    <i class="fas fa-plus"></i> New Template
+                                </button>
+                            </div>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Format</th>
+                                    <th>Created</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="templatesTable">
+                                <tr>
+                                    <td colspan="5" class="text-center">Loading templates...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- New Scan Modal -->
+    <div class="modal" id="newScanModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">New Security Scan</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Target URL</label>
+                    <input type="text" class="form-input" id="scanTarget" placeholder="https://example.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Scan Mode</label>
+                    <select class="form-select" id="scanMode">
+                        <option value="non-destructive">Non-Destructive (Safe)</option>
+                        <option value="destructive">Destructive (Advanced)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Scanning Profile</label>
+                    <select class="form-select" id="scanProfile">
+                        <option value="">Default Settings</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Workspace</label>
+                    <select class="form-select" id="scanWorkspace">
+                        <option value="">Default Workspace</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline modal-close">Cancel</button>
+                <button class="btn" id="startScanBtn">Start Scan</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Profile Modal -->
+    <div class="modal" id="newProfileModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Create Scanning Profile</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Profile Name</label>
+                    <input type="text" class="form-input" id="profileName" placeholder="My Custom Profile">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Description</label>
+                    <textarea class="form-input" id="profileDescription" placeholder="Description of this profile" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Concurrency Level</label>
+                    <input type="number" class="form-input" id="profileConcurrency" placeholder="10" value="10">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Timeout (seconds)</label>
+                    <input type="number" class="form-input" id="profileTimeout" placeholder="8" value="8">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Scan Profile</label>
+                    <select class="form-select" id="profileScanProfile">
+                        <option value="quick">Quick Scan</option>
+                        <option value="normal" selected>Normal Scan</option>
+                        <option value="thorough">Thorough Scan</option>
+                        <option value="stealth">Stealth Scan</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline modal-close">Cancel</button>
+                <button class="btn" id="saveProfileBtn">Save Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
     <script>
-        // Generate a random run ID
-        document.getElementById('run-id').value = `run-${Date.now().toString(36)}-${Math.random().toString(36).substr(2, 5)}`;
-
-        // Global variables
-        let isPolling = false;
-        let pollInterval = null;
-        let latestRun = null;
-        let scanInProgress = false;
-
         // DOM Elements
-        const scanForm = document.getElementById('scan-form');
-        const startBtn = document.getElementById('start-btn');
-        const loadingOverlay = document.getElementById('loading-overlay');
-        const latestRunCard = document.getElementById('latest-run-card');
-        const latestRunTitle = document.getElementById('latest-run-title');
-        const pollingStatus = document.getElementById('polling-status');
-        const reportContent = document.getElementById('report-content');
-        const allButtons = document.querySelectorAll('button');
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const newScanBtn = document.getElementById('newScanBtn');
+        const newScanModal = document.getElementById('newScanModal');
+        const newProfileBtn = document.getElementById('newProfileBtn');
+        const newProfileModal = document.getElementById('newProfileModal');
+        const newPolicyBtn = document.getElementById('newPolicyBtn');
+        const newTemplateBtn = document.getElementById('newTemplateBtn');
+        const modalCloseButtons = document.querySelectorAll('.modal-close');
+        const refreshDashboardBtn = document.getElementById('refreshDashboard');
+        const notification = document.getElementById('notification');
 
-        // Event Listeners
-        scanForm.addEventListener('submit', startScan);
-        document.getElementById('refresh-link').addEventListener('click', checkLatestRun);
-        document.getElementById('view-report-btn').addEventListener('click', viewReport);
-        document.getElementById('download-md-btn').addEventListener('click', () => downloadReport('final_report_curated.md'));
-        document.getElementById('download-html-btn').addEventListener('click', () => downloadReport('final_report_curated.html'));
-        document.getElementById('download-pdf-btn').addEventListener('click', () => downloadReport('final_report_curated.pdf'));
-        document.getElementById('download-json-btn').addEventListener('click', () => downloadReport('reports/summary_report.json'));
-        document.getElementById('download-txt-btn').addEventListener('click', () => downloadReport('reports/summary_report.txt'));
+        // API Base URL
+        const API_BASE = '/api';
 
-        // Check for latest run on page load
-        window.addEventListener('DOMContentLoaded', checkLatestRun);
-
-        // Functions
-        async function startScan(e) {
-            e.preventDefault();
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            loadDashboardData();
+            loadProfiles();
+            loadPolicies();
+            loadTemplates();
+            loadRecentScans();
             
-            if (scanInProgress) return;
+            // Set up event listeners
+            setupEventListeners();
+        });
+
+        // Set up event listeners
+        function setupEventListeners() {
+            // Tab switching
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    switchTab(tabId);
+                });
+            });
+
+            // Modal open/close
+            newScanBtn.addEventListener('click', () => openModal('newScanModal'));
+            newProfileBtn.addEventListener('click', () => openModal('newProfileModal'));
+            newPolicyBtn.addEventListener('click', () => showNotification('Feature coming soon!', 'info'));
+            newTemplateBtn.addEventListener('click', () => showNotification('Feature coming soon!', 'info'));
             
-            const target = document.getElementById('target').value;
-            const mode = document.getElementById('mode').value;
-            const runId = document.getElementById('run-id').value;
+            modalCloseButtons.forEach(button => {
+                button.addEventListener('click', closeAllModals);
+            });
+
+            // Close modals when clicking outside
+            window.addEventListener('click', (e) => {
+                if (e.target.classList.contains('modal')) {
+                    closeAllModals();
+                }
+            });
+
+            // Dashboard refresh
+            refreshDashboardBtn.addEventListener('click', () => {
+                loadDashboardData();
+                loadRecentScans();
+                showNotification('Dashboard refreshed', 'success');
+            });
+
+            // Form submissions
+            document.getElementById('startScanBtn').addEventListener('click', startNewScan);
+            document.getElementById('saveProfileBtn').addEventListener('click', saveNewProfile);
+        }
+
+        // Switch between tabs
+        function switchTab(tabId) {
+            // Update active tab
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
+            
+            // Show active content
+            tabContents.forEach(content => content.classList.remove('active'));
+            document.getElementById(`${tabId}-tab`).classList.add('active');
+        }
+
+        // Open modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        // Close all modals
+        function closeAllModals() {
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.style.display = 'none';
+            });
+        }
+
+        // Show notification
+        function showNotification(message, type = 'success') {
+            notification.textContent = message;
+            notification.className = 'notification show';
+            
+            if (type === 'success') {
+                notification.classList.add('notification-success');
+            } else if (type === 'error') {
+                notification.classList.add('notification-error');
+            }
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Load dashboard data
+        async function loadDashboardData() {
+            try {
+                const response = await fetch(`${API_BASE}/dashboard/metrics`);
+                const data = await response.json();
+                
+                document.getElementById('totalScans').textContent = data.total_scans;
+                document.getElementById('activeScans').textContent = data.active_scans;
+                document.getElementById('criticalVulns').textContent = data.critical_vulns;
+                document.getElementById('highVulns').textContent = data.high_vulns;
+                
+                // Create vulnerability chart
+                createVulnerabilityChart(data);
+            } catch (error) {
+                console.error('Error loading dashboard data:', error);
+                showNotification('Failed to load dashboard data', 'error');
+            }
+        }
+
+        // Create vulnerability chart
+        function createVulnerabilityChart(data) {
+            const chartData = [{
+                x: ['Critical', 'High', 'Medium', 'Low'],
+                y: [data.critical_vulns, data.high_vulns, data.medium_vulns, data.low_vulns],
+                type: 'bar',
+                marker: {
+                    color: ['#ef4444', '#f59e0b', '#f59e0b', '#10b981']
+                }
+            }];
+            
+            const layout = {
+                title: 'Vulnerability Distribution',
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                plot_bgcolor: 'rgba(0,0,0,0)',
+                font: {
+                    color: '#f1f5f9'
+                },
+                margin: {
+                    l: 50,
+                    r: 50,
+                    b: 50,
+                    t: 50
+                }
+            };
+            
+            const config = {
+                responsive: true,
+                displayModeBar: false
+            };
+            
+            Plotly.newPlot('vulnerabilityChart', chartData, layout, config);
+        }
+
+        // Load scanning profiles
+        async function loadProfiles() {
+            try {
+                const response = await fetch(`${API_BASE}/profiles`);
+                const profiles = await response.json();
+                
+                const container = document.getElementById('profilesContainer');
+                container.innerHTML = '';
+                
+                if (Object.keys(profiles).length === 0) {
+                    container.innerHTML = '<p>No profiles found. Create your first profile!</p>';
+                    return;
+                }
+                
+                for (const [id, profile] of Object.entries(profiles)) {
+                    const profileCard = document.createElement('div');
+                    profileCard.className = 'profile-card';
+                    profileCard.innerHTML = `
+                        <h4>${profile.name}</h4>
+                        <p>${profile.description || 'No description'}</p>
+                        <div class="workspace-badge">ID: ${id.substring(0, 8)}</div>
+                    `;
+                    container.appendChild(profileCard);
+                }
+                
+                // Populate profile selector in new scan modal
+                const profileSelector = document.getElementById('scanProfile');
+                profileSelector.innerHTML = '<option value="">Default Settings</option>';
+                
+                for (const [id, profile] of Object.entries(profiles)) {
+                    const option = document.createElement('option');
+                    option.value = id;
+                    option.textContent = profile.name;
+                    profileSelector.appendChild(option);
+                }
+            } catch (error) {
+                console.error('Error loading profiles:', error);
+            }
+        }
+
+        // Load security policies
+        async function loadPolicies() {
+            try {
+                const response = await fetch(`${API_BASE}/policies`);
+                const policies = await response.json();
+                
+                const tbody = document.getElementById('policiesTable');
+                tbody.innerHTML = '';
+                
+                if (Object.keys(policies).length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="5" class="text-center">No policies found.</td></tr>';
+                    return;
+                }
+                
+                for (const [id, policy] of Object.entries(policies)) {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${policy.name}</td>
+                        <td>${policy.description || 'No description'}</td>
+                        <td>${policy.rules ? policy.rules.length : 0} rules</td>
+                        <td>${new Date(policy.created_at).toLocaleDateString()}</td>
+                        <td>
+                            <button class="btn btn-outline btn-sm">Edit</button>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                }
+            } catch (error) {
+                console.error('Error loading policies:', error);
+                document.getElementById('policiesTable').innerHTML = '<tr><td colspan="5" class="text-center">Error loading policies</td></tr>';
+            }
+        }
+
+        // Load report templates
+        async function loadTemplates() {
+            try {
+                const response = await fetch(`${API_BASE}/templates`);
+                const templates = await response.json();
+                
+                const tbody = document.getElementById('templatesTable');
+                tbody.innerHTML = '';
+                
+                if (Object.keys(templates).length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="5" class="text-center">No templates found.</td></tr>';
+                    return;
+                }
+                
+                for (const [id, template] of Object.entries(templates)) {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${template.name}</td>
+                        <td>${template.description || 'No description'}</td>
+                        <td>${template.format.toUpperCase()}</td>
+                        <td>${new Date(template.created_at).toLocaleDateString()}</td>
+                        <td>
+                            <button class="btn btn-outline btn-sm">Edit</button>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                }
+            } catch (error) {
+                console.error('Error loading templates:', error);
+                document.getElementById('templatesTable').innerHTML = '<tr><td colspan="5" class="text-center">Error loading templates</td></tr>';
+            }
+        }
+
+        // Load recent scans
+        async function loadRecentScans() {
+            try {
+                const response = await fetch(`${API_BASE}/dashboard/metrics`);
+                const data = await response.json();
+                
+                const tbody = document.getElementById('recentScansTable');
+                tbody.innerHTML = '';
+                
+                if (!data.recent_scans || data.recent_scans.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="6" class="text-center">No recent scans found.</td></tr>';
+                    return;
+                }
+                
+                // Sort by timestamp (newest first)
+                const recentScans = data.recent_scans.sort((a, b) => b.timestamp - a.timestamp);
+                
+                for (const scan of recentScans) {
+                    const row = document.createElement('tr');
+                    const scanDate = new Date(scan.timestamp * 1000).toLocaleString();
+                    
+                    row.innerHTML = `
+                        <td>${scan.path.split('/')[0] || 'Unknown'}</td>
+                        <td>${scanDate}</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>
+                            <button class="btn btn-outline btn-sm">View</button>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                }
+            } catch (error) {
+                console.error('Error loading recent scans:', error);
+                document.getElementById('recentScansTable').innerHTML = '<tr><td colspan="6" class="text-center">Error loading recent scans</td></tr>';
+            }
+        }
+
+        // Start a new scan
+        async function startNewScan() {
+            const target = document.getElementById('scanTarget').value.trim();
+            const mode = document.getElementById('scanMode').value;
+            const profileId = document.getElementById('scanProfile').value;
             
             if (!target) {
-                alert('Please enter a target URL');
+                showNotification('Please enter a target URL', 'error');
                 return;
             }
-
-            // Set scan in progress flag
-            scanInProgress = true;
             
-            // Disable all buttons during scan
-            allButtons.forEach(button => {
-                button.disabled = true;
-            });
-            startBtn.innerHTML = '<span class="spinner"></span> Starting Scan...';
-            
-            isPolling = true;
-            pollingStatus.style.display = 'block';
-
             try {
                 const formData = new FormData();
                 formData.append('target', target);
                 formData.append('mode', mode);
-                formData.append('run_id', runId);
-
-                const response = await fetch('/api/start', {
+                if (profileId) {
+                    formData.append('profile_id', profileId);
+                }
+                
+                const response = await fetch(`${API_BASE}/start`, {
                     method: 'POST',
                     body: formData
                 });
-
-                if (!response.ok) {
-                    throw new Error(`Failed to start scan: ${response.status}`);
+                
+                if (response.ok) {
+                    closeAllModals();
+                    showNotification('Scan started successfully!', 'success');
+                    document.getElementById('scanTarget').value = '';
+                    
+                    // Refresh dashboard after a short delay
+                    setTimeout(() => {
+                        loadDashboardData();
+                        loadRecentScans();
+                    }, 2000);
+                } else {
+                    throw new Error('Failed to start scan');
                 }
-
-                // Start polling for updates
-                if (pollInterval) clearInterval(pollInterval);
-                pollInterval = setInterval(checkLatestRun, 3000);
-
-                // Set a timeout to stop polling after 10 minutes
-                setTimeout(() => {
-                    if (pollInterval) {
-                        clearInterval(pollInterval);
-                        pollInterval = null;
-                        isPolling = false;
-                        pollingStatus.style.display = 'none';
-                        scanInProgress = false;
-                        // Re-enable buttons
-                        allButtons.forEach(button => {
-                            button.disabled = false;
-                        });
-                        startBtn.innerHTML = '▶️ Start Scan';
-                    }
-                }, 600000); // 10 minutes
-
             } catch (error) {
                 console.error('Error starting scan:', error);
-                alert('Failed to start scan: ' + error.message);
-                // Re-enable buttons on error
-                scanInProgress = false;
-                allButtons.forEach(button => {
-                    button.disabled = false;
-                });
-                startBtn.innerHTML = '▶️ Start Scan';
+                showNotification('Failed to start scan', 'error');
             }
         }
 
-        async function checkLatestRun() {
-            try {
-                const response = await fetch('/api/latest');
-                if (!response.ok) {
-                    throw new Error(`Failed to check latest run: ${response.status}`);
-                }
-                
-                const data = await response.json();
-                
-                if (data.latest) {
-                    latestRun = data.latest;
-                    latestRunCard.style.display = 'block';
-                    latestRunTitle.textContent = data.latest;
-                    
-                    if (data.ready) {
-                        // Scan is complete, load the report
-                        if (isPolling) {
-                            isPolling = false;
-                            pollingStatus.style.display = 'none';
-                            if (pollInterval) {
-                                clearInterval(pollInterval);
-                                pollInterval = null;
-                            }
-                            // Re-enable buttons when scan is complete
-                            scanInProgress = false;
-                            allButtons.forEach(button => {
-                                button.disabled = false;
-                            });
-                            startBtn.innerHTML = '▶️ Start Scan';
-                        }
-                        
-                        loadSummaryReport(data.latest);
-                    }
-                } else {
-                    latestRunCard.style.display = 'none';
-                }
-            } catch (error) {
-                console.error('Error checking latest run:', error);
-            }
-        }
-
-        async function loadSummaryReport(runPath) {
-            try {
-                const response = await fetch(`/api/summary/${encodeURIComponent(runPath)}`);
-                if (!response.ok) {
-                    throw new Error(`Failed to load summary report: ${response.status}`);
-                }
-                
-                const report = await response.json();
-                renderReport(report);
-            } catch (error) {
-                console.error('Error loading summary report:', error);
-                reportContent.innerHTML = `<p>Error loading report: ${error.message}</p>`;
-            }
-        }
-
-        function renderReport(report) {
-            if (!report) return;
-
-            let html = '';
-
-            // Scan Summary
-            html += `
-                <div class="report-section">
-                    <h3>📋 Scan Summary</h3>
-                    <div class="summary-stats">
-                        <div class="stat-card">
-                            <div class="stat-value">${report.scan_summary.total_findings}</div>
-                            <div class="stat-label">Total Findings</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value">${report.scan_summary.vulnerabilities_found}</div>
-                            <div class="stat-label">Vulnerabilities</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value">${report.scan_summary.critical_findings}</div>
-                            <div class="stat-label">Critical</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value">${report.scan_summary.high_severity}</div>
-                            <div class="stat-label">High Severity</div>
-                        </div>
-                    </div>
-                </div>
-            `;
-
-            // Severity Distribution Chart
-            html += `
-                <div class="chart-container">
-                    <div id="severity-chart"></div>
-                </div>
-            `;
-
-            // Vulnerability Type Chart
-            html += `
-                <div class="chart-container">
-                    <div id="vuln-type-chart"></div>
-                </div>
-            `;
-
-            // Vulnerability Breakdown
-            if (report.vulnerability_breakdown) {
-                html += `
-                    <div class="report-section">
-                        <h3>🔍 Vulnerability Breakdown</h3>
-                        <div class="vulnerability-breakdown">
-                `;
-                
-                for (const [type, count] of Object.entries(report.vulnerability_breakdown)) {
-                    html += `
-                        <div class="vuln-item">
-                            <span class="vuln-type">${type}</span>
-                            <span class="vuln-count">${count}</span>
-                        </div>
-                    `;
-                }
-                
-                html += `
-                        </div>
-                    </div>
-                `;
-            }
-
-            // Top Vulnerabilities
-            if (report.top_vulnerabilities && report.top_vulnerabilities.length > 0) {
-                html += `
-                    <div class="report-section">
-                        <h3>🔥 Top Vulnerabilities</h3>
-                `;
-                
-                const topVulns = report.top_vulnerabilities.slice(0, 5);
-                for (let i = 0; i < topVulns.length; i++) {
-                    const vuln = topVulns[i];
-                    const severityClass = ['info', 'low', 'medium', 'high', 'critical'][vuln.severity];
-                    const severityName = ['Info', 'Low', 'Medium', 'High', 'Critical'][vuln.severity];
-                    
-                    html += `
-                        <div class="finding-item">
-                            <div class="finding-header">
-                                <div class="finding-type">${vuln.type.toUpperCase()}</div>
-                                <div class="finding-severity severity-${severityClass}">
-                                    ${severityName}
-                                </div>
-                            </div>
-                            <div class="finding-target">${vuln.target}</div>
-                            <div class="finding-confidence">Confidence: ${vuln.confidence}</div>
-                    `;
-                    
-                    if (vuln.evidence) {
-                        html += `
-                            <div class="finding-evidence">
-                                ${vuln.evidence}
-                            </div>
-                        `;
-                    }
-                    
-                    html += `
-                        </div>
-                    `;
-                }
-                
-                html += `
-                    </div>
-                `;
-            }
-
-            // Recommendations
-            if (report.recommendations && report.recommendations.length > 0) {
-                html += `
-                    <div class="report-section">
-                        <h3>💡 Recommendations</h3>
-                        <ul class="recommendations-list">
-                `;
-                
-                for (let i = 0; i < report.recommendations.length; i++) {
-                    html += `
-                        <li>
-                            <span class="recommendation-icon">✅</span>
-                            <span>${report.recommendations[i]}</span>
-                        </li>
-                    `;
-                }
-                
-                html += `
-                        </ul>
-                    </div>
-                `;
-            }
-
-            reportContent.innerHTML = html;
+        // Save new profile
+        async function saveNewProfile() {
+            const name = document.getElementById('profileName').value.trim();
+            const description = document.getElementById('profileDescription').value.trim();
+            const concurrency = document.getElementById('profileConcurrency').value;
+            const timeout = document.getElementById('profileTimeout').value;
+            const scanProfile = document.getElementById('profileScanProfile').value;
             
-            // Render charts after HTML is inserted
-            setTimeout(() => {
-                renderSeverityChart(report);
-                renderVulnerabilityTypeChart(report);
-            }, 100);
-        }
-
-        function renderSeverityChart(report) {
-            if (!report) return;
-
-            const severityData = report.scan_summary.severity_distribution || {};
-            const severities = Object.keys(severityData).map(Number).sort();
-            const counts = severities.map(sev => severityData[sev]);
-            const severityNames = severities.map(sev => {
-                switch(sev) {
-                    case 1: return 'Info';
-                    case 2: return 'Low';
-                    case 3: return 'Medium';
-                    case 4: return 'High';
-                    case 5: return 'Critical';
-                    default: return 'Unknown';
-                }
-            });
-
-            const colors = ['#2196F3', '#4CAF50', '#FFC107', '#FF9800', '#F44336'];
-
-            try {
-                Plotly.newPlot('severity-chart', [{
-                    x: severityNames,
-                    y: counts,
-                    type: 'bar',
-                    marker: { color: colors.slice(0, severities.length) },
-                    text: counts,
-                    textposition: 'auto'
-                }], {
-                    title: 'Findings by Severity',
-                    xaxis: { title: 'Severity Level' },
-                    yaxis: { title: 'Number of Findings' },
-                    paper_bgcolor: 'rgba(0,0,0,0)',
-                    plot_bgcolor: 'rgba(0,0,0,0)',
-                    font: { color: '#f1f5f9' }
-                }, {
-                    displayModeBar: false
-                });
-            } catch (error) {
-                console.error('Error rendering severity chart:', error);
-                document.getElementById('severity-chart').innerHTML = '<p>Error rendering chart</p>';
+            if (!name) {
+                showNotification('Please enter a profile name', 'error');
+                return;
             }
-        }
-
-        function renderVulnerabilityTypeChart(report) {
-            if (!report) return;
-
-            const vulnData = report.vulnerability_breakdown || {};
-            const vulnTypes = Object.keys(vulnData);
-            const vulnCounts = vulnTypes.map(type => vulnData[type]);
-
-            // Limit to top 10 for better visualization
-            const topIndices = vulnCounts.map((_, i) => i)
-                .sort((a, b) => vulnCounts[b] - vulnCounts[a])
-                .slice(0, 10);
-
-            const topVulnTypes = topIndices.map(i => vulnTypes[i]);
-            const topVulnCounts = topIndices.map(i => vulnCounts[i]);
-
+            
             try {
-                Plotly.newPlot('vuln-type-chart', [{
-                    x: topVulnTypes,
-                    y: topVulnCounts,
-                    type: 'bar',
-                    marker: { color: '#9C27B0' },
-                    text: topVulnCounts,
-                    textposition: 'auto'
-                }], {
-                    title: 'Top 10 Vulnerability Types',
-                    xaxis: { title: 'Vulnerability Type' },
-                    yaxis: { title: 'Number of Findings' },
-                    paper_bgcolor: 'rgba(0,0,0,0)',
-                    plot_bgcolor: 'rgba(0,0,0,0)',
-                    font: { color: '#f1f5f9' }
-                }, {
-                    displayModeBar: false
-                });
-            } catch (error) {
-                console.error('Error rendering vulnerability type chart:', error);
-                document.getElementById('vuln-type-chart').innerHTML = '<p>Error rendering chart</p>';
-            }
-        }
-
-        function viewReport() {
-            if (latestRun) {
-                // Scroll to the report content
-                reportContent.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
-        async function downloadReport(filename) {
-            if (!latestRun) return;
-
-            try {
-                const response = await fetch(`/api/download/${encodeURIComponent(latestRun)}/${filename}`);
-                if (!response.ok) {
-                    throw new Error(`Failed to download report: ${response.status}`);
-                }
+                const profileData = {
+                    name: name,
+                    description: description,
+                    settings: {
+                        concurrency: parseInt(concurrency),
+                        timeout: parseInt(timeout),
+                        scan_profile: scanProfile
+                    }
+                };
                 
-                const blob = await response.blob();
-                const url = window.URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                const fileExtension = filename.split('.').pop();
-                link.href = url;
-                link.setAttribute('download', `report-${latestRun.split('/').pop()}.${fileExtension}`);
-                document.body.appendChild(link);
-                link.click();
-                link.remove();
+                const response = await fetch(`${API_BASE}/profiles`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(profileData)
+                });
+                
+                if (response.ok) {
+                    closeAllModals();
+                    showNotification('Profile created successfully!', 'success');
+                    document.getElementById('profileName').value = '';
+                    document.getElementById('profileDescription').value = '';
+                    
+                    // Reload profiles
+                    loadProfiles();
+                } else {
+                    throw new Error('Failed to create profile');
+                }
             } catch (error) {
-                console.error('Error downloading report:', error);
-                alert('Failed to download report: ' + error.message);
+                console.error('Error creating profile:', error);
+                showNotification('Failed to create profile', 'error');
             }
         }
     </script>
