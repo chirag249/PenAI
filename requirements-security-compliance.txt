@@ -1,6 +1,0 @@
-# Security and Compliance Requirements for PenAI
-
-# Cryptography library for encryption and secure operations
-cryptography>=3.4.8
-
-# For audit logging and compliance reporting
