@@ -1,0 +1,61 @@
+2025-11-12 22:37:39,971 INFO Starting non-destructive phase
+2025-11-12 22:37:57,651 INFO Passive recon done
+2025-11-12 22:38:12,299 INFO Active recon done
+2025-11-12 22:38:39,253 INFO Crawl done, found 18 pages
+2025-11-12 22:38:52,403 INFO Fingerprint done
+2025-11-12 22:39:04,663 INFO Discovered 15 parameterized endpoints
+2025-11-12 22:44:04,814 INFO Form testing done, results: 10
+2025-11-12 22:44:04,814 INFO Running external adapters (only_non_destructive=True)
+2025-11-12 22:44:04,815 INFO Skipping destructive-capable adapter commix (safety gate)
+2025-11-12 22:44:04,815 INFO Skipping destructive-capable adapter hashcat (safety gate)
+2025-11-12 22:44:04,815 INFO Skipping destructive-capable adapter hydra (safety gate)
+2025-11-12 22:44:04,815 INFO Skipping destructive-capable adapter john (safety gate)
+2025-11-12 22:44:04,815 INFO Running adapter: manager (destructive=False)
+2025-11-12 22:44:04,816 INFO Adapter manager: wrote runs/testphp.vulnweb.com/ui-run-ab165561/generated/tools/manager.json
+2025-11-12 22:44:04,816 INFO Skipping destructive-capable adapter medusa (safety gate)
+2025-11-12 22:44:04,816 INFO Skipping destructive-capable adapter msfconsole (safety gate)
+2025-11-12 22:44:04,816 INFO Running adapter: nikto (destructive=False)
+2025-11-12 22:44:25,509 INFO Adapter nikto: wrote runs/testphp.vulnweb.com/ui-run-ab165561/generated/tools/nikto.json
+2025-11-12 22:44:25,509 INFO Running adapter: nmap (destructive=False)
+2025-11-12 22:44:25,511 INFO Adapter nmap: wrote runs/testphp.vulnweb.com/ui-run-ab165561/generated/tools/nmap.json
+2025-11-12 22:44:25,511 INFO Running adapter: nuclei (destructive=False)
+2025-11-12 22:44:25,514 INFO Adapter nuclei: wrote runs/testphp.vulnweb.com/ui-run-ab165561/generated/tools/nuclei.json
+2025-11-12 22:44:25,515 INFO Running adapter: parsers (destructive=False)
+2025-11-12 22:44:25,518 INFO Adapter parsers: wrote runs/testphp.vulnweb.com/ui-run-ab165561/generated/tools/parsers.json
+2025-11-12 22:44:25,518 INFO Skipping destructive-capable adapter sqlmap (safety gate)
+2025-11-12 22:44:25,518 INFO Running adapter: sslyze (destructive=False)
+2025-11-12 22:44:25,519 INFO Adapter sslyze: wrote runs/testphp.vulnweb.com/ui-run-ab165561/generated/tools/sslyze.json
+2025-11-12 22:44:25,519 INFO Running adapter: tool_config (destructive=False)
+2025-11-12 22:44:25,519 INFO Adapter tool_config: wrote runs/testphp.vulnweb.com/ui-run-ab165561/generated/tools/tool_config.json
+2025-11-12 22:44:25,519 INFO Running adapter: wappalyzer (destructive=False)
+2025-11-12 22:44:25,521 INFO Adapter wappalyzer: wrote runs/testphp.vulnweb.com/ui-run-ab165561/generated/tools/wappalyzer.json
+2025-11-12 22:44:25,522 INFO Skipping destructive-capable adapter wpscan (safety gate)
+2025-11-12 22:44:25,525 INFO Targets to scan: 16
+2025-11-12 22:45:27,639 INFO Tool parsers: added 17 findings from generated/tools
+2025-11-12 22:45:27,639 INFO CVE correlation completed for 59 findings
+2025-11-12 22:45:27,654 INFO AI predictions attached to findings (count=59)
+2025-11-12 22:46:16,408 INFO PoCs generated: 4
+2025-11-12 22:46:16,409 INFO Threat intelligence feeds retrieved
+2025-11-12 22:46:16,427 ERROR enhanced AI reasoning failed to run
+Traceback (most recent call last):
+  File "/home/asd/PenAI/agent.py", line 618, in run_non_destructive_phase
+    findings = enhance_findings_with_ai_reasoning(findings, context)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/asd/PenAI/modules/ai/reasoner.py", line 343, in enhance_findings_with_ai_reasoning
+    correlated_findings = correlate_findings(findings)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/asd/PenAI/modules/ai/reasoner.py", line 72, in correlate_findings
+    "confidence": _calculate_group_confidence(group_findings),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/asd/PenAI/modules/ai/reasoner.py", line 130, in _calculate_group_confidence
+    avg_conf = sum(confidences) / len(confidences)
+               ^^^^^^^^^^^^^^^^
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2025-11-12 22:46:16,430 INFO Wrote minimal final_report.json (Reporter missing)
+2025-11-12 22:46:16,431 INFO Scan completion notification sent
+2025-11-12 22:46:16,434 INFO normalize_pocs executed
+2025-11-12 22:46:16,457 INFO map_pocs executed
+2025-11-12 22:46:16,473 INFO attach_pocs executed
+2025-11-12 22:46:16,475 INFO Summary report generated: runs/testphp.vulnweb.com/ui-run-ab165561/reports/summary_report.json
+2025-11-12 22:46:16,575 INFO Called generate_curated.main successfully
+2025-11-12 22:46:16,575 INFO Non-destructive phase complete

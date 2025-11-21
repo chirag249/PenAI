@@ -1,0 +1,8 @@
+{
+  "target": "https://testphp.vulnweb.com",
+  "mode": "non-destructive",
+  "run_id": "ui-run-ab165561",
+  "profile_id": null,
+  "start_time": "2025-11-12T22:37:38.042152",
+  "status": "running"
+}

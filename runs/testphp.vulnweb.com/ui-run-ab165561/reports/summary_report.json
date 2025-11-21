@@ -1,0 +1,261 @@
+{
+  "scan_summary": {
+    "total_findings": 59,
+    "vulnerabilities_found": 59,
+    "severity_distribution": {
+      "2": 48,
+      "4": 7,
+      "5": 4
+    },
+    "critical_findings": 4,
+    "high_severity": 7,
+    "medium_severity": 0,
+    "low_severity": 48,
+    "info_findings": 0
+  },
+  "vulnerability_breakdown": {
+    "xss-none": 16,
+    "sqli-error": 5,
+    "sqli-none": 15,
+    "xss-reflected": 6,
+    "external-tool-commix": 1,
+    "external-tool-hashcat": 1,
+    "external-tool-hydra": 1,
+    "external-tool-john": 1,
+    "external-tool-manager": 1,
+    "external-tool-medusa": 1,
+    "external-tool-msfconsole": 1,
+    "external-tool-nikto_adapter": 1,
+    "external-tool-nikto": 1,
+    "external-tool-nmap": 1,
+    "external-tool-nuclei": 1,
+    "external-tool-parsers": 1,
+    "external-tool-sqlmap": 1,
+    "external-tool-sslyze": 1,
+    "external-tool-tool_config": 1,
+    "external-tool-wappalyzer": 1,
+    "external-tool-wpscan": 1
+  },
+  "high_risk_targets": [
+    "http://testphp.vulnweb.com/secured/newuser.php",
+    "https://testphp.vulnweb.com",
+    "http://testphp.vulnweb.com/guestbook.php",
+    "http://testphp.vulnweb.com/search.php?test=query"
+  ],
+  "top_vulnerabilities": [
+    {
+      "type": "sqli-error",
+      "target": "http://testphp.vulnweb.com/search.php?test=query",
+      "severity": 5,
+      "confidence": "high",
+      "evidence": "SQL syntax",
+      "ai_prediction": {
+        "vuln_type": "sqli",
+        "confidence": 0.5,
+        "explanation": "heuristic"
+      }
+    },
+    {
+      "type": "sqli-error",
+      "target": "http://testphp.vulnweb.com/search.php?test=query",
+      "severity": 5,
+      "confidence": "high",
+      "evidence": "SQL syntax",
+      "ai_prediction": {
+        "vuln_type": "sqli",
+        "confidence": 0.5,
+        "explanation": "heuristic"
+      }
+    },
+    {
+      "type": "sqli-error",
+      "target": "http://testphp.vulnweb.com/search.php?test=query",
+      "severity": 5,
+      "confidence": "high",
+      "evidence": "SQL syntax",
+      "ai_prediction": {
+        "vuln_type": "sqli",
+        "confidence": 0.5,
+        "explanation": "heuristic"
+      }
+    },
+    {
+      "type": "sqli-error",
+      "target": "http://testphp.vulnweb.com/secured/newuser.php",
+      "severity": 5,
+      "confidence": "high",
+      "evidence": "SQL syntax",
+      "ai_prediction": {
+        "vuln_type": "sqli",
+        "confidence": 0.5,
+        "explanation": "heuristic"
+      }
+    },
+    {
+      "type": "sqli-error",
+      "target": "https://testphp.vulnweb.com",
+      "severity": 4,
+      "confidence": "unknown",
+      "evidence": "",
+      "ai_prediction": {
+        "vuln_type": "sqli",
+        "confidence": 0.5,
+        "explanation": "heuristic"
+      }
+    },
+    {
+      "type": "xss-reflected",
+      "target": "http://testphp.vulnweb.com/search.php?test=query",
+      "severity": 4,
+      "confidence": "high",
+      "evidence": "",
+      "ai_prediction": {
+        "vuln_type": "xss",
+        "confidence": 0.5,
+        "explanation": "heuristic"
+      }
+    },
+    {
+      "type": "xss-reflected",
+      "target": "http://testphp.vulnweb.com/search.php?test=query",
+      "severity": 4,
+      "confidence": "high",
+      "evidence": "",
+      "ai_prediction": {
+        "vuln_type": "xss",
+        "confidence": 0.5,
+        "explanation": "heuristic"
+      }
+    },
+    {
+      "type": "xss-reflected",
+      "target": "http://testphp.vulnweb.com/guestbook.php",
+      "severity": 4,
+      "confidence": "high",
+      "evidence": "",
+      "ai_prediction": {
+        "vuln_type": "xss",
+        "confidence": 0.5,
+        "explanation": "heuristic"
+      }
+    },
+    {
+      "type": "xss-reflected",
+      "target": "http://testphp.vulnweb.com/guestbook.php",
+      "severity": 4,
+      "confidence": "high",
+      "evidence": "",
+      "ai_prediction": {
+        "vuln_type": "xss",
+        "confidence": 0.5,
+        "explanation": "heuristic"
+      }
+    },
+    {
+      "type": "xss-reflected",
+      "target": "http://testphp.vulnweb.com/guestbook.php",
+      "severity": 4,
+      "confidence": "high",
+      "evidence": "",
+      "ai_prediction": {
+        "vuln_type": "xss",
+        "confidence": 0.5,
+        "explanation": "heuristic"
+      }
+    }
+  ],
+  "meta": {
+    "passive": {
+      "https://testphp.vulnweb.com": {
+        "status": 200,
+        "title": "Home of Acunetix Art",
+        "snippet": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\">\n<html><!-- InstanceBegin template=\"/Templates/main_dynamic_template.dwt.php\" codeOutsideHTMLIsLocked=\"false\" -->\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\">\n\n<!-- InstanceBeginEditable name=\"document_title_rgn\" -->\n<title>Home of Acunetix Art</title>\n<!-- Insta",
+        "used_url": "http://testphp.vulnweb.com/"
+      }
+    },
+    "active": {
+      "https://testphp.vulnweb.com": {
+        "status": 200,
+        "headers": {
+          "server": "nginx/1.19.0",
+          "date": "Wed, 12 Nov 2025 17:08:10 GMT",
+          "content-type": "text/html; charset=UTF-8",
+          "connection": "keep-alive",
+          "x-powered-by": "PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1",
+          "content-encoding": "gzip"
+        },
+        "used_url": "http://testphp.vulnweb.com/"
+      },
+      "ports": {
+        "testphp.vulnweb.com": {
+          "80": true,
+          "443": false,
+          "8080": false,
+          "8000": false,
+          "22": false,
+          "21": false
+        }
+      }
+    },
+    "crawl_count": 18,
+    "fingerprint": {
+      "https://testphp.vulnweb.com": {
+        "used_url": "http://testphp.vulnweb.com/",
+        "status": 200,
+        "headers": {
+          "server": "nginx/1.19.0",
+          "x-powered-by": "PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1"
+        },
+        "versions": [
+          [
+            "nginx",
+            "1.19.0"
+          ]
+        ]
+      }
+    },
+    "pocs_summary": {
+      "count": 4
+    },
+    "pocs_file": "reports/pocs.json",
+    "threat_intel": {
+      "timestamp": "2025-11-12T22:46:16.409178",
+      "feeds": {
+        "emerging_threats": [
+          {
+            "type": "emerging_threat",
+            "description": "New exploitation technique targeting web applications",
+            "severity": "high",
+            "date": "2025-11-12T22:46:16.409190"
+          }
+        ],
+        "malware_indicators": [
+          {
+            "type": "malware_ioc",
+            "indicator": "suspicious_domain.com",
+            "indicator_type": "domain",
+            "threat_level": "medium"
+          }
+        ],
+        "ip_blacklists": [
+          {
+            "type": "blacklisted_ip",
+            "ip": "192.168.1.100",
+            "reason": "Known malicious IP",
+            "last_seen": "2025-11-12T22:46:16.409195"
+          }
+        ]
+      }
+    }
+  },
+  "recommendations": [
+    "Keep all software and dependencies up to date with the latest security patches",
+    "Use parameterized queries and input validation to prevent SQL injection",
+    "Consider implementing a Web Application Firewall (WAF) for additional protection",
+    "Regularly scan for vulnerabilities using automated tools",
+    "Implement proper authentication and authorization mechanisms",
+    "Conduct periodic security assessments and penetration testing",
+    "Immediately address critical and high-severity vulnerabilities",
+    "Implement proper input validation and output encoding to prevent XSS attacks"
+  ]
+}
