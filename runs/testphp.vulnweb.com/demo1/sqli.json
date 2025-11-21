@@ -1,7 +1,0 @@
-[
-  {
-    "type": "sqli-error",
-    "target": "https://testphp.vulnweb.com",
-    "error": ""
-  }
-]

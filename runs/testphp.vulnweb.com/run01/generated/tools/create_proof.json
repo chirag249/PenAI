@@ -1,5 +1,0 @@
-{
-  "status": "error",
-  "tool": "create_proof",
-  "error": "main() takes 0 positional arguments but 2 were given"
-}

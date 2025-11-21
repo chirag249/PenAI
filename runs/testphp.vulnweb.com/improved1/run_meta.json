@@ -1,7 +1,0 @@
-{
-  "targets": [
-    "https://testphp.vulnweb.com"
-  ],
-  "mode": "non-destructive",
-  "primary_domain": "testphp.vulnweb.com"
-}

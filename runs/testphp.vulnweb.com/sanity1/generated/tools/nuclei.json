@@ -1,9 +1,0 @@
-{
-  "tool": "nuclei",
-  "status": "ran",
-  "rc": null,
-  "findings": [],
-  "stdout": "",
-  "stderr": "timeout",
-  "output_file": "runs/testphp.vulnweb.com/sanity1/generated/tools/nuclei_adapter.json"
-}

@@ -1,5 +1,0 @@
-{
-  "tool": "nuclei",
-  "status": "adapter_missing_binary",
-  "note": "nuclei not found on PATH"
-}

@@ -1,7 +1,0 @@
-{
-  "targets": [
-    "https://example.com"
-  ],
-  "mode": "destructive",
-  "primary_domain": "example.com"
-}
