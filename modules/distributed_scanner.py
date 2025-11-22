@@ -6,19 +6,19 @@ This module implements distributed scanning capabilities that can orchestrate
 security tests across multiple nodes/machines using Redis as a task queue.
 """
 
-# from __future__ import annotations
-# import asyncio
-# import json
-# import os
-# import uuid
-# import time
-# import logging
-# from typing import List, Dict, Any, Optional, Set
-# from collections import defaultdict
-# import redis
-# import psutil
-# from concurrent.futures import ThreadPoolExecutor
-# import threading
+from __future__ import annotations
+import asyncio
+import json
+import os
+import uuid
+import time
+import logging
+from typing import List, Dict, Any, Optional, Set
+from collections import defaultdict
+import redis
+import psutil
+from concurrent.futures import ThreadPoolExecutor
+import threading
 
 logger = logging.getLogger(__name__)
 
