@@ -1,4 +1,3 @@
-# modules/recon/active.py
 import asyncio, json, os
 import httpx
 from modules.portscan import async_port_scan
