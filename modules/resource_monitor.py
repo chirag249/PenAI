@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Resource Monitor for comprehensive system resource tracking during scans.
 
