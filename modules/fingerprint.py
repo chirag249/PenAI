@@ -4,7 +4,7 @@ from urllib.parse import urlparse
 import httpx
 from modules.utils import resolve_working_url
 
-COMMON_HEADERS = ["server","x-powered-by","via","x-cms","set-cookie"]
+# COMMON_HEADERS = ["server","x-powered-by","via","x-cms","set-cookie"]
 
 async def fingerprint(scope, outdir):
     os.makedirs(outdir, exist_ok=True)
