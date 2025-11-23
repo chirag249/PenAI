@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# modules/destructive/rce_tester.py
 from __future__ import annotations
 import asyncio
 import os
