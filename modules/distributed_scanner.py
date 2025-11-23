@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Distributed Scanner for enterprise-scale security testing.
 
