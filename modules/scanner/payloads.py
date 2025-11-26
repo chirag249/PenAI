@@ -1,4 +1,3 @@
-# modules/scanner/payloads.py
 XSS_PAYLOADS = [
     "<script>penai_xss</script>",
     "\"><script>penai_xss</script>",
