@@ -1,4 +1,3 @@
-# modules/scanner/xss.py
 import httpx, urllib.parse, json, os
 from config import DEFAULTS
 from modules.utils import resolve_working_url
