@@ -19,7 +19,6 @@ async def xss_check(url, outdir, config=None):
     os.makedirs(outdir, exist_ok=True)
     findings = []
     
-    # Get adaptive configuration
     if config is None:
         config = {"timeout": 10, "payload_intensity": "normal"}
         if adaptive_available and get_adaptive_config:
