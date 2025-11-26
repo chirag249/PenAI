@@ -1,4 +1,3 @@
-# modules/scanner/form_tester.py
 import os
 import json
 import urllib.parse
