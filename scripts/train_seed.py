@@ -1,5 +1,3 @@
-# scripts/train_seed.py
-#!/usr/bin/env python3
 import sys, json, os
 from modules.ai.trainer import train_from_examples
 
