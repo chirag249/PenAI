@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Attach PoCs to final report using the improved mapper.
 If mapper is not available, does naive attach by exact proof_url -> finding URL match.
