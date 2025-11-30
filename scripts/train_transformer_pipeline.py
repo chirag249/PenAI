@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# scripts/train_transformer_pipeline.py
 """
 Training pipeline for transformer-based vulnerability classifier.
 """
