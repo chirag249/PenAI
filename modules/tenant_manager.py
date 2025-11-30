@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Tenant Manager for multi-tenant security testing environments.
 
