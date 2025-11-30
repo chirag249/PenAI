@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 scripts/generate_synth_examples.py
 Usage:
