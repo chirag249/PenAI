@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 scripts/extract_findings_to_jsonl.py
 Usage:
