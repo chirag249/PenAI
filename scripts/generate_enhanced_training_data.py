@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# scripts/generate_enhanced_training_data.py
 """
 Script to generate enhanced training data for the AI model from CVE descriptions 
 and vulnerability reports.
