@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 scripts/score_model_sample.py
 Usage:
