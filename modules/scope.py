@@ -1,4 +1,3 @@
-# modules/scope.py
 import os
 import urllib.parse
 import json
