@@ -40,7 +40,6 @@ source .venv/bin/activate
 # Install base dependencies
 pip install -r requirements.txt
 
-pip install -r requirements-ai-enhanced.txt
 ```
 
 ## Usage
